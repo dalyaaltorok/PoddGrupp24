@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Rubrik.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 25pt</value>
+  </data>
+  <data name="Rubrik.Location" type="System.Drawing.Point, System.Drawing">
+    <value>511, 23</value>
+  </data>
+  <data name="Rubrik.Size" type="System.Drawing.Size, System.Drawing">
+    <value>378, 56</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Rubrik.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Rubrik.Text" xml:space="preserve">
+    <value>PODDBIBLIOTEKET</value>
+  </data>
+  <data name="&gt;&gt;Rubrik.Name" xml:space="preserve">
+    <value>Rubrik</value>
+  </data>
+  <data name="&gt;&gt;Rubrik.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Rubrik.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Rubrik.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1119, 144</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 32</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>KATEGORI</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1019, 176</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 27</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button1LaggTillKat.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="button1LaggTillKat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1019, 221</value>
+  </data>
+  <data name="button1LaggTillKat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 29</value>
+  </data>
+  <data name="button1LaggTillKat.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="button1LaggTillKat.Text" xml:space="preserve">
+    <value>Lägg till</value>
+  </data>
+  <data name="&gt;&gt;button1LaggTillKat.Name" xml:space="preserve">
+    <value>button1LaggTillKat</value>
+  </data>
+  <data name="&gt;&gt;button1LaggTillKat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1LaggTillKat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1LaggTillKat.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="button2AndraKat.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="button2AndraKat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button2AndraKat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1119, 221</value>
+  </data>
+  <data name="button2AndraKat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 29</value>
+  </data>
+  <data name="button2AndraKat.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="button2AndraKat.Text" xml:space="preserve">
+    <value>Ändra</value>
+  </data>
+  <data name="&gt;&gt;button2AndraKat.Name" xml:space="preserve">
+    <value>button2AndraKat</value>
+  </data>
+  <data name="&gt;&gt;button2AndraKat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2AndraKat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button2AndraKat.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="button3TaBortKat.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="button3TaBortKat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button3TaBortKat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1219, 221</value>
+  </data>
+  <data name="button3TaBortKat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 29</value>
+  </data>
+  <data name="button3TaBortKat.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="button3TaBortKat.Text" xml:space="preserve">
+    <value>Ta bort</value>
+  </data>
+  <data name="&gt;&gt;button3TaBortKat.Name" xml:space="preserve">
+    <value>button3TaBortKat</value>
+  </data>
+  <data name="&gt;&gt;button3TaBortKat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button3TaBortKat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button3TaBortKat.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="KategoriListaListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1019, 267</value>
+  </data>
+  <data name="KategoriListaListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 124</value>
+  </data>
+  <data name="KategoriListaListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;KategoriListaListBox.Name" xml:space="preserve">
+    <value>KategoriListaListBox</value>
+  </data>
+  <data name="&gt;&gt;KategoriListaListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;KategoriListaListBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;KategoriListaListBox.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="richTextBoxBeskrivning.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1019, 406</value>
+  </data>
+  <data name="richTextBoxBeskrivning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 255</value>
+  </data>
+  <data name="richTextBoxBeskrivning.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="richTextBoxBeskrivning.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;richTextBoxBeskrivning.Name" xml:space="preserve">
+    <value>richTextBoxBeskrivning</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxBeskrivning.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxBeskrivning.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxBeskrivning.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="AvsnittLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="AvsnittLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>809, 138</value>
+  </data>
+  <data name="AvsnittLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 30</value>
+  </data>
+  <data name="AvsnittLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="AvsnittLabel.Text" xml:space="preserve">
+    <value>AVSNITT</value>
+  </data>
+  <data name="&gt;&gt;AvsnittLabel.Name" xml:space="preserve">
+    <value>AvsnittLabel</value>
+  </data>
+  <data name="&gt;&gt;AvsnittLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AvsnittLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AvsnittLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="listBoxAvsnitt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>704, 177</value>
+  </data>
+  <data name="listBoxAvsnitt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 484</value>
+  </data>
+  <data name="listBoxAvsnitt.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;listBoxAvsnitt.Name" xml:space="preserve">
+    <value>listBoxAvsnitt</value>
+  </data>
+  <data name="&gt;&gt;listBoxAvsnitt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listBoxAvsnitt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listBoxAvsnitt.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="NamnLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="NamnLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 138</value>
+  </data>
+  <data name="NamnLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 25</value>
+  </data>
+  <data name="NamnLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="NamnLabel.Text" xml:space="preserve">
+    <value>NAMN</value>
+  </data>
+  <data name="&gt;&gt;NamnLabel.Name" xml:space="preserve">
+    <value>NamnLabel</value>
+  </data>
+  <data name="&gt;&gt;NamnLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NamnLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NamnLabel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="textBoxNamn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 167</value>
+  </data>
+  <data name="textBoxNamn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 27</value>
+  </data>
+  <data name="textBoxNamn.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;textBoxNamn.Name" xml:space="preserve">
+    <value>textBoxNamn</value>
+  </data>
+  <data name="&gt;&gt;textBoxNamn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxNamn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxNamn.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="comboBoxMinuter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 200</value>
+  </data>
+  <data name="comboBoxMinuter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 28</value>
+  </data>
+  <data name="comboBoxMinuter.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMinuter.Name" xml:space="preserve">
+    <value>comboBoxMinuter</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMinuter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMinuter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxMinuter.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="comboBoxKategori.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 200</value>
+  </data>
+  <data name="comboBoxKategori.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 28</value>
+  </data>
+  <data name="comboBoxKategori.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;comboBoxKategori.Name" xml:space="preserve">
+    <value>comboBoxKategori</value>
+  </data>
+  <data name="&gt;&gt;comboBoxKategori.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxKategori.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxKategori.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="LabelURL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt, style=Bold</value>
+  </data>
+  <data name="LabelURL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 200</value>
+  </data>
+  <data name="LabelURL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 25</value>
+  </data>
+  <data name="LabelURL.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="LabelURL.Text" xml:space="preserve">
+    <value>URL:</value>
+  </data>
+  <data name="&gt;&gt;LabelURL.Name" xml:space="preserve">
+    <value>LabelURL</value>
+  </data>
+  <data name="&gt;&gt;LabelURL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelURL.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LabelURL.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textBoxURL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 201</value>
+  </data>
+  <data name="textBoxURL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>323, 27</value>
+  </data>
+  <data name="textBoxURL.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;textBoxURL.Name" xml:space="preserve">
+    <value>textBoxURL</value>
+  </data>
+  <data name="&gt;&gt;textBoxURL.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxURL.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxURL.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="buttonLaggTillNamn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="buttonLaggTillNamn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 166</value>
+  </data>
+  <data name="buttonLaggTillNamn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 29</value>
+  </data>
+  <data name="buttonLaggTillNamn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="buttonLaggTillNamn.Text" xml:space="preserve">
+    <value>Lägg till</value>
+  </data>
+  <data name="&gt;&gt;buttonLaggTillNamn.Name" xml:space="preserve">
+    <value>buttonLaggTillNamn</value>
+  </data>
+  <data name="&gt;&gt;buttonLaggTillNamn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonLaggTillNamn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonLaggTillNamn.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="buttonAndraNamn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="buttonAndraNamn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonAndraNamn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 166</value>
+  </data>
+  <data name="buttonAndraNamn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 29</value>
+  </data>
+  <data name="buttonAndraNamn.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="buttonAndraNamn.Text" xml:space="preserve">
+    <value>Ändra</value>
+  </data>
+  <data name="&gt;&gt;buttonAndraNamn.Name" xml:space="preserve">
+    <value>buttonAndraNamn</value>
+  </data>
+  <data name="&gt;&gt;buttonAndraNamn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAndraNamn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonAndraNamn.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonTaBortNamn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="buttonTaBortNamn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonTaBortNamn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>570, 165</value>
+  </data>
+  <data name="buttonTaBortNamn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 29</value>
+  </data>
+  <data name="buttonTaBortNamn.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="buttonTaBortNamn.Text" xml:space="preserve">
+    <value>Ta bort</value>
+  </data>
+  <data name="&gt;&gt;buttonTaBortNamn.Name" xml:space="preserve">
+    <value>buttonTaBortNamn</value>
+  </data>
+  <data name="&gt;&gt;buttonTaBortNamn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonTaBortNamn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonTaBortNamn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonAterstall.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="buttonAterstall.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonAterstall.Location" type="System.Drawing.Point, System.Drawing">
+    <value>570, 130</value>
+  </data>
+  <data name="buttonAterstall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 29</value>
+  </data>
+  <data name="buttonAterstall.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="buttonAterstall.Text" xml:space="preserve">
+    <value>Återställ</value>
+  </data>
+  <data name="&gt;&gt;buttonAterstall.Name" xml:space="preserve">
+    <value>buttonAterstall</value>
+  </data>
+  <data name="&gt;&gt;buttonAterstall.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAterstall.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonAterstall.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboBoxKat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 130</value>
+  </data>
+  <data name="comboBoxKat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 28</value>
+  </data>
+  <data name="comboBoxKat.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;comboBoxKat.Name" xml:space="preserve">
+    <value>comboBoxKat</value>
+  </data>
+  <data name="&gt;&gt;comboBoxKat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxKat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBoxKat.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dataGridViewPodd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="dataGridViewPodd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 243</value>
+  </data>
+  <data name="dataGridViewPodd.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="dataGridViewPodd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>637, 418</value>
+  </data>
+  <data name="dataGridViewPodd.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewPodd.Name" xml:space="preserve">
+    <value>dataGridViewPodd</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewPodd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewPodd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewPodd.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LabelSenast.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="LabelSenast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 674</value>
+  </data>
+  <data name="LabelSenast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 25</value>
+  </data>
+  <data name="LabelSenast.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="LabelSenast.Text" xml:space="preserve">
+    <value>Senast nedladdade podcast:</value>
+  </data>
+  <data name="&gt;&gt;LabelSenast.Name" xml:space="preserve">
+    <value>LabelSenast</value>
+  </data>
+  <data name="&gt;&gt;LabelSenast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelSenast.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LabelSenast.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LabelSenastChange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="LabelSenastChange.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 674</value>
+  </data>
+  <data name="LabelSenastChange.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 25</value>
+  </data>
+  <data name="LabelSenastChange.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="LabelSenastChange.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;LabelSenastChange.Name" xml:space="preserve">
+    <value>LabelSenastChange</value>
+  </data>
+  <data name="&gt;&gt;LabelSenastChange.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelSenastChange.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LabelSenastChange.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 20</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1339, 722</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Poddbiblioteket</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Poddbibliotek</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
