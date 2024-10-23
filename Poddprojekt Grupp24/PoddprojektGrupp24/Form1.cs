@@ -56,6 +56,11 @@ namespace PoddprojektGrupp24
         {
 
         }
+
+        private void comboBoxMinuter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
