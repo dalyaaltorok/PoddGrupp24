@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
-using System.Windows.Forms;
 
 namespace DataAccessLayer
 {
@@ -25,10 +24,6 @@ namespace DataAccessLayer
         {
             try
             {
-                if (!validation.DirectoryExists(path))
-                {
-
-                }
                 XmlSerializer serializer = new XmlSerializer(typeof(List<T>));
                 using (FileStream stream = new FileStream(path, FileMode.Create, FileAccess.Write))
                 {
