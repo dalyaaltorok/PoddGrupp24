@@ -22,26 +22,23 @@ namespace DataAccessLayer
         }
         public void Serialize(List<T> list)
         {
-            try
-            {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<T>));
                 using (FileStream stream = new FileStream(path, FileMode.Create, FileAccess.Write))
                 {
                     serializer.Serialize(stream, list);
                 }
             }
-            catch
-            {
-
-            }
-        }
+        
         public List<T> Deserialize()
         {
             XmlSerializer deserializer = new XmlSerializer(typeof(List<T>));
-            using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+            if(validation.DirectoryExists && validation.FileExists)
             {
-                List<T> list = (List<T>)deserializer.Deserialize(stream);
-                return list;
+                using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+                {
+                    List<T> list = (List<T>)deserializer.Deserialize(stream);
+                    return list;
+                }
             }
         }
     }
