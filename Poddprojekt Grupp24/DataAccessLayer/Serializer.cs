@@ -27,7 +27,7 @@ namespace DataAccessLayer
             {
                 if (!validation.DirectoryExists(path))
                 {
-                    MessageBox.Show("Directory does not exist.", "Error");
+                    
                 }
                 XmlSerializer serializer = new XmlSerializer(typeof(List<T>));
                 using (FileStream stream = new FileStream(path, FileMode.Create, FileAccess.Write))
