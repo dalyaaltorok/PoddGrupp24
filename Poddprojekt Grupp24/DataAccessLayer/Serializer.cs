@@ -10,33 +10,8 @@ using System.Windows.Forms;
 
 namespace DataAccessLayer
 {
-    public class Serializer<T>
+    public class Serializer
     {
-        private string path { get; set; }
-
-        ValidationSerializer validation;
-
-        public Serializer(string aPath)
-        {
-            path = aPath;
-            validation = new ValidationSerializer();
-        }
-        public void Serialize(List<T> list)
-        {
-            try
-            {
-                if (!validation.DirectoryExists(path))
-                {
-
-                }
-                XmlSerializer serializer = new XmlSerializer(typeof(List<T>));
-                using (FileStream stream = new FileStream(path, FileMode.Create, FileAccess.Write))
-                {
-                    serializer.Serialize(stream, list);
-                }
-            }
-            catch
-            {
 
             }
         }
