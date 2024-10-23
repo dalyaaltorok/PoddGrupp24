@@ -11,19 +11,19 @@ namespace DataAccessLayer
 {
     public class Serializer<T>
     {
-        private string path { get; set; }
+        private string Path { get; set; }
 
         ValidationSerializer validation;
 
         public Serializer(string aPath)
         {
-            path = aPath;
+            Path = aPath;
             validation = new ValidationSerializer();
         }
         public void Serialize(List<T> list)
         {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<T>));
-                using (FileStream stream = new FileStream(path, FileMode.Create, FileAccess.Write))
+                using (FileStream stream = new FileStream(Path, FileMode.Create, FileAccess.Write))
                 {
                     serializer.Serialize(stream, list);
                 }
@@ -32,13 +32,17 @@ namespace DataAccessLayer
         public List<T> Deserialize()
         {
             XmlSerializer deserializer = new XmlSerializer(typeof(List<T>));
-            if(validation.DirectoryExists && validation.FileExists)
+            if(validation.DirectoryExists(Path) && validation.FileExists(Path))
             {
-                using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+                using (FileStream stream = new FileStream(Path, FileMode.Open, FileAccess.Read))
                 {
                     List<T> list = (List<T>)deserializer.Deserialize(stream);
                     return list;
                 }
+            }
+            else
+            {
+                return new List<T>();
             }
         }
     }
