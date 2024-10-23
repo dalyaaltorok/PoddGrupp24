@@ -153,6 +153,7 @@
             comboBoxMinuter.FormattingEnabled = true;
             resources.ApplyResources(comboBoxMinuter, "comboBoxMinuter");
             comboBoxMinuter.Name = "comboBoxMinuter";
+            comboBoxMinuter.SelectedIndexChanged += comboBoxMinuter_SelectedIndexChanged;
             // 
             // comboBoxKategori
             // 
