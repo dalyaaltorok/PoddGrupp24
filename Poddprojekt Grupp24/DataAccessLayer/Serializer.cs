@@ -21,10 +21,11 @@ namespace DataAccessLayer
             validation = new ValidationSerializer();
         }
 
+        //tom konsttruktor här för att kunna instansiera serializer i repositories
         public Serializer()
         {
         }
-
+        
         public void Serialize(List<T> list)
         {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<T>));

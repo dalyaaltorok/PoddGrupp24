@@ -11,12 +11,19 @@ namespace DataAccessLayer
     {
         Serializer<Episode> dataSerialize;
         List<Episode> listEpisodes;
+        IRepository<Episode> repo;
 
         public EpisodeRepository()
         {
             dataSerialize = new Serializer<Episode>();
             listEpisodes = new List<Episode>();
+            repo = new IRepository<Episode>();
             listEpisodes.GetAll();
+        }
+
+        public async Task GetByName()
+        {
+
         }
     }
 }
