@@ -12,7 +12,7 @@ namespace Models
         private string title;
         private Category category;
         private List<Episode> episodes;
-        public string Name;
+        public string Name
         {
             get { return name; }
             set { name = value; }
@@ -22,12 +22,12 @@ namespace Models
             get { return title; }
             set { title = value; }
         }
-        public Category category
+        public Category Category
         {
             get { return category; }
             set { category = value; }
         }
-        public List<Episode> episodes
+        public List<Episode> Episodes
         {
             get { return episodes; }
             set { episodes = value; }
