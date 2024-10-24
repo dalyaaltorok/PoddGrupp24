@@ -20,6 +20,11 @@ namespace DataAccessLayer
             Path = aPath;
             validation = new ValidationSerializer();
         }
+
+        public Serializer()
+        {
+        }
+
         public void Serialize(List<T> list)
         {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<T>));
