@@ -11,7 +11,6 @@ namespace DataAccessLayer
     {
         Serializer<Episode> dataSerialize;
         List<Episode> listEpisodes;
-        IRepository<Episode> repo;
 
         public EpisodeRepository(string path)
         {
