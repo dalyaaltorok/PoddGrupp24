@@ -13,17 +13,58 @@ namespace DataAccessLayer
         List<Episode> listEpisodes;
         IRepository<Episode> repo;
 
-        public EpisodeRepository()
+        public EpisodeRepository(string path)
         {
-            dataSerialize = new Serializer<Episode>();
-            listEpisodes = new List<Episode>();
-            repo = new IRepository<Episode>();
-            listEpisodes.GetAll();
+            dataSerialize = new Serializer<Episode>(path);
+            listEpisodes = dataSerialize.Deserialize();
+            GetAll();
         }
 
-        public async Task GetByName()
+        public List<Episode> GetAll()
         {
+            return listEpisodes;
+        }
 
+        public Episode GetByName(String name)
+        {
+            foreach (var episode in listEpisodes)
+            {
+                if (episode.Name == name)
+                {
+                    return episode;
+                }
+            }
+            return null;
+        }
+
+        public void Add(Episode episode)
+        {
+            listEpisodes.Add(episode);
+            SaveAll();        }
+
+        public void Update(Episode episode)
+        {
+            for (int i = 0; i < listEpisodes.Count; i++)
+            {
+                if (listEpisodes[i].Name == episode.Name)
+                {
+                    listEpisodes[i] = episode;
+                    SaveAll();
+                    return;
+                }
+            }
+        }
+
+        public void Delete(Episode episode)
+        {
+            listEpisodes.Remove(episode);
+            SaveAll();
+        }
+
+        public void SaveAll()
+        {
+            dataSerialize.Serialize(listEpisodes);
         }
     }
 }
+
