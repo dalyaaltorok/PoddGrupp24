@@ -19,7 +19,7 @@ namespace PoddprojektGrupp24
             List<Category> list = catController.GetAll();
             foreach (Category category in list)
             {
-                KategoriListaListBox.AppendText(category.Name + "\n");
+                checkedListBoxCat.Items.Add(category, false);
             }
         }
 
@@ -32,7 +32,7 @@ namespace PoddprojektGrupp24
         {
             String name = textBox1.Text.Trim();
             catController.Add(name);
-            KategoriListaListBox.Clear();
+            checkedListBoxCat.Items.Clear();
             populateCategories();
         }
 
