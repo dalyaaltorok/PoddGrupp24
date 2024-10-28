@@ -20,7 +20,10 @@ namespace Models
             this.name = name;
         }
 
+        public Category()
+        {
 
+        }
 
     }
 }

@@ -38,7 +38,6 @@
             button1LaggTillKat = new Button();
             button2AndraKat = new Button();
             button3TaBortKat = new Button();
-            KategoriListaListBox = new ListBox();
             richTextBoxBeskrivning = new RichTextBox();
             AvsnittLabel = new Label();
             listBoxAvsnitt = new ListBox();
@@ -56,6 +55,7 @@
             dataGridViewPodd = new DataGridView();
             LabelSenast = new Label();
             LabelSenastChange = new Label();
+            KategoriListaListBox = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPodd).BeginInit();
             SuspendLayout();
             // 
@@ -111,13 +111,6 @@
             button3TaBortKat.Name = "button3TaBortKat";
             button3TaBortKat.UseVisualStyleBackColor = false;
             button3TaBortKat.Click += button3TaBortKat_Click;
-            // 
-            // KategoriListaListBox
-            // 
-            KategoriListaListBox.FormattingEnabled = true;
-            resources.ApplyResources(KategoriListaListBox, "KategoriListaListBox");
-            KategoriListaListBox.Name = "KategoriListaListBox";
-            KategoriListaListBox.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // richTextBoxBeskrivning
             // 
@@ -264,11 +257,17 @@
             LabelSenastChange.ForeColor = Color.Firebrick;
             LabelSenastChange.Name = "LabelSenastChange";
             // 
+            // KategoriListaListBox
+            // 
+            resources.ApplyResources(KategoriListaListBox, "KategoriListaListBox");
+            KategoriListaListBox.Name = "KategoriListaListBox";
+            // 
             // Poddbibliotek
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
+            Controls.Add(KategoriListaListBox);
             Controls.Add(LabelSenastChange);
             Controls.Add(LabelSenast);
             Controls.Add(dataGridViewPodd);
@@ -286,7 +285,6 @@
             Controls.Add(listBoxAvsnitt);
             Controls.Add(AvsnittLabel);
             Controls.Add(richTextBoxBeskrivning);
-            Controls.Add(KategoriListaListBox);
             Controls.Add(button3TaBortKat);
             Controls.Add(button2AndraKat);
             Controls.Add(button1LaggTillKat);
@@ -308,7 +306,6 @@
         private Button button1LaggTillKat;
         private Button button2AndraKat;
         private Button button3TaBortKat;
-        private ListBox KategoriListaListBox;
         private RichTextBox richTextBoxBeskrivning;
         private Label AvsnittLabel;
         private ListBox listBoxAvsnitt;
@@ -326,5 +323,6 @@
         private DataGridView dataGridViewPodd;
         private Label LabelSenast;
         private Label LabelSenastChange;
+        private RichTextBox KategoriListaListBox;
     }
 }

@@ -38,7 +38,7 @@ namespace DataAccessLayer
         public List<T> Deserialize()
         {
             XmlSerializer deserializer = new XmlSerializer(typeof(List<T>));
-            if(validation.DirectoryExists(Path) && validation.FileExists(Path))
+            if(validation.FileExists(Path))
             {
                 using (FileStream stream = new FileStream(Path, FileMode.Open, FileAccess.Read))
                 {

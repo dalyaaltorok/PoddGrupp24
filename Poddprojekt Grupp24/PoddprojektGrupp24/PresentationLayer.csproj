@@ -9,7 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <Import Include="System.Windows.Forms"/>
+	  <Import Include="System.Windows.Forms" />
+	  <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+	  <ProjectReference Include="..\Models\Models.csproj" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
