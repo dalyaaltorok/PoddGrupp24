@@ -19,7 +19,7 @@ namespace PoddprojektGrupp24
             List<Category> list = catController.GetAll();
             foreach (Category category in list)
             {
-                checkedListBoxCat.Items.Add(category, false);
+                checkedListBoxCat.Items.Add(category.Name, false);
             }
         }
 
