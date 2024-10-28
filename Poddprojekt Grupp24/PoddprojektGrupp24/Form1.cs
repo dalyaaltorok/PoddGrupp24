@@ -19,7 +19,7 @@ namespace PoddprojektGrupp24
             List<Category> list = catController.GetAll();
             foreach (Category category in list)
             {
-                checkedListBoxCat.Items.Add(category.Name, false);
+                checkedListBoxCat.Items.Add(category.Name, false); //Lägger till en item i kategoriboxen. "false" innebär att ett item inte ska vara iklickat efter att det skapats.  
             }
         }
 
@@ -30,9 +30,9 @@ namespace PoddprojektGrupp24
 
         private void button1LaggTillKat_Click(object sender, EventArgs e)
         {
-            String name = textBox1.Text.Trim();
+            String name = textBox1.Text.Trim(); //Ser till att ta bort onädiga spaces i början och slutet av kategorinamnfältet.
             catController.Add(name);
-            checkedListBoxCat.Items.Clear();
+            checkedListBoxCat.Items.Clear(); //Rensar boxen innan den populeras på nytt i nedan metod.
             populateCategories();
         }
 
