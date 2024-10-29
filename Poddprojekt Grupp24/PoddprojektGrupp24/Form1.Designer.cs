@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Poddbibliotek));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
@@ -41,13 +42,12 @@
             richTextBoxBeskrivning = new RichTextBox();
             AvsnittLabel = new Label();
             listBoxAvsnitt = new ListBox();
-            NamnLabel = new Label();
-            textBoxNamn = new TextBox();
+            lbLaggTillPoddcast = new Label();
+            textBoxPoddnamn = new TextBox();
             comboBoxMinuter = new ComboBox();
             comboBoxKategori = new ComboBox();
-            LabelURL = new Label();
             textBoxURL = new TextBox();
-            buttonLaggTillNamn = new Button();
+            btnLaggTillPodd = new Button();
             buttonAndraNamn = new Button();
             buttonTaBortNamn = new Button();
             buttonAterstall = new Button();
@@ -56,6 +56,13 @@
             LabelSenast = new Label();
             LabelSenastChange = new Label();
             checkedListBoxCat = new CheckedListBox();
+            label2 = new Label();
+            lbTilldelaKategori = new Label();
+            toolTipFrivilligKategori = new ToolTip(components);
+            lbAndraFiltrera = new Label();
+            textBocAndraPoddNamn = new TextBox();
+            toolTipAndraKategori = new ToolTip(components);
+            btnAndraKategori = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPodd).BeginInit();
             SuspendLayout();
             // 
@@ -129,17 +136,20 @@
             listBoxAvsnitt.FormattingEnabled = true;
             resources.ApplyResources(listBoxAvsnitt, "listBoxAvsnitt");
             listBoxAvsnitt.Name = "listBoxAvsnitt";
+            listBoxAvsnitt.SelectedIndexChanged += listBoxAvsnitt_SelectedIndexChanged;
             // 
-            // NamnLabel
+            // lbLaggTillPoddcast
             // 
-            resources.ApplyResources(NamnLabel, "NamnLabel");
-            NamnLabel.ForeColor = Color.Firebrick;
-            NamnLabel.Name = "NamnLabel";
+            resources.ApplyResources(lbLaggTillPoddcast, "lbLaggTillPoddcast");
+            lbLaggTillPoddcast.ForeColor = Color.Firebrick;
+            lbLaggTillPoddcast.Name = "lbLaggTillPoddcast";
+            lbLaggTillPoddcast.Click += NamnLabel_Click;
             // 
-            // textBoxNamn
+            // textBoxPoddnamn
             // 
-            resources.ApplyResources(textBoxNamn, "textBoxNamn");
-            textBoxNamn.Name = "textBoxNamn";
+            resources.ApplyResources(textBoxPoddnamn, "textBoxPoddnamn");
+            textBoxPoddnamn.Name = "textBoxPoddnamn";
+            textBoxPoddnamn.TextChanged += textBoxNamn_TextChanged;
             // 
             // comboBoxMinuter
             // 
@@ -153,27 +163,22 @@
             comboBoxKategori.FormattingEnabled = true;
             resources.ApplyResources(comboBoxKategori, "comboBoxKategori");
             comboBoxKategori.Name = "comboBoxKategori";
-            // 
-            // LabelURL
-            // 
-            resources.ApplyResources(LabelURL, "LabelURL");
-            LabelURL.ForeColor = Color.Firebrick;
-            LabelURL.Name = "LabelURL";
+            comboBoxKategori.SelectedIndexChanged += comboBoxKategori_SelectedIndexChanged;
             // 
             // textBoxURL
             // 
             resources.ApplyResources(textBoxURL, "textBoxURL");
             textBoxURL.Name = "textBoxURL";
             // 
-            // buttonLaggTillNamn
+            // btnLaggTillPodd
             // 
-            buttonLaggTillNamn.BackColor = Color.LightCoral;
-            buttonLaggTillNamn.FlatAppearance.BorderColor = Color.LightCoral;
-            buttonLaggTillNamn.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(buttonLaggTillNamn, "buttonLaggTillNamn");
-            buttonLaggTillNamn.ForeColor = Color.FromArgb(64, 0, 0);
-            buttonLaggTillNamn.Name = "buttonLaggTillNamn";
-            buttonLaggTillNamn.UseVisualStyleBackColor = false;
+            btnLaggTillPodd.BackColor = Color.LightCoral;
+            btnLaggTillPodd.FlatAppearance.BorderColor = Color.LightCoral;
+            btnLaggTillPodd.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnLaggTillPodd, "btnLaggTillPodd");
+            btnLaggTillPodd.ForeColor = Color.FromArgb(64, 0, 0);
+            btnLaggTillPodd.Name = "btnLaggTillPodd";
+            btnLaggTillPodd.UseVisualStyleBackColor = false;
             // 
             // buttonAndraNamn
             // 
@@ -211,6 +216,7 @@
             comboBoxKat.FormattingEnabled = true;
             resources.ApplyResources(comboBoxKat, "comboBoxKat");
             comboBoxKat.Name = "comboBoxKat";
+            toolTipAndraKategori.SetToolTip(comboBoxKat, resources.GetString("comboBoxKat.ToolTip"));
             // 
             // dataGridViewPodd
             // 
@@ -265,11 +271,64 @@
             checkedListBoxCat.Name = "checkedListBoxCat";
             checkedListBoxCat.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
             // 
+            // label2
+            // 
+            resources.ApplyResources(label2, "label2");
+            label2.Name = "label2";
+            label2.Click += label2_Click_1;
+            // 
+            // lbTilldelaKategori
+            // 
+            resources.ApplyResources(lbTilldelaKategori, "lbTilldelaKategori");
+            lbTilldelaKategori.ForeColor = Color.Firebrick;
+            lbTilldelaKategori.Name = "lbTilldelaKategori";
+            toolTipFrivilligKategori.SetToolTip(lbTilldelaKategori, resources.GetString("lbTilldelaKategori.ToolTip"));
+            lbTilldelaKategori.Click += label3_Click;
+            // 
+            // toolTipFrivilligKategori
+            // 
+            toolTipFrivilligKategori.AutoPopDelay = 5000;
+            toolTipFrivilligKategori.InitialDelay = 50;
+            toolTipFrivilligKategori.ReshowDelay = 100;
+            // 
+            // lbAndraFiltrera
+            // 
+            resources.ApplyResources(lbAndraFiltrera, "lbAndraFiltrera");
+            lbAndraFiltrera.ForeColor = Color.Firebrick;
+            lbAndraFiltrera.Name = "lbAndraFiltrera";
+            lbAndraFiltrera.Click += label3_Click_1;
+            // 
+            // textBocAndraPoddNamn
+            // 
+            resources.ApplyResources(textBocAndraPoddNamn, "textBocAndraPoddNamn");
+            textBocAndraPoddNamn.Name = "textBocAndraPoddNamn";
+            // 
+            // toolTipAndraKategori
+            // 
+            toolTipAndraKategori.AutoPopDelay = 5000;
+            toolTipAndraKategori.InitialDelay = 50;
+            toolTipAndraKategori.ReshowDelay = 100;
+            // 
+            // btnAndraKategori
+            // 
+            btnAndraKategori.BackColor = Color.LightCoral;
+            btnAndraKategori.FlatAppearance.BorderColor = Color.LightCoral;
+            btnAndraKategori.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnAndraKategori, "btnAndraKategori");
+            btnAndraKategori.ForeColor = Color.FromArgb(64, 0, 0);
+            btnAndraKategori.Name = "btnAndraKategori";
+            btnAndraKategori.UseVisualStyleBackColor = false;
+            // 
             // Poddbibliotek
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
+            Controls.Add(btnAndraKategori);
+            Controls.Add(textBocAndraPoddNamn);
+            Controls.Add(lbAndraFiltrera);
+            Controls.Add(lbTilldelaKategori);
+            Controls.Add(label2);
             Controls.Add(checkedListBoxCat);
             Controls.Add(LabelSenastChange);
             Controls.Add(LabelSenast);
@@ -278,13 +337,12 @@
             Controls.Add(buttonAterstall);
             Controls.Add(buttonTaBortNamn);
             Controls.Add(buttonAndraNamn);
-            Controls.Add(buttonLaggTillNamn);
+            Controls.Add(btnLaggTillPodd);
             Controls.Add(textBoxURL);
-            Controls.Add(LabelURL);
             Controls.Add(comboBoxKategori);
             Controls.Add(comboBoxMinuter);
-            Controls.Add(textBoxNamn);
-            Controls.Add(NamnLabel);
+            Controls.Add(textBoxPoddnamn);
+            Controls.Add(lbLaggTillPoddcast);
             Controls.Add(listBoxAvsnitt);
             Controls.Add(AvsnittLabel);
             Controls.Add(richTextBoxBeskrivning);
@@ -312,13 +370,12 @@
         private RichTextBox richTextBoxBeskrivning;
         private Label AvsnittLabel;
         private ListBox listBoxAvsnitt;
-        private Label NamnLabel;
-        private TextBox textBoxNamn;
+        private Label lbLaggTillPoddcast;
+        private TextBox textBoxPoddnamn;
         private ComboBox comboBoxMinuter;
         private ComboBox comboBoxKategori;
-        private Label LabelURL;
         private TextBox textBoxURL;
-        private Button buttonLaggTillNamn;
+        private Button btnLaggTillPodd;
         private Button buttonAndraNamn;
         private Button buttonTaBortNamn;
         private Button buttonAterstall;
@@ -327,5 +384,12 @@
         private Label LabelSenast;
         private Label LabelSenastChange;
         private CheckedListBox checkedListBoxCat;
+        private Label label2;
+        private Label lbTilldelaKategori;
+        private ToolTip toolTipFrivilligKategori;
+        private Label lbAndraFiltrera;
+        private TextBox textBocAndraPoddNamn;
+        private ToolTip toolTipAndraKategori;
+        private Button btnAndraKategori;
     }
 }

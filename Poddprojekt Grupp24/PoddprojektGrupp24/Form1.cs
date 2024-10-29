@@ -45,19 +45,19 @@ namespace PoddprojektGrupp24
         private void button3TaBortKat_Click(object sender, EventArgs e)
         {
             int index = checkedListBoxCat.SelectedIndex;
-            if(index < 0)
+            if (index < 0)
             {
                 MessageBox.Show("Please select a category to remove");
                 return;
             }
-            
+
             string message = "Are you sure you want to remove this category?";
             string title = "Category";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult dialog = MessageBox.Show(message, title, buttons);
-            
+
             if (dialog == DialogResult.Yes)
-            { 
+            {
                 if (index >= 0)
                 {
                     catController.RemoveItem(index);
@@ -107,6 +107,51 @@ namespace PoddprojektGrupp24
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxAvsnitt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNamn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NamnLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxKategori_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbUppdateringsfrekv_Click(object sender, EventArgs e)
         {
 
         }
