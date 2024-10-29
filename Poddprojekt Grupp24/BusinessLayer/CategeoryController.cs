@@ -30,19 +30,11 @@ namespace BusinessLayer
             return categoryRepo.GetAll();
         }
 
-        public void RemoveItem(List<string> selectedCategoryName)
+        public void RemoveItem(int index)
         {
-
-           foreach (var item in selectedCategoryName)
-            {
-                Category category = categoryRepo.GetByName(string categoryName);
-
-                if (category != null)
-                {
-                    categoryRepo.Delete(category);
-                }
-            }    
+            categoryRepo.Delete(index);
         }
 
     }
 }
+

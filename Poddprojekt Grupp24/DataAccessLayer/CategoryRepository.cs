@@ -55,9 +55,9 @@ namespace DataAccessLayer
 
         }
 
-        public void Delete(Category category)
+        public void Delete(int index)
         {
-            listCategories.Remove(category);
+            listCategories.RemoveAt(index);
             SaveAll();
         }
 
