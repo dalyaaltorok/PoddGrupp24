@@ -56,9 +56,9 @@ namespace DataAccessLayer
                 }
             }
         }
-        public void Delete(Feed feed)
+        public void Delete(int index)
         {
-            feedList.Remove(feed);
+            feedList.RemoveAt(index);
             SaveAll();
         }
 

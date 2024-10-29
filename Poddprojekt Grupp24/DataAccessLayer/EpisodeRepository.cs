@@ -54,9 +54,9 @@ namespace DataAccessLayer
             }
         }
 
-        public void Delete(Episode episode)
+        public void Delete(int index)
         {
-            listEpisodes.Remove(episode);
+            listEpisodes.RemoveAt(index);
             SaveAll();
         }
 

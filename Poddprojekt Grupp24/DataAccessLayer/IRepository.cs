@@ -12,7 +12,7 @@ namespace DataAccessLayer
         List<T> GetAll();
         void Add(T element);
         void Update(T element);
-        void Delete(T element);
+        void Delete(int index);
         void SaveAll();
         
     }
