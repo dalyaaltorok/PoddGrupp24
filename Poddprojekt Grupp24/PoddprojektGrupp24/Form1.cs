@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.DirectoryServices;
 using BusinessLayer;
 using Models;
 
@@ -43,7 +44,29 @@ namespace PoddprojektGrupp24
 
         private void button3TaBortKat_Click(object sender, EventArgs e)
         {
+            string message = "Are you sure you want to remove this category?";
+            string title = "Category";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult dialog = MessageBox.Show(message, title, buttons);
+            int index = checkedListBoxCat.SelectedIndex;
 
+            if (dialog == DialogResult.Yes)
+            { 
+                if (index >= 0)
+                {
+                    catController.RemoveItem(index);
+
+                    checkedListBoxCat.Items.Remove(index);
+
+                    MessageBox.Show("You have successfully removed this category!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a category to remove");
+            }
+            checkedListBoxCat.Items.Clear();
+            populateCategories();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
