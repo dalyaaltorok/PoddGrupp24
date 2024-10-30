@@ -9,6 +9,9 @@
 	<Import Include="System.Windows.Forms" />
 	</ItemGroup>
 	<ItemGroup>
+	  <PackageReference Include="System.ServiceModel.Syndication" Version="8.0.0" />
+	</ItemGroup>
+	<ItemGroup>
 	  <ProjectReference Include="..\Models\Models.csproj" />
 	</ItemGroup>
 

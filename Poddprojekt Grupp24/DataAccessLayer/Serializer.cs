@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
+using System.ServiceModel.Syndication;
+
 
 namespace DataAccessLayer
 {
@@ -50,6 +52,14 @@ namespace DataAccessLayer
             {
                 return new List<T>();
             }
+        }
+
+        public async Task<SyndicationFeed> DeserializeRSS(string rss)
+        {
+            XmlReader reader = XmlReader.Create(rss);
+            SyndicationFeed stream = SyndicationFeed.Load(reader);
+            reader.Close();
+            return stream;
         }
     }
 }
