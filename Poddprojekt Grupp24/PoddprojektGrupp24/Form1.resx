@@ -122,14 +122,10 @@
     <value>Segoe UI, 25pt</value>
   </data>
   <data name="Rubrik.Location" type="System.Drawing.Point, System.Drawing">
-    <value>820, 19</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Rubrik.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>505, 12</value>
   </data>
   <data name="Rubrik.Size" type="System.Drawing.Size, System.Drawing">
-    <value>614, 90</value>
+    <value>378, 56</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Rubrik.TabIndex" type="System.Int32, mscorlib">
@@ -154,13 +150,10 @@
     <value>Segoe UI, 12pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1818, 118</value>
-  </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>1119, 74</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 51</value>
+    <value>114, 32</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -181,16 +174,13 @@
     <value>27</value>
   </data>
   <data name="textBoxNyKategori.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1656, 194</value>
-  </data>
-  <data name="textBoxNyKategori.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>1019, 121</value>
   </data>
   <data name="textBoxNyKategori.PlaceholderText" xml:space="preserve">
     <value>Ange namn på ny kateogori</value>
   </data>
   <data name="textBoxNyKategori.Size" type="System.Drawing.Size, System.Drawing">
-    <value>475, 39</value>
+    <value>294, 27</value>
   </data>
   <data name="textBoxNyKategori.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -212,13 +202,10 @@
     <value>Popup</value>
   </data>
   <data name="btnLaggTillKat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1656, 266</value>
-  </data>
-  <data name="btnLaggTillKat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>1019, 166</value>
   </data>
   <data name="btnLaggTillKat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 46</value>
+    <value>94, 29</value>
   </data>
   <data name="btnLaggTillKat.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -245,13 +232,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnAndraKat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1818, 266</value>
-  </data>
-  <data name="btnAndraKat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>1119, 166</value>
   </data>
   <data name="btnAndraKat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 46</value>
+    <value>94, 29</value>
   </data>
   <data name="btnAndraKat.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -278,13 +262,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnTaBortKat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1981, 264</value>
-  </data>
-  <data name="btnTaBortKat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>1219, 165</value>
   </data>
   <data name="btnTaBortKat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 46</value>
+    <value>92, 29</value>
   </data>
   <data name="btnTaBortKat.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -305,13 +286,10 @@
     <value>23</value>
   </data>
   <data name="richTextBoxBeskrivning.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1656, 560</value>
-  </data>
-  <data name="richTextBoxBeskrivning.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>1019, 350</value>
   </data>
   <data name="richTextBoxBeskrivning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>475, 463</value>
+    <value>294, 291</value>
   </data>
   <data name="richTextBoxBeskrivning.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -335,13 +313,10 @@
     <value>Segoe UI, 12pt, style=Bold</value>
   </data>
   <data name="lbAvsnitt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1249, 118</value>
-  </data>
-  <data name="lbAvsnitt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>769, 74</value>
   </data>
   <data name="lbAvsnitt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 48</value>
+    <value>158, 30</value>
   </data>
   <data name="lbAvsnitt.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -362,13 +337,10 @@
     <value>21</value>
   </data>
   <data name="listBoxAvsnitt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1144, 187</value>
-  </data>
-  <data name="listBoxAvsnitt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>704, 117</value>
   </data>
   <data name="listBoxAvsnitt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 836</value>
+    <value>291, 524</value>
   </data>
   <data name="listBoxAvsnitt.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -392,13 +364,10 @@
     <value>NoControl</value>
   </data>
   <data name="lbLaggTillPoddcast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 118</value>
-  </data>
-  <data name="lbLaggTillPoddcast.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>102, 74</value>
   </data>
   <data name="lbLaggTillPoddcast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>273, 49</value>
+    <value>168, 31</value>
   </data>
   <data name="lbLaggTillPoddcast.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -419,16 +388,13 @@
     <value>19</value>
   </data>
   <data name="textBoxPoddnamn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 221</value>
-  </data>
-  <data name="textBoxPoddnamn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>27, 138</value>
   </data>
   <data name="textBoxPoddnamn.PlaceholderText" xml:space="preserve">
     <value>Ge podden ett namn!</value>
   </data>
   <data name="textBoxPoddnamn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>475, 39</value>
+    <value>294, 27</value>
   </data>
   <data name="textBoxPoddnamn.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -446,13 +412,10 @@
     <value>18</value>
   </data>
   <data name="cbUpdateringsfrekvens.Location" type="System.Drawing.Point, System.Drawing">
-    <value>802, 333</value>
-  </data>
-  <data name="cbUpdateringsfrekvens.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>494, 208</value>
   </data>
   <data name="cbUpdateringsfrekvens.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 40</value>
+    <value>170, 28</value>
   </data>
   <data name="cbUpdateringsfrekvens.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -470,13 +433,10 @@
     <value>17</value>
   </data>
   <data name="comboBoxKategori.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 270</value>
-  </data>
-  <data name="comboBoxKategori.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>167, 169</value>
   </data>
   <data name="comboBoxKategori.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 40</value>
+    <value>154, 28</value>
   </data>
   <data name="comboBoxKategori.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -500,16 +460,13 @@
     <value>16</value>
   </data>
   <data name="textBoxURL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 172</value>
-  </data>
-  <data name="textBoxURL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>27, 108</value>
   </data>
   <data name="textBoxURL.PlaceholderText" xml:space="preserve">
     <value>Ange poddens RSS-länk!</value>
   </data>
   <data name="textBoxURL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>475, 39</value>
+    <value>294, 27</value>
   </data>
   <data name="textBoxURL.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -530,13 +487,10 @@
     <value>Popup</value>
   </data>
   <data name="btnLaggTillPodd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 333</value>
-  </data>
-  <data name="btnLaggTillPodd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>27, 208</value>
   </data>
   <data name="btnLaggTillPodd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 46</value>
+    <value>138, 29</value>
   </data>
   <data name="btnLaggTillPodd.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -563,13 +517,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnAndraNamn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>923, 172</value>
-  </data>
-  <data name="btnAndraNamn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>568, 108</value>
   </data>
   <data name="btnAndraNamn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 39</value>
+    <value>94, 24</value>
   </data>
   <data name="btnAndraNamn.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -590,13 +541,10 @@
     <value>13</value>
   </data>
   <data name="comboBoxKat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>560, 221</value>
-  </data>
-  <data name="comboBoxKat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>345, 138</value>
   </data>
   <data name="comboBoxKat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 40</value>
+    <value>214, 28</value>
   </data>
   <data name="comboBoxKat.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -620,16 +568,13 @@
     <value>12</value>
   </data>
   <data name="dataGridViewPodd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 389</value>
-  </data>
-  <data name="dataGridViewPodd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>27, 243</value>
   </data>
   <data name="dataGridViewPodd.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="dataGridViewPodd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1032, 634</value>
+    <value>635, 396</value>
   </data>
   <data name="dataGridViewPodd.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -647,10 +592,14 @@
     <value>11</value>
   </data>
   <data name="checkedListBoxCat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1656, 333</value>
+    <value>1019, 208</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="checkedListBoxCat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="checkedListBoxCat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>475, 148</value>
+    <value>294, 92</value>
   </data>
   <data name="checkedListBoxCat.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -674,13 +623,10 @@
     <value>NoControl</value>
   </data>
   <data name="lbTilldelaKategori.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 270</value>
-  </data>
-  <data name="lbTilldelaKategori.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>22, 169</value>
   </data>
   <data name="lbTilldelaKategori.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 40</value>
+    <value>143, 25</value>
   </data>
   <data name="lbTilldelaKategori.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -707,13 +653,10 @@
     <value>NoControl</value>
   </data>
   <data name="lbUpdateringsfrekv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>560, 333</value>
-  </data>
-  <data name="lbUpdateringsfrekv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>345, 208</value>
   </data>
   <data name="lbUpdateringsfrekv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 40</value>
+    <value>143, 25</value>
   </data>
   <data name="lbUpdateringsfrekv.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -743,13 +686,10 @@
     <value>NoControl</value>
   </data>
   <data name="lbFiltreraKategori.Location" type="System.Drawing.Point, System.Drawing">
-    <value>560, 273</value>
-  </data>
-  <data name="lbFiltreraKategori.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>345, 171</value>
   </data>
   <data name="lbFiltreraKategori.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 40</value>
+    <value>113, 25</value>
   </data>
   <data name="lbFiltreraKategori.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -776,13 +716,10 @@
     <value>NoControl</value>
   </data>
   <data name="lbAndraFiltrera.Location" type="System.Drawing.Point, System.Drawing">
-    <value>714, 118</value>
-  </data>
-  <data name="lbAndraFiltrera.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>439, 74</value>
   </data>
   <data name="lbAndraFiltrera.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 49</value>
+    <value>147, 31</value>
   </data>
   <data name="lbAndraFiltrera.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -803,16 +740,13 @@
     <value>8</value>
   </data>
   <data name="textBocAndraPoddNamn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>560, 172</value>
-  </data>
-  <data name="textBocAndraPoddNamn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>345, 108</value>
   </data>
   <data name="textBocAndraPoddNamn.PlaceholderText" xml:space="preserve">
     <value>Ändra namn på podcast</value>
   </data>
   <data name="textBocAndraPoddNamn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 39</value>
+    <value>214, 27</value>
   </data>
   <data name="textBocAndraPoddNamn.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -836,13 +770,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnTaBortPodd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>294, 333</value>
-  </data>
-  <data name="btnTaBortPodd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>181, 208</value>
   </data>
   <data name="btnTaBortPodd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 46</value>
+    <value>138, 29</value>
   </data>
   <data name="btnTaBortPodd.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -871,99 +802,6 @@
   <data name="&gt;&gt;btnTaBortPodd.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="btnAndraKategori.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="btnAndraKategori.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAndraKategori.Location" type="System.Drawing.Point, System.Drawing">
-    <value>923, 221</value>
-  </data>
-  <data name="btnAndraKategori.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="btnAndraKategori.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 39</value>
-  </data>
-  <data name="btnAndraKategori.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="btnAndraKategori.Text" xml:space="preserve">
-    <value>Ändra</value>
-  </data>
-  <data name="&gt;&gt;btnAndraKategori.Name" xml:space="preserve">
-    <value>btnAndraKategori</value>
-  </data>
-  <data name="&gt;&gt;btnAndraKategori.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAndraKategori.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnAndraKategori.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="cbFiltreraKategori.Location" type="System.Drawing.Point, System.Drawing">
-    <value>754, 273</value>
-  </data>
-  <data name="cbFiltreraKategori.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="cbFiltreraKategori.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 40</value>
-  </data>
-  <data name="cbFiltreraKategori.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="&gt;&gt;cbFiltreraKategori.Name" xml:space="preserve">
-    <value>cbFiltreraKategori</value>
-  </data>
-  <data name="&gt;&gt;cbFiltreraKategori.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbFiltreraKategori.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cbFiltreraKategori.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt, style=Bold</value>
-  </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1704, 496</value>
-  </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>387, 48</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>AVSNITTSBESKRIVNING</value>
-  </data>
-  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="btnAterstallFiltrering.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
@@ -971,13 +809,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnAterstallFiltrering.Location" type="System.Drawing.Point, System.Drawing">
-    <value>923, 273</value>
-  </data>
-  <data name="btnAterstallFiltrering.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>568, 171</value>
   </data>
   <data name="btnAterstallFiltrering.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 39</value>
+    <value>94, 24</value>
   </data>
   <data name="btnAterstallFiltrering.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -1006,20 +841,101 @@
   <data name="&gt;&gt;btnAterstallFiltrering.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="btnAndraKategori.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnAndraKategori.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAndraKategori.Location" type="System.Drawing.Point, System.Drawing">
+    <value>568, 138</value>
+  </data>
+  <data name="btnAndraKategori.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 24</value>
+  </data>
+  <data name="btnAndraKategori.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="btnAndraKategori.Text" xml:space="preserve">
+    <value>Ändra</value>
+  </data>
+  <data name="&gt;&gt;btnAndraKategori.Name" xml:space="preserve">
+    <value>btnAndraKategori</value>
+  </data>
+  <data name="&gt;&gt;btnAndraKategori.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAndraKategori.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnAndraKategori.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cbFiltreraKategori.Location" type="System.Drawing.Point, System.Drawing">
+    <value>464, 171</value>
+  </data>
+  <data name="cbFiltreraKategori.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 28</value>
+  </data>
+  <data name="cbFiltreraKategori.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;cbFiltreraKategori.Name" xml:space="preserve">
+    <value>cbFiltreraKategori</value>
+  </data>
+  <data name="&gt;&gt;cbFiltreraKategori.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbFiltreraKategori.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbFiltreraKategori.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1049, 310</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 30</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>AVSNITTSBESKRIVNING</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>13, 32</value>
+    <value>8, 20</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>2170, 1049</value>
+    <value>1332, 656</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Poddbiblioteket</value>

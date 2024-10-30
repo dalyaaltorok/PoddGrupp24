@@ -59,11 +59,11 @@
             textBocAndraPoddNamn = new TextBox();
             toolTipAndraKategori = new ToolTip(components);
             btnTaBortPodd = new Button();
+            btnAterstallFiltrering = new Button();
             btnAndraKategori = new Button();
             toolTipTaBortPodd = new ToolTip(components);
             cbFiltreraKategori = new ComboBox();
             label2 = new Label();
-            btnAterstallFiltrering = new Button();
             toolTipAterstallFiltering = new ToolTip(components);
             toolTipFrivilligKategori = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)dataGridViewPodd).BeginInit();
@@ -296,6 +296,18 @@
             toolTipAndraKategori.SetToolTip(btnTaBortPodd, resources.GetString("btnTaBortPodd.ToolTip1"));
             btnTaBortPodd.UseVisualStyleBackColor = false;
             // 
+            // btnAterstallFiltrering
+            // 
+            btnAterstallFiltrering.BackColor = Color.LightCoral;
+            btnAterstallFiltrering.FlatAppearance.BorderColor = Color.LightCoral;
+            btnAterstallFiltrering.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnAterstallFiltrering, "btnAterstallFiltrering");
+            btnAterstallFiltrering.ForeColor = Color.FromArgb(64, 0, 0);
+            btnAterstallFiltrering.Name = "btnAterstallFiltrering";
+            toolTipAndraKategori.SetToolTip(btnAterstallFiltrering, resources.GetString("btnAterstallFiltrering.ToolTip"));
+            toolTipAterstallFiltering.SetToolTip(btnAterstallFiltrering, resources.GetString("btnAterstallFiltrering.ToolTip1"));
+            btnAterstallFiltrering.UseVisualStyleBackColor = false;
+            // 
             // btnAndraKategori
             // 
             btnAndraKategori.BackColor = Color.LightCoral;
@@ -323,18 +335,6 @@
             resources.ApplyResources(label2, "label2");
             label2.ForeColor = Color.Firebrick;
             label2.Name = "label2";
-            // 
-            // btnAterstallFiltrering
-            // 
-            btnAterstallFiltrering.BackColor = Color.LightCoral;
-            btnAterstallFiltrering.FlatAppearance.BorderColor = Color.LightCoral;
-            btnAterstallFiltrering.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(btnAterstallFiltrering, "btnAterstallFiltrering");
-            btnAterstallFiltrering.ForeColor = Color.FromArgb(64, 0, 0);
-            btnAterstallFiltrering.Name = "btnAterstallFiltrering";
-            toolTipAndraKategori.SetToolTip(btnAterstallFiltrering, resources.GetString("btnAterstallFiltrering.ToolTip"));
-            toolTipAterstallFiltering.SetToolTip(btnAterstallFiltrering, resources.GetString("btnAterstallFiltrering.ToolTip1"));
-            btnAterstallFiltrering.UseVisualStyleBackColor = false;
             // 
             // toolTipAterstallFiltering
             // 
