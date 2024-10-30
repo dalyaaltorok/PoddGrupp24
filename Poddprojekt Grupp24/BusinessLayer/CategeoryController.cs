@@ -35,6 +35,17 @@ namespace BusinessLayer
             categoryRepo.Delete(index);
         }
 
+        public void UpdateItem(string newName, int index)
+        {
+            var category = categoryRepo.GetAll()[index];
+            if (category !=null)
+            {
+                category.Name = newName;
+                categoryRepo.Update(category, index);
+                categoryRepo.SaveAll();
+            }
+        }
+
     }
 }
 

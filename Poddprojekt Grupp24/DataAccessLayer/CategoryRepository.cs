@@ -44,13 +44,12 @@ namespace DataAccessLayer
             SaveAll();
         }
 
-        public void Update(Category category)
+        public void Update(Category category, int index)
         {
-            for (int i = 0; i < listCategories.Count; i++)
+            if (index >= 0 && index < listCategories.Count)
             {
-                listCategories[i] = category;
+                listCategories[index] = category;
                 SaveAll();
-                return;
             }
 
         }

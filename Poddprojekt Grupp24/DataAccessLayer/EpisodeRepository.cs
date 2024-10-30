@@ -41,7 +41,7 @@ namespace DataAccessLayer
             listEpisodes.Add(episode);
             SaveAll();        }
 
-        public void Update(Episode episode)
+        public void Update(Episode episode, int index)
         {
             for (int i = 0; i < listEpisodes.Count; i++)
             {

@@ -39,6 +39,18 @@ namespace PoddprojektGrupp24
 
         private void button2AndraKat_Click(object sender, EventArgs e)
         {
+            int index = checkedListBoxCat.SelectedIndex;
+            if (index >= 0)
+            {
+                string newName = textBoxNyKategori.Text.Trim();
+                if (!string.IsNullOrEmpty(newName))
+                {
+                    catController.UpdateItem(newName, index);
+                    checkedListBoxCat.Items[index] = newName;
+                    checkedListBoxCat.Items.Clear();
+                    populateCategories();
+                }
+            }
 
         }
 

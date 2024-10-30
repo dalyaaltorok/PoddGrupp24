@@ -44,7 +44,7 @@ namespace DataAccessLayer
             }
         }
 
-        public void Update(Feed feed)
+        public void Update(Feed feed, int index)
         {
             for (int i = 0; i < feedList.Count; i++)
             {
