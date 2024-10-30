@@ -53,7 +53,6 @@
             dataGridViewPodd = new DataGridView();
             checkedListBoxCat = new CheckedListBox();
             lbTilldelaKategori = new Label();
-            toolTipFrivilligKategori = new ToolTip(components);
             lbUpdateringsfrekv = new Label();
             lbFiltreraKategori = new Label();
             lbAndraFiltrera = new Label();
@@ -64,6 +63,9 @@
             toolTipTaBortPodd = new ToolTip(components);
             cbFiltreraKategori = new ComboBox();
             label2 = new Label();
+            btnAterstallFiltrering = new Button();
+            toolTipAterstallFiltering = new ToolTip(components);
+            toolTipFrivilligKategori = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)dataGridViewPodd).BeginInit();
             SuspendLayout();
             // 
@@ -164,6 +166,7 @@
             comboBoxKategori.FormattingEnabled = true;
             resources.ApplyResources(comboBoxKategori, "comboBoxKategori");
             comboBoxKategori.Name = "comboBoxKategori";
+            toolTipFrivilligKategori.SetToolTip(comboBoxKategori, resources.GetString("comboBoxKategori.ToolTip"));
             comboBoxKategori.SelectedIndexChanged += comboBoxKategori_SelectedIndexChanged;
             // 
             // textBoxURL
@@ -247,14 +250,7 @@
             resources.ApplyResources(lbTilldelaKategori, "lbTilldelaKategori");
             lbTilldelaKategori.ForeColor = Color.Firebrick;
             lbTilldelaKategori.Name = "lbTilldelaKategori";
-            toolTipFrivilligKategori.SetToolTip(lbTilldelaKategori, resources.GetString("lbTilldelaKategori.ToolTip"));
             lbTilldelaKategori.Click += label3_Click;
-            // 
-            // toolTipFrivilligKategori
-            // 
-            toolTipFrivilligKategori.AutoPopDelay = 5000;
-            toolTipFrivilligKategori.InitialDelay = 50;
-            toolTipFrivilligKategori.ReshowDelay = 100;
             // 
             // lbUpdateringsfrekv
             // 
@@ -296,8 +292,8 @@
             resources.ApplyResources(btnTaBortPodd, "btnTaBortPodd");
             btnTaBortPodd.ForeColor = Color.FromArgb(64, 0, 0);
             btnTaBortPodd.Name = "btnTaBortPodd";
-            toolTipAndraKategori.SetToolTip(btnTaBortPodd, resources.GetString("btnTaBortPodd.ToolTip"));
-            toolTipTaBortPodd.SetToolTip(btnTaBortPodd, resources.GetString("btnTaBortPodd.ToolTip1"));
+            toolTipTaBortPodd.SetToolTip(btnTaBortPodd, resources.GetString("btnTaBortPodd.ToolTip"));
+            toolTipAndraKategori.SetToolTip(btnTaBortPodd, resources.GetString("btnTaBortPodd.ToolTip1"));
             btnTaBortPodd.UseVisualStyleBackColor = false;
             // 
             // btnAndraKategori
@@ -309,6 +305,12 @@
             btnAndraKategori.ForeColor = Color.FromArgb(64, 0, 0);
             btnAndraKategori.Name = "btnAndraKategori";
             btnAndraKategori.UseVisualStyleBackColor = false;
+            // 
+            // toolTipTaBortPodd
+            // 
+            toolTipTaBortPodd.AutoPopDelay = 5000;
+            toolTipTaBortPodd.InitialDelay = 50;
+            toolTipTaBortPodd.ReshowDelay = 100;
             // 
             // cbFiltreraKategori
             // 
@@ -322,11 +324,36 @@
             label2.ForeColor = Color.Firebrick;
             label2.Name = "label2";
             // 
+            // btnAterstallFiltrering
+            // 
+            btnAterstallFiltrering.BackColor = Color.LightCoral;
+            btnAterstallFiltrering.FlatAppearance.BorderColor = Color.LightCoral;
+            btnAterstallFiltrering.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnAterstallFiltrering, "btnAterstallFiltrering");
+            btnAterstallFiltrering.ForeColor = Color.FromArgb(64, 0, 0);
+            btnAterstallFiltrering.Name = "btnAterstallFiltrering";
+            toolTipAndraKategori.SetToolTip(btnAterstallFiltrering, resources.GetString("btnAterstallFiltrering.ToolTip"));
+            toolTipAterstallFiltering.SetToolTip(btnAterstallFiltrering, resources.GetString("btnAterstallFiltrering.ToolTip1"));
+            btnAterstallFiltrering.UseVisualStyleBackColor = false;
+            // 
+            // toolTipAterstallFiltering
+            // 
+            toolTipAterstallFiltering.AutoPopDelay = 5000;
+            toolTipAterstallFiltering.InitialDelay = 50;
+            toolTipAterstallFiltering.ReshowDelay = 100;
+            // 
+            // toolTipFrivilligKategori
+            // 
+            toolTipFrivilligKategori.AutoPopDelay = 5000;
+            toolTipFrivilligKategori.InitialDelay = 50;
+            toolTipFrivilligKategori.ReshowDelay = 100;
+            // 
             // Poddbibliotek
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
+            Controls.Add(btnAterstallFiltrering);
             Controls.Add(label2);
             Controls.Add(lbFiltreraKategori);
             Controls.Add(cbFiltreraKategori);
@@ -384,7 +411,6 @@
         private DataGridView dataGridViewPodd;
         private CheckedListBox checkedListBoxCat;
         private Label lbTilldelaKategori;
-        private ToolTip toolTipFrivilligKategori;
         private Label lbAndraFiltrera;
         private TextBox textBocAndraPoddNamn;
         private ToolTip toolTipAndraKategori;
@@ -395,5 +421,8 @@
         private ComboBox cbFiltreraKategori;
         private Label lbFiltreraKategori;
         private Label label2;
+        private Button btnAterstallFiltrering;
+        private ToolTip toolTipAterstallFiltering;
+        private ToolTip toolTipFrivilligKategori;
     }
 }

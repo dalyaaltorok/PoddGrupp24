@@ -165,6 +165,11 @@ namespace PoddprojektGrupp24
         {
 
         }
+
+        private void toolTipFrivilligKategori_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }
 
