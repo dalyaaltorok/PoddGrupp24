@@ -35,34 +35,35 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Rubrik = new Label();
             label1 = new Label();
-            textBox1 = new TextBox();
-            button1LaggTillKat = new Button();
-            button2AndraKat = new Button();
-            button3TaBortKat = new Button();
+            textBoxNyKategori = new TextBox();
+            btnLaggTillKat = new Button();
+            btnAndraKat = new Button();
+            btnTaBortKat = new Button();
             richTextBoxBeskrivning = new RichTextBox();
-            AvsnittLabel = new Label();
+            lbAvsnitt = new Label();
             listBoxAvsnitt = new ListBox();
             lbLaggTillPoddcast = new Label();
             textBoxPoddnamn = new TextBox();
-            comboBoxMinuter = new ComboBox();
+            cbUpdateringsfrekvens = new ComboBox();
             comboBoxKategori = new ComboBox();
             textBoxURL = new TextBox();
             btnLaggTillPodd = new Button();
-            buttonAndraNamn = new Button();
-            buttonTaBortNamn = new Button();
-            buttonAterstall = new Button();
+            btnAndraNamn = new Button();
             comboBoxKat = new ComboBox();
             dataGridViewPodd = new DataGridView();
-            LabelSenast = new Label();
-            LabelSenastChange = new Label();
             checkedListBoxCat = new CheckedListBox();
-            label2 = new Label();
             lbTilldelaKategori = new Label();
             toolTipFrivilligKategori = new ToolTip(components);
+            lbUpdateringsfrekv = new Label();
+            lbFiltreraKategori = new Label();
             lbAndraFiltrera = new Label();
             textBocAndraPoddNamn = new TextBox();
             toolTipAndraKategori = new ToolTip(components);
+            btnTaBortPodd = new Button();
             btnAndraKategori = new Button();
+            toolTipTaBortPodd = new ToolTip(components);
+            cbFiltreraKategori = new ComboBox();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPodd).BeginInit();
             SuspendLayout();
             // 
@@ -80,56 +81,56 @@
             label1.Name = "label1";
             label1.Click += label1_Click;
             // 
-            // textBox1
+            // textBoxNyKategori
             // 
-            resources.ApplyResources(textBox1, "textBox1");
-            textBox1.Name = "textBox1";
-            textBox1.TextChanged += textBox1_TextChanged;
+            resources.ApplyResources(textBoxNyKategori, "textBoxNyKategori");
+            textBoxNyKategori.Name = "textBoxNyKategori";
+            textBoxNyKategori.TextChanged += textBox1_TextChanged;
             // 
-            // button1LaggTillKat
+            // btnLaggTillKat
             // 
-            button1LaggTillKat.BackColor = Color.LightCoral;
-            button1LaggTillKat.FlatAppearance.BorderColor = Color.LightCoral;
-            button1LaggTillKat.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(button1LaggTillKat, "button1LaggTillKat");
-            button1LaggTillKat.ForeColor = Color.FromArgb(64, 0, 0);
-            button1LaggTillKat.Name = "button1LaggTillKat";
-            button1LaggTillKat.UseVisualStyleBackColor = false;
-            button1LaggTillKat.Click += button1LaggTillKat_Click;
+            btnLaggTillKat.BackColor = Color.LightCoral;
+            btnLaggTillKat.FlatAppearance.BorderColor = Color.LightCoral;
+            btnLaggTillKat.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnLaggTillKat, "btnLaggTillKat");
+            btnLaggTillKat.ForeColor = Color.FromArgb(64, 0, 0);
+            btnLaggTillKat.Name = "btnLaggTillKat";
+            btnLaggTillKat.UseVisualStyleBackColor = false;
+            btnLaggTillKat.Click += button1LaggTillKat_Click;
             // 
-            // button2AndraKat
+            // btnAndraKat
             // 
-            button2AndraKat.BackColor = Color.LightCoral;
-            button2AndraKat.FlatAppearance.BorderColor = Color.LightCoral;
-            button2AndraKat.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(button2AndraKat, "button2AndraKat");
-            button2AndraKat.ForeColor = Color.FromArgb(64, 0, 0);
-            button2AndraKat.Name = "button2AndraKat";
-            button2AndraKat.UseVisualStyleBackColor = false;
-            button2AndraKat.Click += button2AndraKat_Click;
+            btnAndraKat.BackColor = Color.LightCoral;
+            btnAndraKat.FlatAppearance.BorderColor = Color.LightCoral;
+            btnAndraKat.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnAndraKat, "btnAndraKat");
+            btnAndraKat.ForeColor = Color.FromArgb(64, 0, 0);
+            btnAndraKat.Name = "btnAndraKat";
+            btnAndraKat.UseVisualStyleBackColor = false;
+            btnAndraKat.Click += button2AndraKat_Click;
             // 
-            // button3TaBortKat
+            // btnTaBortKat
             // 
-            button3TaBortKat.BackColor = Color.LightCoral;
-            button3TaBortKat.FlatAppearance.BorderColor = Color.LightCoral;
-            button3TaBortKat.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(button3TaBortKat, "button3TaBortKat");
-            button3TaBortKat.ForeColor = Color.FromArgb(64, 0, 0);
-            button3TaBortKat.Name = "button3TaBortKat";
-            button3TaBortKat.UseVisualStyleBackColor = false;
-            button3TaBortKat.Click += button3TaBortKat_Click;
+            btnTaBortKat.BackColor = Color.LightCoral;
+            btnTaBortKat.FlatAppearance.BorderColor = Color.LightCoral;
+            btnTaBortKat.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnTaBortKat, "btnTaBortKat");
+            btnTaBortKat.ForeColor = Color.FromArgb(64, 0, 0);
+            btnTaBortKat.Name = "btnTaBortKat";
+            btnTaBortKat.UseVisualStyleBackColor = false;
+            btnTaBortKat.Click += button3TaBortKat_Click;
             // 
             // richTextBoxBeskrivning
             // 
             resources.ApplyResources(richTextBoxBeskrivning, "richTextBoxBeskrivning");
             richTextBoxBeskrivning.Name = "richTextBoxBeskrivning";
             // 
-            // AvsnittLabel
+            // lbAvsnitt
             // 
-            resources.ApplyResources(AvsnittLabel, "AvsnittLabel");
-            AvsnittLabel.ForeColor = Color.Firebrick;
-            AvsnittLabel.Name = "AvsnittLabel";
-            AvsnittLabel.Click += label2_Click;
+            resources.ApplyResources(lbAvsnitt, "lbAvsnitt");
+            lbAvsnitt.ForeColor = Color.Firebrick;
+            lbAvsnitt.Name = "lbAvsnitt";
+            lbAvsnitt.Click += label2_Click;
             // 
             // listBoxAvsnitt
             // 
@@ -151,12 +152,12 @@
             textBoxPoddnamn.Name = "textBoxPoddnamn";
             textBoxPoddnamn.TextChanged += textBoxNamn_TextChanged;
             // 
-            // comboBoxMinuter
+            // cbUpdateringsfrekvens
             // 
-            comboBoxMinuter.FormattingEnabled = true;
-            resources.ApplyResources(comboBoxMinuter, "comboBoxMinuter");
-            comboBoxMinuter.Name = "comboBoxMinuter";
-            comboBoxMinuter.SelectedIndexChanged += comboBoxMinuter_SelectedIndexChanged;
+            cbUpdateringsfrekvens.FormattingEnabled = true;
+            resources.ApplyResources(cbUpdateringsfrekvens, "cbUpdateringsfrekvens");
+            cbUpdateringsfrekvens.Name = "cbUpdateringsfrekvens";
+            cbUpdateringsfrekvens.SelectedIndexChanged += comboBoxMinuter_SelectedIndexChanged;
             // 
             // comboBoxKategori
             // 
@@ -180,36 +181,15 @@
             btnLaggTillPodd.Name = "btnLaggTillPodd";
             btnLaggTillPodd.UseVisualStyleBackColor = false;
             // 
-            // buttonAndraNamn
+            // btnAndraNamn
             // 
-            buttonAndraNamn.BackColor = Color.LightCoral;
-            buttonAndraNamn.FlatAppearance.BorderColor = Color.LightCoral;
-            buttonAndraNamn.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(buttonAndraNamn, "buttonAndraNamn");
-            buttonAndraNamn.ForeColor = Color.FromArgb(64, 0, 0);
-            buttonAndraNamn.Name = "buttonAndraNamn";
-            buttonAndraNamn.UseVisualStyleBackColor = false;
-            // 
-            // buttonTaBortNamn
-            // 
-            buttonTaBortNamn.BackColor = Color.LightCoral;
-            buttonTaBortNamn.FlatAppearance.BorderColor = Color.LightCoral;
-            buttonTaBortNamn.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(buttonTaBortNamn, "buttonTaBortNamn");
-            buttonTaBortNamn.ForeColor = Color.FromArgb(64, 0, 0);
-            buttonTaBortNamn.Name = "buttonTaBortNamn";
-            buttonTaBortNamn.UseVisualStyleBackColor = false;
-            // 
-            // buttonAterstall
-            // 
-            buttonAterstall.BackColor = Color.LightCoral;
-            buttonAterstall.FlatAppearance.BorderColor = Color.LightCoral;
-            buttonAterstall.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(buttonAterstall, "buttonAterstall");
-            buttonAterstall.ForeColor = Color.FromArgb(64, 0, 0);
-            buttonAterstall.Name = "buttonAterstall";
-            buttonAterstall.UseVisualStyleBackColor = false;
-            buttonAterstall.Click += buttonAterstall_Click;
+            btnAndraNamn.BackColor = Color.LightCoral;
+            btnAndraNamn.FlatAppearance.BorderColor = Color.LightCoral;
+            btnAndraNamn.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnAndraNamn, "btnAndraNamn");
+            btnAndraNamn.ForeColor = Color.FromArgb(64, 0, 0);
+            btnAndraNamn.Name = "btnAndraNamn";
+            btnAndraNamn.UseVisualStyleBackColor = false;
             // 
             // comboBoxKat
             // 
@@ -220,7 +200,9 @@
             // 
             // dataGridViewPodd
             // 
-            resources.ApplyResources(dataGridViewPodd, "dataGridViewPodd");
+            dataGridViewPodd.AllowUserToAddRows = false;
+            dataGridViewPodd.AllowUserToDeleteRows = false;
+            dataGridViewPodd.AllowUserToResizeRows = false;
             dataGridViewPodd.BackgroundColor = Color.White;
             dataGridViewPodd.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -241,6 +223,7 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridViewPodd.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewPodd.GridColor = Color.White;
+            resources.ApplyResources(dataGridViewPodd, "dataGridViewPodd");
             dataGridViewPodd.Name = "dataGridViewPodd";
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Control;
@@ -251,18 +234,6 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dataGridViewPodd.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             // 
-            // LabelSenast
-            // 
-            resources.ApplyResources(LabelSenast, "LabelSenast");
-            LabelSenast.ForeColor = Color.Firebrick;
-            LabelSenast.Name = "LabelSenast";
-            // 
-            // LabelSenastChange
-            // 
-            resources.ApplyResources(LabelSenastChange, "LabelSenastChange");
-            LabelSenastChange.ForeColor = Color.Firebrick;
-            LabelSenastChange.Name = "LabelSenastChange";
-            // 
             // checkedListBoxCat
             // 
             checkedListBoxCat.CheckOnClick = true;
@@ -270,12 +241,6 @@
             resources.ApplyResources(checkedListBoxCat, "checkedListBoxCat");
             checkedListBoxCat.Name = "checkedListBoxCat";
             checkedListBoxCat.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
-            // 
-            // label2
-            // 
-            resources.ApplyResources(label2, "label2");
-            label2.Name = "label2";
-            label2.Click += label2_Click_1;
             // 
             // lbTilldelaKategori
             // 
@@ -290,6 +255,20 @@
             toolTipFrivilligKategori.AutoPopDelay = 5000;
             toolTipFrivilligKategori.InitialDelay = 50;
             toolTipFrivilligKategori.ReshowDelay = 100;
+            // 
+            // lbUpdateringsfrekv
+            // 
+            resources.ApplyResources(lbUpdateringsfrekv, "lbUpdateringsfrekv");
+            lbUpdateringsfrekv.ForeColor = Color.Firebrick;
+            lbUpdateringsfrekv.Name = "lbUpdateringsfrekv";
+            lbUpdateringsfrekv.Click += label3_Click_2;
+            // 
+            // lbFiltreraKategori
+            // 
+            resources.ApplyResources(lbFiltreraKategori, "lbFiltreraKategori");
+            lbFiltreraKategori.ForeColor = Color.Firebrick;
+            lbFiltreraKategori.Name = "lbFiltreraKategori";
+            lbFiltreraKategori.Click += lbFiltreraKategori_Click;
             // 
             // lbAndraFiltrera
             // 
@@ -309,6 +288,18 @@
             toolTipAndraKategori.InitialDelay = 50;
             toolTipAndraKategori.ReshowDelay = 100;
             // 
+            // btnTaBortPodd
+            // 
+            btnTaBortPodd.BackColor = Color.LightCoral;
+            btnTaBortPodd.FlatAppearance.BorderColor = Color.LightCoral;
+            btnTaBortPodd.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnTaBortPodd, "btnTaBortPodd");
+            btnTaBortPodd.ForeColor = Color.FromArgb(64, 0, 0);
+            btnTaBortPodd.Name = "btnTaBortPodd";
+            toolTipAndraKategori.SetToolTip(btnTaBortPodd, resources.GetString("btnTaBortPodd.ToolTip"));
+            toolTipTaBortPodd.SetToolTip(btnTaBortPodd, resources.GetString("btnTaBortPodd.ToolTip1"));
+            btnTaBortPodd.UseVisualStyleBackColor = false;
+            // 
             // btnAndraKategori
             // 
             btnAndraKategori.BackColor = Color.LightCoral;
@@ -319,37 +310,49 @@
             btnAndraKategori.Name = "btnAndraKategori";
             btnAndraKategori.UseVisualStyleBackColor = false;
             // 
+            // cbFiltreraKategori
+            // 
+            cbFiltreraKategori.FormattingEnabled = true;
+            resources.ApplyResources(cbFiltreraKategori, "cbFiltreraKategori");
+            cbFiltreraKategori.Name = "cbFiltreraKategori";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(label2, "label2");
+            label2.ForeColor = Color.Firebrick;
+            label2.Name = "label2";
+            // 
             // Poddbibliotek
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
+            Controls.Add(label2);
+            Controls.Add(lbFiltreraKategori);
+            Controls.Add(cbFiltreraKategori);
+            Controls.Add(lbUpdateringsfrekv);
+            Controls.Add(btnTaBortPodd);
             Controls.Add(btnAndraKategori);
             Controls.Add(textBocAndraPoddNamn);
             Controls.Add(lbAndraFiltrera);
             Controls.Add(lbTilldelaKategori);
-            Controls.Add(label2);
             Controls.Add(checkedListBoxCat);
-            Controls.Add(LabelSenastChange);
-            Controls.Add(LabelSenast);
             Controls.Add(dataGridViewPodd);
             Controls.Add(comboBoxKat);
-            Controls.Add(buttonAterstall);
-            Controls.Add(buttonTaBortNamn);
-            Controls.Add(buttonAndraNamn);
+            Controls.Add(btnAndraNamn);
             Controls.Add(btnLaggTillPodd);
             Controls.Add(textBoxURL);
             Controls.Add(comboBoxKategori);
-            Controls.Add(comboBoxMinuter);
+            Controls.Add(cbUpdateringsfrekvens);
             Controls.Add(textBoxPoddnamn);
             Controls.Add(lbLaggTillPoddcast);
             Controls.Add(listBoxAvsnitt);
-            Controls.Add(AvsnittLabel);
+            Controls.Add(lbAvsnitt);
             Controls.Add(richTextBoxBeskrivning);
-            Controls.Add(button3TaBortKat);
-            Controls.Add(button2AndraKat);
-            Controls.Add(button1LaggTillKat);
-            Controls.Add(textBox1);
+            Controls.Add(btnTaBortKat);
+            Controls.Add(btnAndraKat);
+            Controls.Add(btnLaggTillKat);
+            Controls.Add(textBoxNyKategori);
             Controls.Add(label1);
             Controls.Add(Rubrik);
             Name = "Poddbibliotek";
@@ -363,33 +366,34 @@
 
         private Label Rubrik;
         private Label label1;
-        private TextBox textBox1;
-        private Button button1LaggTillKat;
-        private Button button2AndraKat;
-        private Button button3TaBortKat;
+        private TextBox textBoxNyKategori;
+        private Button btnLaggTillKat;
+        private Button btnAndraKat;
+        private Button btnTaBortKat;
         private RichTextBox richTextBoxBeskrivning;
-        private Label AvsnittLabel;
+        private Label lbAvsnitt;
         private ListBox listBoxAvsnitt;
         private Label lbLaggTillPoddcast;
         private TextBox textBoxPoddnamn;
-        private ComboBox comboBoxMinuter;
+        private ComboBox cbUpdateringsfrekvens;
         private ComboBox comboBoxKategori;
         private TextBox textBoxURL;
         private Button btnLaggTillPodd;
-        private Button buttonAndraNamn;
-        private Button buttonTaBortNamn;
-        private Button buttonAterstall;
+        private Button btnAndraNamn;
         private ComboBox comboBoxKat;
         private DataGridView dataGridViewPodd;
-        private Label LabelSenast;
-        private Label LabelSenastChange;
         private CheckedListBox checkedListBoxCat;
-        private Label label2;
         private Label lbTilldelaKategori;
         private ToolTip toolTipFrivilligKategori;
         private Label lbAndraFiltrera;
         private TextBox textBocAndraPoddNamn;
         private ToolTip toolTipAndraKategori;
         private Button btnAndraKategori;
+        private Button btnTaBortPodd;
+        private ToolTip toolTipTaBortPodd;
+        private Label lbUpdateringsfrekv;
+        private ComboBox cbFiltreraKategori;
+        private Label lbFiltreraKategori;
+        private Label label2;
     }
 }

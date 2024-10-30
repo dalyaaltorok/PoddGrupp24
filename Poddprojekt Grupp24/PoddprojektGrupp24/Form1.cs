@@ -31,7 +31,7 @@ namespace PoddprojektGrupp24
 
         private void button1LaggTillKat_Click(object sender, EventArgs e)
         {
-            String name = textBox1.Text.Trim(); //Ser till att ta bort onädiga spaces i början och slutet av kategorinamnfältet.
+            String name = textBoxNyKategori.Text.Trim(); //Ser till att ta bort onädiga spaces i början och slutet av kategorinamnfältet.
             catController.Add(name);
             checkedListBoxCat.Items.Clear(); //Rensar boxen innan den populeras på nytt i nedan metod.
             populateCategories();
@@ -152,6 +152,16 @@ namespace PoddprojektGrupp24
         }
 
         private void lbUppdateringsfrekv_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbFiltreraKategori_Click(object sender, EventArgs e)
         {
 
         }
