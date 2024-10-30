@@ -11,7 +11,7 @@ namespace DataAccessLayer
         T GetByName(String  name);
         List<T> GetAll();
         void Add(T element);
-        void Update(T element);
+        void Update(T element, int index);
         void Delete(int index);
         void SaveAll();
         
