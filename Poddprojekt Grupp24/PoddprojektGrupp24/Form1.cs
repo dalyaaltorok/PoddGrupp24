@@ -9,11 +9,11 @@ namespace PoddprojektGrupp24
 {
     public partial class Poddbibliotek : Form
     {
-        CategeoryController catController;
+        CategoryController catController;
         ValidationPL validator;
         public Poddbibliotek()
         {
-            catController = new CategeoryController("Category.xml");
+            catController = new CategoryController("Category.xml");
             validator = new ValidationPL("Category.xml");
             InitializeComponent();
             populateCategories();

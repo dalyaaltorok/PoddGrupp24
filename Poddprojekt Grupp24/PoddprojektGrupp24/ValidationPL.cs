@@ -13,13 +13,13 @@ namespace PresentationLayer
     {
 
         FeedController feedController;
-        CategeoryController categoryController;
+        CategoryController categoryController;
         HttpClient httpClient;
 
         public ValidationPL(string path)
         {
             feedController = new FeedController(path);
-            categoryController = new CategeoryController();
+            categoryController = new CategoryController();
             httpClient = new HttpClient();
         }
         public async Task<bool> ValidateRSSUrlAsync(string url)

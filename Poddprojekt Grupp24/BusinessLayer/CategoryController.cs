@@ -8,16 +8,16 @@ using Models;
 
 namespace BusinessLayer
 {
-    public class CategeoryController
+    public class CategoryController
     {
         CategoryRepository categoryRepo;
 
-        public CategeoryController(String path)
+        public CategoryController(String path)
         {
             categoryRepo = new CategoryRepository(path);
         }
 
-        public CategeoryController() { }
+        public CategoryController() { }
 
         public void Add(String name)
         {
