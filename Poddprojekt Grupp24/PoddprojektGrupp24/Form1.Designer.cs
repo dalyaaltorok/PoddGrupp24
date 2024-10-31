@@ -308,8 +308,10 @@
             resources.ApplyResources(btnResetFilters, "btnResetFilters");
             btnResetFilters.ForeColor = Color.FromArgb(64, 0, 0);
             btnResetFilters.Name = "btnResetFilters";
-            toolTipResetFilters.SetToolTip(btnResetFilters, resources.GetString("btnResetFilters.ToolTip"));
+            toolTipChangeFeedCategory.SetToolTip(btnResetFilters, resources.GetString("btnResetFilters.ToolTip"));
+            toolTipResetFilters.SetToolTip(btnResetFilters, resources.GetString("btnResetFilters.ToolTip1"));
             btnResetFilters.UseVisualStyleBackColor = false;
+            btnResetFilters.Click += btnResetFilters_Click;
             // 
             // btnChangeCategory
             // 
@@ -332,6 +334,7 @@
             cbFilterCategory.FormattingEnabled = true;
             resources.ApplyResources(cbFilterCategory, "cbFilterCategory");
             cbFilterCategory.Name = "cbFilterCategory";
+            cbFilterCategory.SelectedIndexChanged += cbFilterCategory_SelectedIndexChanged;
             // 
             // label2
             // 

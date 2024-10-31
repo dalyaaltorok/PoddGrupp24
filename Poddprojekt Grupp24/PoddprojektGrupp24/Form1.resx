@@ -461,7 +461,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="cbUpdateFrequencyDataGridViewItems.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 40</value>
+    <value>155, 40</value>
   </data>
   <data name="cbUpdateFrequencyDataGridViewItems.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -572,13 +572,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnChangeFeedName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>923, 173</value>
+    <value>944, 173</value>
   </data>
   <data name="btnChangeFeedName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
   <data name="btnChangeFeedName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 38</value>
+    <value>132, 38</value>
   </data>
   <data name="btnChangeFeedName.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -896,13 +896,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnResetFilters.Location" type="System.Drawing.Point, System.Drawing">
-    <value>923, 334</value>
+    <value>944, 334</value>
   </data>
   <data name="btnResetFilters.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
   <data name="btnResetFilters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 38</value>
+    <value>132, 38</value>
   </data>
   <data name="btnResetFilters.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -910,10 +910,13 @@
   <data name="btnResetFilters.Text" xml:space="preserve">
     <value>Återställ</value>
   </data>
+  <data name="btnResetFilters.ToolTip" xml:space="preserve">
+    <value>Tar bort all filtrering och återställer till standardvy</value>
+  </data>
   <metadata name="toolTipResetFilters.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1153, 28</value>
   </metadata>
-  <data name="btnResetFilters.ToolTip" xml:space="preserve">
+  <data name="btnResetFilters.ToolTip1" xml:space="preserve">
     <value>Tar bort all filtrering och återställer till standardvy</value>
   </data>
   <data name="&gt;&gt;btnResetFilters.Name" xml:space="preserve">
@@ -935,13 +938,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnChangeCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>923, 221</value>
+    <value>944, 221</value>
   </data>
   <data name="btnChangeCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
   <data name="btnChangeCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 38</value>
+    <value>132, 38</value>
   </data>
   <data name="btnChangeCategory.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>

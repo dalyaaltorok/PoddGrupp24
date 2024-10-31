@@ -13,7 +13,7 @@ namespace PoddprojektGrupp24
             catController = new CategeoryController("Category.xml");
             InitializeComponent();
             populateCategories();
-            
+
         }
 
         private void populateCategories()
@@ -61,7 +61,7 @@ namespace PoddprojektGrupp24
                     checkedListBoxUserCategories.Items[index] = newName;
                     checkedListBoxUserCategories.Items.Clear();
                     populateCategories();
-                    
+
                 }
             }
 
@@ -198,7 +198,18 @@ namespace PoddprojektGrupp24
 
         private void comboBoxKat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnResetFilters_Click(object sender, EventArgs e)
+        {
+            cbFilterCategory.SelectedIndex = -1;
+            cbUpdateFrequencyDataGridViewItems.SelectedIndex = -1;
+        }
+
+        private void cbFilterCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
