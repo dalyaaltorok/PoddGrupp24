@@ -191,11 +191,6 @@ namespace PoddprojektGrupp24
 
         }
 
-        private void toolTipFrivilligKategori_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
         private void comboBoxKat_SelectedIndexChanged(object sender, EventArgs e)
         {
 

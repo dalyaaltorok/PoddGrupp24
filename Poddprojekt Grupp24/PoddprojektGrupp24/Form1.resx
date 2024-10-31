@@ -150,34 +150,34 @@
   <data name="&gt;&gt;Rubrik.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbKategori.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lbKategori.Location" type="System.Drawing.Point, System.Drawing">
     <value>1818, 118</value>
   </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="lbKategori.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbKategori.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 51</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbKategori.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="lbKategori.Text" xml:space="preserve">
     <value>KATEGORI</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;lbKategori.Name" xml:space="preserve">
+    <value>lbKategori</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbKategori.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbKategori.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbKategori.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
   <data name="tbNewCategoryName.Location" type="System.Drawing.Point, System.Drawing">
@@ -478,6 +478,9 @@
   <data name="&gt;&gt;cbUpdateFrequencyDataGridViewItems.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <metadata name="toolTipFrivilligKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1500, 23</value>
+  </metadata>
   <data name="cbAssignFeedCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>271, 270</value>
   </data>
@@ -490,9 +493,6 @@
   <data name="cbAssignFeedCategory.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <metadata name="toolTipFrivilligKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1500, 23</value>
-  </metadata>
   <data name="cbAssignFeedCategory.ToolTip" xml:space="preserve">
     <value>Frivilligt att ange kategori</value>
   </data>
@@ -601,6 +601,9 @@
   <metadata name="cbChangeFeedCategory.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="toolTipChangeFeedCategory.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>376, 27</value>
+  </metadata>
   <data name="cbChangeFeedCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>561, 221</value>
   </data>
@@ -613,9 +616,6 @@
   <data name="cbChangeFeedCategory.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <metadata name="toolTipChangeFeedCategory.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>376, 27</value>
-  </metadata>
   <data name="cbChangeFeedCategory.ToolTip" xml:space="preserve">
     <value>Välj en podd i listan för att ändra kategori</value>
   </data>
@@ -814,6 +814,9 @@
   <data name="&gt;&gt;lbAndraFiltrera.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="toolTipChangeFeedName.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>18, 22</value>
+  </metadata>
   <data name="tbChangeFeedName.Location" type="System.Drawing.Point, System.Drawing">
     <value>561, 173</value>
   </data>
@@ -829,9 +832,6 @@
   <data name="tbChangeFeedName.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <metadata name="toolTipChangeFeedName.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>18, 22</value>
-  </metadata>
   <data name="tbChangeFeedName.ToolTip" xml:space="preserve">
     <value>Välj en podd i listan för att ändra namnet</value>
   </data>
@@ -847,6 +847,12 @@
   <data name="&gt;&gt;tbChangeFeedName.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="toolTipChangeFeedCategory.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>376, 27</value>
+  </metadata>
+  <metadata name="toolTipRemoveSelectedFeed.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>770, 22</value>
+  </metadata>
   <data name="btnRemoveSelectedFeed.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
@@ -868,9 +874,6 @@
   <data name="btnRemoveSelectedFeed.Text" xml:space="preserve">
     <value>Ta bort podd</value>
   </data>
-  <metadata name="toolTipRemoveSelectedFeed.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>770, 22</value>
-  </metadata>
   <data name="btnRemoveSelectedFeed.ToolTip" xml:space="preserve">
     <value>Välj en podd i listan att ta bort</value>
   </data>
@@ -889,6 +892,9 @@
   <data name="&gt;&gt;btnRemoveSelectedFeed.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="toolTipResetFilters.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1153, 28</value>
+  </metadata>
   <data name="btnResetFilters.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
@@ -913,9 +919,6 @@
   <data name="btnResetFilters.ToolTip" xml:space="preserve">
     <value>Tar bort all filtrering och återställer till standardvy</value>
   </data>
-  <metadata name="toolTipResetFilters.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1153, 28</value>
-  </metadata>
   <data name="btnResetFilters.ToolTip1" xml:space="preserve">
     <value>Tar bort all filtrering och återställer till standardvy</value>
   </data>
@@ -964,6 +967,9 @@
   <data name="&gt;&gt;btnChangeCategory.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="toolTipRemoveSelectedFeed.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>770, 22</value>
+  </metadata>
   <data name="cbFilterCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>774, 274</value>
   </data>
@@ -988,42 +994,51 @@
   <data name="&gt;&gt;cbFilterCategory.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbAvsnittsbeskrivning.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lbAvsnittsbeskrivning.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lbAvsnittsbeskrivning.Location" type="System.Drawing.Point, System.Drawing">
     <value>1705, 496</value>
   </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="lbAvsnittsbeskrivning.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbAvsnittsbeskrivning.Size" type="System.Drawing.Size, System.Drawing">
     <value>387, 48</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbAvsnittsbeskrivning.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="lbAvsnittsbeskrivning.Text" xml:space="preserve">
     <value>AVSNITTSBESKRIVNING</value>
   </data>
-  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lbAvsnittsbeskrivning.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="&gt;&gt;lbAvsnittsbeskrivning.Name" xml:space="preserve">
+    <value>lbAvsnittsbeskrivning</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbAvsnittsbeskrivning.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbAvsnittsbeskrivning.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lbAvsnittsbeskrivning.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="toolTipFrivilligKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1500, 23</value>
+  </metadata>
+  <metadata name="toolTipChangeFeedName.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>18, 22</value>
+  </metadata>
+  <metadata name="toolTipResetFilters.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1153, 28</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

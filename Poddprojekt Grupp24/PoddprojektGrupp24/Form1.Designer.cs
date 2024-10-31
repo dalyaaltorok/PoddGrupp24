@@ -30,11 +30,11 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Poddbibliotek));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             Rubrik = new Label();
-            label1 = new Label();
+            lbKategori = new Label();
             tbNewCategoryName = new TextBox();
             btnLaggTillKat = new Button();
             btnAndraKat = new Button();
@@ -63,7 +63,7 @@
             btnChangeCategory = new Button();
             toolTipRemoveSelectedFeed = new ToolTip(components);
             cbFilterCategory = new ComboBox();
-            label2 = new Label();
+            lbAvsnittsbeskrivning = new Label();
             toolTipFrivilligKategori = new ToolTip(components);
             toolTipChangeFeedName = new ToolTip(components);
             toolTipResetFilters = new ToolTip(components);
@@ -77,12 +77,12 @@
             Rubrik.Name = "Rubrik";
             Rubrik.Click += Rubrik_Click;
             // 
-            // label1
+            // lbKategori
             // 
-            resources.ApplyResources(label1, "label1");
-            label1.ForeColor = Color.Firebrick;
-            label1.Name = "label1";
-            label1.Click += label1_Click;
+            resources.ApplyResources(lbKategori, "lbKategori");
+            lbKategori.ForeColor = Color.Firebrick;
+            lbKategori.Name = "lbKategori";
+            lbKategori.Click += label1_Click;
             // 
             // tbNewCategoryName
             // 
@@ -211,34 +211,34 @@
             dataGridViewPodcastList.AllowUserToResizeRows = false;
             dataGridViewPodcastList.BackgroundColor = Color.White;
             dataGridViewPodcastList.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridViewPodcastList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridViewPodcastList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewPodcastList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridViewPodcastList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridViewPodcastList.DefaultCellStyle = dataGridViewCellStyle5;
             dataGridViewPodcastList.GridColor = Color.White;
             resources.ApplyResources(dataGridViewPodcastList, "dataGridViewPodcastList");
             dataGridViewPodcastList.Name = "dataGridViewPodcastList";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridViewPodcastList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridViewPodcastList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             // 
             // checkedListBoxUserCategories
             // 
@@ -336,11 +336,11 @@
             cbFilterCategory.Name = "cbFilterCategory";
             cbFilterCategory.SelectedIndexChanged += cbFilterCategory_SelectedIndexChanged;
             // 
-            // label2
+            // lbAvsnittsbeskrivning
             // 
-            resources.ApplyResources(label2, "label2");
-            label2.ForeColor = Color.Firebrick;
-            label2.Name = "label2";
+            resources.ApplyResources(lbAvsnittsbeskrivning, "lbAvsnittsbeskrivning");
+            lbAvsnittsbeskrivning.ForeColor = Color.Firebrick;
+            lbAvsnittsbeskrivning.Name = "lbAvsnittsbeskrivning";
             // 
             // toolTipFrivilligKategori
             // 
@@ -366,7 +366,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
             Controls.Add(btnResetFilters);
-            Controls.Add(label2);
+            Controls.Add(lbAvsnittsbeskrivning);
             Controls.Add(lbFiltreraKategori);
             Controls.Add(cbFilterCategory);
             Controls.Add(lbUpdateringsfrekv);
@@ -392,7 +392,7 @@
             Controls.Add(btnAndraKat);
             Controls.Add(btnLaggTillKat);
             Controls.Add(tbNewCategoryName);
-            Controls.Add(label1);
+            Controls.Add(lbKategori);
             Controls.Add(Rubrik);
             Name = "Poddbibliotek";
             Load += Form1_Load;
@@ -404,7 +404,7 @@
         #endregion
 
         private Label Rubrik;
-        private Label label1;
+        private Label lbKategori;
         private TextBox tbNewCategoryName;
         private Button btnLaggTillKat;
         private Button btnAndraKat;
@@ -432,7 +432,7 @@
         private Label lbUpdateringsfrekv;
         private ComboBox cbFilterCategory;
         private Label lbFiltreraKategori;
-        private Label label2;
+        private Label lbAvsnittsbeskrivning;
         private Button btnResetFilters;
         private ToolTip toolTipFrivilligKategori;
         private ToolTip toolTipChangeFeedName;
