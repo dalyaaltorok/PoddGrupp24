@@ -13,14 +13,25 @@ namespace PoddprojektGrupp24
             catController = new CategeoryController("Category.xml");
             InitializeComponent();
             populateCategories();
+            populateCategoryChangeComboBox();
         }
 
         private void populateCategories()
         {
+            comboBoxKat.Items.Clear(); //Rensar CB:n (listan) och fyller på den på nytt. Användbart när användare gör en förändring i kategorilistan efter instansiering av ett formulär.
             List<Category> list = catController.GetAll();
             foreach (Category category in list)
             {
                 checkedListBoxCat.Items.Add(category.Name, false); //Lägger till en item i kategoriboxen. "false" innebär att ett item inte ska vara iklickat efter att det skapats.  
+            }
+        }
+
+        public void populateCategoryChangeComboBox()
+        {
+            List<Category> list = catController.GetAll();
+            foreach (Category category in list)
+            {
+                comboBoxKat.Items.Add(category.Name);
             }
         }
 
@@ -35,6 +46,10 @@ namespace PoddprojektGrupp24
             catController.Add(name);
             checkedListBoxCat.Items.Clear(); //Rensar boxen innan den populeras på nytt i nedan metod.
             populateCategories();
+            populateCategoryChangeComboBox();
+            textBoxNyKategori.Clear();
+            MessageBox.Show("Kategorin " + name + " har lagts till!", "Ny kategori tillagd");
+
         }
 
         private void button2AndraKat_Click(object sender, EventArgs e)
@@ -49,6 +64,7 @@ namespace PoddprojektGrupp24
                     checkedListBoxCat.Items[index] = newName;
                     checkedListBoxCat.Items.Clear();
                     populateCategories();
+                    populateCategoryChangeComboBox();
                 }
             }
 
@@ -81,6 +97,7 @@ namespace PoddprojektGrupp24
             }
             checkedListBoxCat.Items.Clear();
             populateCategories();
+            populateCategoryChangeComboBox();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -181,6 +198,11 @@ namespace PoddprojektGrupp24
         private void toolTipFrivilligKategori_Popup(object sender, PopupEventArgs e)
         {
 
+        }
+
+        private void comboBoxKat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

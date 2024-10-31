@@ -445,6 +445,15 @@
   <data name="&gt;&gt;textBoxPoddnamn.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <data name="cbUpdateringsfrekvens.Items" xml:space="preserve">
+    <value>1:a Minut</value>
+  </data>
+  <data name="cbUpdateringsfrekvens.Items1" xml:space="preserve">
+    <value>3:e Minut</value>
+  </data>
+  <data name="cbUpdateringsfrekvens.Items2" xml:space="preserve">
+    <value>5:e Minut</value>
+  </data>
   <data name="cbUpdateringsfrekvens.Location" type="System.Drawing.Point, System.Drawing">
     <value>774, 333</value>
   </data>
@@ -469,9 +478,6 @@
   <data name="&gt;&gt;cbUpdateringsfrekvens.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <metadata name="toolTipFrivilligKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1235, 17</value>
-  </metadata>
   <data name="comboBoxKategori.Location" type="System.Drawing.Point, System.Drawing">
     <value>271, 270</value>
   </data>
@@ -484,6 +490,9 @@
   <data name="comboBoxKategori.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
+  <metadata name="toolTipFrivilligKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1235, 17</value>
+  </metadata>
   <data name="comboBoxKategori.ToolTip" xml:space="preserve">
     <value>Frivilligt att ange kategori</value>
   </data>
@@ -589,8 +598,8 @@
   <data name="&gt;&gt;btnAndraNamn.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <metadata name="toolTipAndraKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>334, 17</value>
+  <metadata name="comboBoxKat.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <data name="comboBoxKat.Location" type="System.Drawing.Point, System.Drawing">
     <value>561, 221</value>
@@ -604,8 +613,11 @@
   <data name="comboBoxKat.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
+  <metadata name="toolTipAndraKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>334, 17</value>
+  </metadata>
   <data name="comboBoxKat.ToolTip" xml:space="preserve">
-    <value>Ändra kategori på podd</value>
+    <value>Ändra kategori på en vald podd</value>
   </data>
   <data name="&gt;&gt;comboBoxKat.Name" xml:space="preserve">
     <value>comboBoxKat</value>
@@ -829,12 +841,6 @@
   <data name="&gt;&gt;textBocAndraPoddNamn.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="toolTipAndraKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>334, 17</value>
-  </metadata>
-  <metadata name="toolTipTaBortPodd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>638, 17</value>
-  </metadata>
   <data name="btnTaBortPodd.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
@@ -856,6 +862,9 @@
   <data name="btnTaBortPodd.Text" xml:space="preserve">
     <value>Ta bort podd</value>
   </data>
+  <metadata name="toolTipTaBortPodd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>638, 17</value>
+  </metadata>
   <data name="btnTaBortPodd.ToolTip" xml:space="preserve">
     <value>Välj en podd i listan att ta bort</value>
   </data>
@@ -874,9 +883,6 @@
   <data name="&gt;&gt;btnTaBortPodd.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="toolTipAterstallFiltering.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>910, 17</value>
-  </metadata>
   <data name="btnAterstallFiltrering.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
@@ -901,6 +907,9 @@
   <data name="btnAterstallFiltrering.ToolTip" xml:space="preserve">
     <value>Tar bort filtrering och återställer till standardvy</value>
   </data>
+  <metadata name="toolTipAterstallFiltering.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>910, 17</value>
+  </metadata>
   <data name="btnAterstallFiltrering.ToolTip1" xml:space="preserve">
     <value>Tar bort filtrering och återställer till standardvy</value>
   </data>
@@ -949,9 +958,6 @@
   <data name="&gt;&gt;btnAndraKategori.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="toolTipTaBortPodd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>638, 17</value>
-  </metadata>
   <data name="cbFiltreraKategori.Location" type="System.Drawing.Point, System.Drawing">
     <value>754, 274</value>
   </data>
@@ -1012,12 +1018,6 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="toolTipAterstallFiltering.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>910, 17</value>
-  </metadata>
-  <metadata name="toolTipFrivilligKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1235, 17</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
