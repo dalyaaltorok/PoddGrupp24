@@ -72,12 +72,12 @@ namespace PoddprojektGrupp24
             int index = checkedListBoxUserCategories.SelectedIndex;
             if (index < 0)
             {
-                MessageBox.Show("Please select a category to remove");
+                MessageBox.Show("Vänligen välj en kategori som du vill ta bort");
                 return;
             }
 
-            string message = "Are you sure you want to remove this category?";
-            string title = "Category";
+            string message = "Är du säker på att du vill ta bort denna kategori?";
+            string title = "Kategori";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult dialog = MessageBox.Show(message, title, buttons);
 
@@ -89,7 +89,7 @@ namespace PoddprojektGrupp24
 
                     checkedListBoxUserCategories.Items.Remove(index);
 
-                    MessageBox.Show("You have successfully removed this category!");
+                    MessageBox.Show("Du har tagit bort kategorin!");
                 }
             }
             checkedListBoxUserCategories.Items.Clear();
