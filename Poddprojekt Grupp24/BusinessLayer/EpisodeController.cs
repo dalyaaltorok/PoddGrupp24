@@ -10,6 +10,7 @@ using DataAccessLayer;
 
 namespace BusinessLayer
 {
+    /*
     public class FeedController
     {
         IRepository<Feed> feedRepository;
@@ -68,7 +69,7 @@ namespace BusinessLayer
             feed.Category = category;
             feedRepository.Update(feed, index);
         }
-    }
+    }*/
 }
 
 
