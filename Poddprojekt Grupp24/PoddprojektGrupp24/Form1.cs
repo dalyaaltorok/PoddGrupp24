@@ -202,7 +202,17 @@ namespace PoddprojektGrupp24
 
         private void comboBoxKat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private async void btnAddNewFeed_Click(object sender, EventArgs e)
+        {
+       
+        }
+
+        private void textBoxURL_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

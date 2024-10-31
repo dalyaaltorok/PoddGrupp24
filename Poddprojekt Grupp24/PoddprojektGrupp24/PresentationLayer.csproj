@@ -12,6 +12,7 @@
 	  <Import Include="System.Windows.Forms" />
 	  <PackageReference Include="System.ServiceModel.Syndication" Version="8.0.0" />
 	  <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+	  <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
 	  <ProjectReference Include="..\Models\Models.csproj" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
