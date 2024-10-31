@@ -30,43 +30,43 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Poddbibliotek));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             Rubrik = new Label();
             label1 = new Label();
-            textBoxNyKategori = new TextBox();
+            tbNewCategoryName = new TextBox();
             btnLaggTillKat = new Button();
             btnAndraKat = new Button();
             btnTaBortKat = new Button();
-            richTextBoxBeskrivning = new RichTextBox();
+            richTextBoxEpisodeDescription = new RichTextBox();
             lbAvsnitt = new Label();
-            listBoxAvsnitt = new ListBox();
+            listBoxEpisodes = new ListBox();
             lbLaggTillPoddcast = new Label();
-            textBoxPoddnamn = new TextBox();
-            cbUpdateringsfrekvens = new ComboBox();
-            comboBoxKategori = new ComboBox();
+            textBoxFeedName = new TextBox();
+            cbUpdateFrequencyDataGridViewItems = new ComboBox();
+            cbAssignFeedCategory = new ComboBox();
             textBoxURL = new TextBox();
-            btnLaggTillPodd = new Button();
-            btnAndraNamn = new Button();
-            comboBoxKat = new ComboBox();
-            dataGridViewPodd = new DataGridView();
-            checkedListBoxCat = new CheckedListBox();
+            btnAddNewFeed = new Button();
+            btnChangeFeedName = new Button();
+            cbChangeFeedCategory = new ComboBox();
+            dataGridViewPodcastList = new DataGridView();
+            checkedListBoxUserCategories = new CheckedListBox();
             lbTilldelaKategori = new Label();
             lbUpdateringsfrekv = new Label();
             lbFiltreraKategori = new Label();
             lbAndraFiltrera = new Label();
-            textBocAndraPoddNamn = new TextBox();
+            tbChangeFeedName = new TextBox();
             toolTipAndraKategori = new ToolTip(components);
-            btnTaBortPodd = new Button();
-            btnAterstallFiltrering = new Button();
-            btnAndraKategori = new Button();
+            btnRemoveSelectedFeed = new Button();
+            btnResetFilters = new Button();
+            btnChangeCategory = new Button();
             toolTipTaBortPodd = new ToolTip(components);
-            cbFiltreraKategori = new ComboBox();
+            cbFilterCategory = new ComboBox();
             label2 = new Label();
             toolTipAterstallFiltering = new ToolTip(components);
             toolTipFrivilligKategori = new ToolTip(components);
-            ((System.ComponentModel.ISupportInitialize)dataGridViewPodd).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPodcastList).BeginInit();
             SuspendLayout();
             // 
             // Rubrik
@@ -83,11 +83,11 @@
             label1.Name = "label1";
             label1.Click += label1_Click;
             // 
-            // textBoxNyKategori
+            // tbNewCategoryName
             // 
-            resources.ApplyResources(textBoxNyKategori, "textBoxNyKategori");
-            textBoxNyKategori.Name = "textBoxNyKategori";
-            textBoxNyKategori.TextChanged += textBox1_TextChanged;
+            resources.ApplyResources(tbNewCategoryName, "tbNewCategoryName");
+            tbNewCategoryName.Name = "tbNewCategoryName";
+            tbNewCategoryName.TextChanged += textBox1_TextChanged;
             // 
             // btnLaggTillKat
             // 
@@ -122,10 +122,10 @@
             btnTaBortKat.UseVisualStyleBackColor = false;
             btnTaBortKat.Click += button3TaBortKat_Click;
             // 
-            // richTextBoxBeskrivning
+            // richTextBoxEpisodeDescription
             // 
-            resources.ApplyResources(richTextBoxBeskrivning, "richTextBoxBeskrivning");
-            richTextBoxBeskrivning.Name = "richTextBoxBeskrivning";
+            resources.ApplyResources(richTextBoxEpisodeDescription, "richTextBoxEpisodeDescription");
+            richTextBoxEpisodeDescription.Name = "richTextBoxEpisodeDescription";
             // 
             // lbAvsnitt
             // 
@@ -134,12 +134,12 @@
             lbAvsnitt.Name = "lbAvsnitt";
             lbAvsnitt.Click += label2_Click;
             // 
-            // listBoxAvsnitt
+            // listBoxEpisodes
             // 
-            listBoxAvsnitt.FormattingEnabled = true;
-            resources.ApplyResources(listBoxAvsnitt, "listBoxAvsnitt");
-            listBoxAvsnitt.Name = "listBoxAvsnitt";
-            listBoxAvsnitt.SelectedIndexChanged += listBoxAvsnitt_SelectedIndexChanged;
+            listBoxEpisodes.FormattingEnabled = true;
+            resources.ApplyResources(listBoxEpisodes, "listBoxEpisodes");
+            listBoxEpisodes.Name = "listBoxEpisodes";
+            listBoxEpisodes.SelectedIndexChanged += listBoxAvsnitt_SelectedIndexChanged;
             // 
             // lbLaggTillPoddcast
             // 
@@ -148,104 +148,104 @@
             lbLaggTillPoddcast.Name = "lbLaggTillPoddcast";
             lbLaggTillPoddcast.Click += NamnLabel_Click;
             // 
-            // textBoxPoddnamn
+            // textBoxFeedName
             // 
-            resources.ApplyResources(textBoxPoddnamn, "textBoxPoddnamn");
-            textBoxPoddnamn.Name = "textBoxPoddnamn";
-            textBoxPoddnamn.TextChanged += textBoxNamn_TextChanged;
+            resources.ApplyResources(textBoxFeedName, "textBoxFeedName");
+            textBoxFeedName.Name = "textBoxFeedName";
+            textBoxFeedName.TextChanged += textBoxNamn_TextChanged;
             // 
-            // cbUpdateringsfrekvens
+            // cbUpdateFrequencyDataGridViewItems
             // 
-            cbUpdateringsfrekvens.FormattingEnabled = true;
-            cbUpdateringsfrekvens.Items.AddRange(new object[] { resources.GetString("cbUpdateringsfrekvens.Items"), resources.GetString("cbUpdateringsfrekvens.Items1"), resources.GetString("cbUpdateringsfrekvens.Items2") });
-            resources.ApplyResources(cbUpdateringsfrekvens, "cbUpdateringsfrekvens");
-            cbUpdateringsfrekvens.Name = "cbUpdateringsfrekvens";
-            cbUpdateringsfrekvens.SelectedIndexChanged += comboBoxMinuter_SelectedIndexChanged;
+            cbUpdateFrequencyDataGridViewItems.FormattingEnabled = true;
+            cbUpdateFrequencyDataGridViewItems.Items.AddRange(new object[] { resources.GetString("cbUpdateFrequencyDataGridViewItems.Items"), resources.GetString("cbUpdateFrequencyDataGridViewItems.Items1"), resources.GetString("cbUpdateFrequencyDataGridViewItems.Items2") });
+            resources.ApplyResources(cbUpdateFrequencyDataGridViewItems, "cbUpdateFrequencyDataGridViewItems");
+            cbUpdateFrequencyDataGridViewItems.Name = "cbUpdateFrequencyDataGridViewItems";
+            cbUpdateFrequencyDataGridViewItems.SelectedIndexChanged += comboBoxMinuter_SelectedIndexChanged;
             // 
-            // comboBoxKategori
+            // cbAssignFeedCategory
             // 
-            comboBoxKategori.FormattingEnabled = true;
-            resources.ApplyResources(comboBoxKategori, "comboBoxKategori");
-            comboBoxKategori.Name = "comboBoxKategori";
-            toolTipFrivilligKategori.SetToolTip(comboBoxKategori, resources.GetString("comboBoxKategori.ToolTip"));
-            comboBoxKategori.SelectedIndexChanged += comboBoxKategori_SelectedIndexChanged;
+            cbAssignFeedCategory.FormattingEnabled = true;
+            resources.ApplyResources(cbAssignFeedCategory, "cbAssignFeedCategory");
+            cbAssignFeedCategory.Name = "cbAssignFeedCategory";
+            toolTipFrivilligKategori.SetToolTip(cbAssignFeedCategory, resources.GetString("cbAssignFeedCategory.ToolTip"));
+            cbAssignFeedCategory.SelectedIndexChanged += comboBoxKategori_SelectedIndexChanged;
             // 
             // textBoxURL
             // 
             resources.ApplyResources(textBoxURL, "textBoxURL");
             textBoxURL.Name = "textBoxURL";
             // 
-            // btnLaggTillPodd
+            // btnAddNewFeed
             // 
-            btnLaggTillPodd.BackColor = Color.LightCoral;
-            btnLaggTillPodd.FlatAppearance.BorderColor = Color.LightCoral;
-            btnLaggTillPodd.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(btnLaggTillPodd, "btnLaggTillPodd");
-            btnLaggTillPodd.ForeColor = Color.FromArgb(64, 0, 0);
-            btnLaggTillPodd.Name = "btnLaggTillPodd";
-            btnLaggTillPodd.UseVisualStyleBackColor = false;
+            btnAddNewFeed.BackColor = Color.LightCoral;
+            btnAddNewFeed.FlatAppearance.BorderColor = Color.LightCoral;
+            btnAddNewFeed.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnAddNewFeed, "btnAddNewFeed");
+            btnAddNewFeed.ForeColor = Color.FromArgb(64, 0, 0);
+            btnAddNewFeed.Name = "btnAddNewFeed";
+            btnAddNewFeed.UseVisualStyleBackColor = false;
             // 
-            // btnAndraNamn
+            // btnChangeFeedName
             // 
-            btnAndraNamn.BackColor = Color.LightCoral;
-            btnAndraNamn.FlatAppearance.BorderColor = Color.LightCoral;
-            btnAndraNamn.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(btnAndraNamn, "btnAndraNamn");
-            btnAndraNamn.ForeColor = Color.FromArgb(64, 0, 0);
-            btnAndraNamn.Name = "btnAndraNamn";
-            btnAndraNamn.UseVisualStyleBackColor = false;
+            btnChangeFeedName.BackColor = Color.LightCoral;
+            btnChangeFeedName.FlatAppearance.BorderColor = Color.LightCoral;
+            btnChangeFeedName.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnChangeFeedName, "btnChangeFeedName");
+            btnChangeFeedName.ForeColor = Color.FromArgb(64, 0, 0);
+            btnChangeFeedName.Name = "btnChangeFeedName";
+            btnChangeFeedName.UseVisualStyleBackColor = false;
             // 
-            // comboBoxKat
+            // cbChangeFeedCategory
             // 
-            comboBoxKat.FormattingEnabled = true;
-            resources.ApplyResources(comboBoxKat, "comboBoxKat");
-            comboBoxKat.Name = "comboBoxKat";
-            toolTipAndraKategori.SetToolTip(comboBoxKat, resources.GetString("comboBoxKat.ToolTip"));
-            comboBoxKat.SelectedIndexChanged += comboBoxKat_SelectedIndexChanged;
+            cbChangeFeedCategory.FormattingEnabled = true;
+            resources.ApplyResources(cbChangeFeedCategory, "cbChangeFeedCategory");
+            cbChangeFeedCategory.Name = "cbChangeFeedCategory";
+            toolTipAndraKategori.SetToolTip(cbChangeFeedCategory, resources.GetString("cbChangeFeedCategory.ToolTip"));
+            cbChangeFeedCategory.SelectedIndexChanged += comboBoxKat_SelectedIndexChanged;
             // 
-            // dataGridViewPodd
+            // dataGridViewPodcastList
             // 
-            dataGridViewPodd.AllowUserToAddRows = false;
-            dataGridViewPodd.AllowUserToDeleteRows = false;
-            dataGridViewPodd.AllowUserToResizeRows = false;
-            dataGridViewPodd.BackgroundColor = Color.White;
-            dataGridViewPodd.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridViewPodd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewPodd.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridViewPodd.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewPodd.GridColor = Color.White;
-            resources.ApplyResources(dataGridViewPodd, "dataGridViewPodd");
-            dataGridViewPodd.Name = "dataGridViewPodd";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridViewPodd.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewPodcastList.AllowUserToAddRows = false;
+            dataGridViewPodcastList.AllowUserToDeleteRows = false;
+            dataGridViewPodcastList.AllowUserToResizeRows = false;
+            dataGridViewPodcastList.BackgroundColor = Color.White;
+            dataGridViewPodcastList.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridViewPodcastList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewPodcastList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridViewPodcastList.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewPodcastList.GridColor = Color.White;
+            resources.ApplyResources(dataGridViewPodcastList, "dataGridViewPodcastList");
+            dataGridViewPodcastList.Name = "dataGridViewPodcastList";
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridViewPodcastList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             // 
-            // checkedListBoxCat
+            // checkedListBoxUserCategories
             // 
-            checkedListBoxCat.CheckOnClick = true;
-            checkedListBoxCat.FormattingEnabled = true;
-            resources.ApplyResources(checkedListBoxCat, "checkedListBoxCat");
-            checkedListBoxCat.Name = "checkedListBoxCat";
-            checkedListBoxCat.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
+            checkedListBoxUserCategories.CheckOnClick = true;
+            checkedListBoxUserCategories.FormattingEnabled = true;
+            resources.ApplyResources(checkedListBoxUserCategories, "checkedListBoxUserCategories");
+            checkedListBoxUserCategories.Name = "checkedListBoxUserCategories";
+            checkedListBoxUserCategories.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
             // 
             // lbTilldelaKategori
             // 
@@ -275,10 +275,10 @@
             lbAndraFiltrera.Name = "lbAndraFiltrera";
             lbAndraFiltrera.Click += label3_Click_1;
             // 
-            // textBocAndraPoddNamn
+            // tbChangeFeedName
             // 
-            resources.ApplyResources(textBocAndraPoddNamn, "textBocAndraPoddNamn");
-            textBocAndraPoddNamn.Name = "textBocAndraPoddNamn";
+            resources.ApplyResources(tbChangeFeedName, "tbChangeFeedName");
+            tbChangeFeedName.Name = "tbChangeFeedName";
             // 
             // toolTipAndraKategori
             // 
@@ -286,39 +286,39 @@
             toolTipAndraKategori.InitialDelay = 50;
             toolTipAndraKategori.ReshowDelay = 100;
             // 
-            // btnTaBortPodd
+            // btnRemoveSelectedFeed
             // 
-            btnTaBortPodd.BackColor = Color.LightCoral;
-            btnTaBortPodd.FlatAppearance.BorderColor = Color.LightCoral;
-            btnTaBortPodd.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(btnTaBortPodd, "btnTaBortPodd");
-            btnTaBortPodd.ForeColor = Color.FromArgb(64, 0, 0);
-            btnTaBortPodd.Name = "btnTaBortPodd";
-            toolTipTaBortPodd.SetToolTip(btnTaBortPodd, resources.GetString("btnTaBortPodd.ToolTip"));
-            toolTipAndraKategori.SetToolTip(btnTaBortPodd, resources.GetString("btnTaBortPodd.ToolTip1"));
-            btnTaBortPodd.UseVisualStyleBackColor = false;
+            btnRemoveSelectedFeed.BackColor = Color.LightCoral;
+            btnRemoveSelectedFeed.FlatAppearance.BorderColor = Color.LightCoral;
+            btnRemoveSelectedFeed.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnRemoveSelectedFeed, "btnRemoveSelectedFeed");
+            btnRemoveSelectedFeed.ForeColor = Color.FromArgb(64, 0, 0);
+            btnRemoveSelectedFeed.Name = "btnRemoveSelectedFeed";
+            toolTipTaBortPodd.SetToolTip(btnRemoveSelectedFeed, resources.GetString("btnRemoveSelectedFeed.ToolTip"));
+            toolTipAndraKategori.SetToolTip(btnRemoveSelectedFeed, resources.GetString("btnRemoveSelectedFeed.ToolTip1"));
+            btnRemoveSelectedFeed.UseVisualStyleBackColor = false;
             // 
-            // btnAterstallFiltrering
+            // btnResetFilters
             // 
-            btnAterstallFiltrering.BackColor = Color.LightCoral;
-            btnAterstallFiltrering.FlatAppearance.BorderColor = Color.LightCoral;
-            btnAterstallFiltrering.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(btnAterstallFiltrering, "btnAterstallFiltrering");
-            btnAterstallFiltrering.ForeColor = Color.FromArgb(64, 0, 0);
-            btnAterstallFiltrering.Name = "btnAterstallFiltrering";
-            toolTipAndraKategori.SetToolTip(btnAterstallFiltrering, resources.GetString("btnAterstallFiltrering.ToolTip"));
-            toolTipAterstallFiltering.SetToolTip(btnAterstallFiltrering, resources.GetString("btnAterstallFiltrering.ToolTip1"));
-            btnAterstallFiltrering.UseVisualStyleBackColor = false;
+            btnResetFilters.BackColor = Color.LightCoral;
+            btnResetFilters.FlatAppearance.BorderColor = Color.LightCoral;
+            btnResetFilters.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnResetFilters, "btnResetFilters");
+            btnResetFilters.ForeColor = Color.FromArgb(64, 0, 0);
+            btnResetFilters.Name = "btnResetFilters";
+            toolTipAndraKategori.SetToolTip(btnResetFilters, resources.GetString("btnResetFilters.ToolTip"));
+            toolTipAterstallFiltering.SetToolTip(btnResetFilters, resources.GetString("btnResetFilters.ToolTip1"));
+            btnResetFilters.UseVisualStyleBackColor = false;
             // 
-            // btnAndraKategori
+            // btnChangeCategory
             // 
-            btnAndraKategori.BackColor = Color.LightCoral;
-            btnAndraKategori.FlatAppearance.BorderColor = Color.LightCoral;
-            btnAndraKategori.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(btnAndraKategori, "btnAndraKategori");
-            btnAndraKategori.ForeColor = Color.FromArgb(64, 0, 0);
-            btnAndraKategori.Name = "btnAndraKategori";
-            btnAndraKategori.UseVisualStyleBackColor = false;
+            btnChangeCategory.BackColor = Color.LightCoral;
+            btnChangeCategory.FlatAppearance.BorderColor = Color.LightCoral;
+            btnChangeCategory.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(btnChangeCategory, "btnChangeCategory");
+            btnChangeCategory.ForeColor = Color.FromArgb(64, 0, 0);
+            btnChangeCategory.Name = "btnChangeCategory";
+            btnChangeCategory.UseVisualStyleBackColor = false;
             // 
             // toolTipTaBortPodd
             // 
@@ -326,11 +326,11 @@
             toolTipTaBortPodd.InitialDelay = 50;
             toolTipTaBortPodd.ReshowDelay = 100;
             // 
-            // cbFiltreraKategori
+            // cbFilterCategory
             // 
-            cbFiltreraKategori.FormattingEnabled = true;
-            resources.ApplyResources(cbFiltreraKategori, "cbFiltreraKategori");
-            cbFiltreraKategori.Name = "cbFiltreraKategori";
+            cbFilterCategory.FormattingEnabled = true;
+            resources.ApplyResources(cbFilterCategory, "cbFilterCategory");
+            cbFilterCategory.Name = "cbFilterCategory";
             // 
             // label2
             // 
@@ -355,38 +355,38 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
-            Controls.Add(btnAterstallFiltrering);
+            Controls.Add(btnResetFilters);
             Controls.Add(label2);
             Controls.Add(lbFiltreraKategori);
-            Controls.Add(cbFiltreraKategori);
+            Controls.Add(cbFilterCategory);
             Controls.Add(lbUpdateringsfrekv);
-            Controls.Add(btnTaBortPodd);
-            Controls.Add(btnAndraKategori);
-            Controls.Add(textBocAndraPoddNamn);
+            Controls.Add(btnRemoveSelectedFeed);
+            Controls.Add(btnChangeCategory);
+            Controls.Add(tbChangeFeedName);
             Controls.Add(lbAndraFiltrera);
             Controls.Add(lbTilldelaKategori);
-            Controls.Add(checkedListBoxCat);
-            Controls.Add(dataGridViewPodd);
-            Controls.Add(comboBoxKat);
-            Controls.Add(btnAndraNamn);
-            Controls.Add(btnLaggTillPodd);
+            Controls.Add(checkedListBoxUserCategories);
+            Controls.Add(dataGridViewPodcastList);
+            Controls.Add(cbChangeFeedCategory);
+            Controls.Add(btnChangeFeedName);
+            Controls.Add(btnAddNewFeed);
             Controls.Add(textBoxURL);
-            Controls.Add(comboBoxKategori);
-            Controls.Add(cbUpdateringsfrekvens);
-            Controls.Add(textBoxPoddnamn);
+            Controls.Add(cbAssignFeedCategory);
+            Controls.Add(cbUpdateFrequencyDataGridViewItems);
+            Controls.Add(textBoxFeedName);
             Controls.Add(lbLaggTillPoddcast);
-            Controls.Add(listBoxAvsnitt);
+            Controls.Add(listBoxEpisodes);
             Controls.Add(lbAvsnitt);
-            Controls.Add(richTextBoxBeskrivning);
+            Controls.Add(richTextBoxEpisodeDescription);
             Controls.Add(btnTaBortKat);
             Controls.Add(btnAndraKat);
             Controls.Add(btnLaggTillKat);
-            Controls.Add(textBoxNyKategori);
+            Controls.Add(tbNewCategoryName);
             Controls.Add(label1);
             Controls.Add(Rubrik);
             Name = "Poddbibliotek";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridViewPodd).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPodcastList).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -395,35 +395,35 @@
 
         private Label Rubrik;
         private Label label1;
-        private TextBox textBoxNyKategori;
+        private TextBox tbNewCategoryName;
         private Button btnLaggTillKat;
         private Button btnAndraKat;
         private Button btnTaBortKat;
-        private RichTextBox richTextBoxBeskrivning;
+        private RichTextBox richTextBoxEpisodeDescription;
         private Label lbAvsnitt;
-        private ListBox listBoxAvsnitt;
+        private ListBox listBoxEpisodes;
         private Label lbLaggTillPoddcast;
-        private TextBox textBoxPoddnamn;
-        private ComboBox cbUpdateringsfrekvens;
-        private ComboBox comboBoxKategori;
+        private TextBox textBoxFeedName;
+        private ComboBox cbUpdateFrequencyDataGridViewItems;
+        private ComboBox cbAssignFeedCategory;
         private TextBox textBoxURL;
-        private Button btnLaggTillPodd;
-        private Button btnAndraNamn;
-        private ComboBox comboBoxKat;
-        private DataGridView dataGridViewPodd;
-        private CheckedListBox checkedListBoxCat;
+        private Button btnAddNewFeed;
+        private Button btnChangeFeedName;
+        private ComboBox cbChangeFeedCategory;
+        private DataGridView dataGridViewPodcastList;
+        private CheckedListBox checkedListBoxUserCategories;
         private Label lbTilldelaKategori;
         private Label lbAndraFiltrera;
-        private TextBox textBocAndraPoddNamn;
+        private TextBox tbChangeFeedName;
         private ToolTip toolTipAndraKategori;
-        private Button btnAndraKategori;
-        private Button btnTaBortPodd;
+        private Button btnChangeCategory;
+        private Button btnRemoveSelectedFeed;
         private ToolTip toolTipTaBortPodd;
         private Label lbUpdateringsfrekv;
-        private ComboBox cbFiltreraKategori;
+        private ComboBox cbFilterCategory;
         private Label lbFiltreraKategori;
         private Label label2;
-        private Button btnAterstallFiltrering;
+        private Button btnResetFilters;
         private ToolTip toolTipAterstallFiltering;
         private ToolTip toolTipFrivilligKategori;
     }

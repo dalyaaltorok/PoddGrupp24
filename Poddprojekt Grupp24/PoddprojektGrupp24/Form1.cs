@@ -18,11 +18,11 @@ namespace PoddprojektGrupp24
 
         private void populateCategories()
         {
-            comboBoxKat.Items.Clear(); //Rensar CB:n (listan) och fyller på den på nytt. Användbart när användare gör en förändring i kategorilistan efter instansiering av ett formulär.
+            cbChangeFeedCategory.Items.Clear(); //Rensar CB:n (listan) och fyller på den på nytt. Användbart när användare gör en förändring i kategorilistan efter instansiering av ett formulär.
             List<Category> list = catController.GetAll();
             foreach (Category category in list)
             {
-                checkedListBoxCat.Items.Add(category.Name, false); //Lägger till en item i kategoriboxen. "false" innebär att ett item inte ska vara iklickat efter att det skapats.  
+                checkedListBoxUserCategories.Items.Add(category.Name, false); //Lägger till en item i kategoriboxen. "false" innebär att ett item inte ska vara iklickat efter att det skapats.  
             }
         }
 
@@ -31,7 +31,7 @@ namespace PoddprojektGrupp24
             List<Category> list = catController.GetAll();
             foreach (Category category in list)
             {
-                comboBoxKat.Items.Add(category.Name);
+                cbChangeFeedCategory.Items.Add(category.Name);
             }
         }
 
@@ -42,27 +42,27 @@ namespace PoddprojektGrupp24
 
         private void button1LaggTillKat_Click(object sender, EventArgs e)
         {
-            String name = textBoxNyKategori.Text.Trim(); //Ser till att ta bort onädiga spaces i början och slutet av kategorinamnfältet.
+            String name = tbNewCategoryName.Text.Trim(); //Ser till att ta bort onädiga spaces i början och slutet av kategorinamnfältet.
             catController.Add(name);
-            checkedListBoxCat.Items.Clear(); //Rensar boxen innan den populeras på nytt i nedan metod.
+            checkedListBoxUserCategories.Items.Clear(); //Rensar boxen innan den populeras på nytt i nedan metod.
             populateCategories();
             populateCategoryChangeComboBox();
-            textBoxNyKategori.Clear();
+            tbNewCategoryName.Clear();
             MessageBox.Show("Kategorin " + name + " har lagts till!", "Ny kategori tillagd");
 
         }
 
         private void button2AndraKat_Click(object sender, EventArgs e)
         {
-            int index = checkedListBoxCat.SelectedIndex;
+            int index = checkedListBoxUserCategories.SelectedIndex;
             if (index >= 0)
             {
-                string newName = textBoxNyKategori.Text.Trim();
+                string newName = tbNewCategoryName.Text.Trim();
                 if (!string.IsNullOrEmpty(newName))
                 {
                     catController.UpdateItem(newName, index);
-                    checkedListBoxCat.Items[index] = newName;
-                    checkedListBoxCat.Items.Clear();
+                    checkedListBoxUserCategories.Items[index] = newName;
+                    checkedListBoxUserCategories.Items.Clear();
                     populateCategories();
                     populateCategoryChangeComboBox();
                 }
@@ -72,7 +72,7 @@ namespace PoddprojektGrupp24
 
         private void button3TaBortKat_Click(object sender, EventArgs e)
         {
-            int index = checkedListBoxCat.SelectedIndex;
+            int index = checkedListBoxUserCategories.SelectedIndex;
             if (index < 0)
             {
                 MessageBox.Show("Please select a category to remove");
@@ -90,12 +90,12 @@ namespace PoddprojektGrupp24
                 {
                     catController.RemoveItem(index);
 
-                    checkedListBoxCat.Items.Remove(index);
+                    checkedListBoxUserCategories.Items.Remove(index);
 
                     MessageBox.Show("You have successfully removed this category!");
                 }
             }
-            checkedListBoxCat.Items.Clear();
+            checkedListBoxUserCategories.Items.Clear();
             populateCategories();
             populateCategoryChangeComboBox();
         }
