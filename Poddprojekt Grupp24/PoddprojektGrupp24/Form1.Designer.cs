@@ -67,6 +67,8 @@
             toolTipFrivilligKategori = new ToolTip(components);
             toolTipChangeFeedName = new ToolTip(components);
             toolTipResetFilters = new ToolTip(components);
+            lbKategoriLabel = new Label();
+            lbAvsnittsbesk = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPodcastList).BeginInit();
             SuspendLayout();
             // 
@@ -79,8 +81,8 @@
             // 
             // lbKategori
             // 
-            resources.ApplyResources(lbKategori, "lbKategori");
             lbKategori.ForeColor = Color.Firebrick;
+            resources.ApplyResources(lbKategori, "lbKategori");
             lbKategori.Name = "lbKategori";
             lbKategori.Click += label1_Click;
             // 
@@ -282,7 +284,6 @@
             // 
             resources.ApplyResources(tbChangeFeedName, "tbChangeFeedName");
             tbChangeFeedName.Name = "tbChangeFeedName";
-            toolTipChangeFeedName.SetToolTip(tbChangeFeedName, resources.GetString("tbChangeFeedName.ToolTip"));
             // 
             // toolTipChangeFeedCategory
             // 
@@ -340,8 +341,8 @@
             // 
             // lbAvsnittsbeskrivning
             // 
-            resources.ApplyResources(lbAvsnittsbeskrivning, "lbAvsnittsbeskrivning");
             lbAvsnittsbeskrivning.ForeColor = Color.Firebrick;
+            resources.ApplyResources(lbAvsnittsbeskrivning, "lbAvsnittsbeskrivning");
             lbAvsnittsbeskrivning.Name = "lbAvsnittsbeskrivning";
             // 
             // toolTipFrivilligKategori
@@ -362,11 +363,26 @@
             toolTipResetFilters.InitialDelay = 50;
             toolTipResetFilters.ReshowDelay = 100;
             // 
+            // lbKategoriLabel
+            // 
+            resources.ApplyResources(lbKategoriLabel, "lbKategoriLabel");
+            lbKategoriLabel.ForeColor = Color.Firebrick;
+            lbKategoriLabel.Name = "lbKategoriLabel";
+            lbKategoriLabel.Click += label1_Click_1;
+            // 
+            // lbAvsnittsbesk
+            // 
+            resources.ApplyResources(lbAvsnittsbesk, "lbAvsnittsbesk");
+            lbAvsnittsbesk.ForeColor = Color.Firebrick;
+            lbAvsnittsbesk.Name = "lbAvsnittsbesk";
+            // 
             // Poddbibliotek
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
+            Controls.Add(lbAvsnittsbesk);
+            Controls.Add(lbKategoriLabel);
             Controls.Add(btnResetFilters);
             Controls.Add(lbAvsnittsbeskrivning);
             Controls.Add(lbFiltreraKategori);
@@ -439,5 +455,7 @@
         private ToolTip toolTipFrivilligKategori;
         private ToolTip toolTipChangeFeedName;
         private ToolTip toolTipResetFilters;
+        private Label lbKategoriLabel;
+        private Label lbAvsnittsbesk;
     }
 }
