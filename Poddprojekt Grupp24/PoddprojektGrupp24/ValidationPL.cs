@@ -11,6 +11,7 @@ namespace PresentationLayer
 {
     public class ValidationPL
     {
+        string test;
         FeedController feedController;
         CategeoryController categoryController;
 
