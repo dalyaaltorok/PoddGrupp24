@@ -13,27 +13,25 @@ namespace PoddprojektGrupp24
             catController = new CategeoryController("Category.xml");
             InitializeComponent();
             populateCategories();
-            populateCategoryChangeComboBox();
+            
         }
 
         private void populateCategories()
         {
             cbChangeFeedCategory.Items.Clear(); //Rensar CB:n (listan) och fyller på den på nytt. Användbart när användare gör en förändring i kategorilistan efter instansiering av ett formulär.
+            cbFilterCategory.Items.Clear();
+            cbAssignFeedCategory.Items.Clear();
             List<Category> list = catController.GetAll();
             foreach (Category category in list)
             {
                 checkedListBoxUserCategories.Items.Add(category.Name, false); //Lägger till en item i kategoriboxen. "false" innebär att ett item inte ska vara iklickat efter att det skapats.  
+                cbChangeFeedCategory.Items.Add(category.Name);
+                cbFilterCategory.Items.Add(category.Name);
+                cbAssignFeedCategory.Items.Add(category.Name);
             }
         }
 
-        public void populateCategoryChangeComboBox()
-        {
-            List<Category> list = catController.GetAll();
-            foreach (Category category in list)
-            {
-                cbChangeFeedCategory.Items.Add(category.Name);
-            }
-        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -46,7 +44,6 @@ namespace PoddprojektGrupp24
             catController.Add(name);
             checkedListBoxUserCategories.Items.Clear(); //Rensar boxen innan den populeras på nytt i nedan metod.
             populateCategories();
-            populateCategoryChangeComboBox();
             tbNewCategoryName.Clear();
             MessageBox.Show("Kategorin " + name + " har lagts till!", "Ny kategori tillagd");
 
@@ -64,7 +61,7 @@ namespace PoddprojektGrupp24
                     checkedListBoxUserCategories.Items[index] = newName;
                     checkedListBoxUserCategories.Items.Clear();
                     populateCategories();
-                    populateCategoryChangeComboBox();
+                    
                 }
             }
 
@@ -97,7 +94,6 @@ namespace PoddprojektGrupp24
             }
             checkedListBoxUserCategories.Items.Clear();
             populateCategories();
-            populateCategoryChangeComboBox();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

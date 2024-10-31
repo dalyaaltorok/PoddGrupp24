@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Poddbibliotek));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Rubrik = new Label();
             label1 = new Label();
             tbNewCategoryName = new TextBox();
@@ -57,15 +57,16 @@
             lbFiltreraKategori = new Label();
             lbAndraFiltrera = new Label();
             tbChangeFeedName = new TextBox();
-            toolTipAndraKategori = new ToolTip(components);
+            toolTipChangeFeedCategory = new ToolTip(components);
             btnRemoveSelectedFeed = new Button();
             btnResetFilters = new Button();
             btnChangeCategory = new Button();
-            toolTipTaBortPodd = new ToolTip(components);
+            toolTipRemoveSelectedFeed = new ToolTip(components);
             cbFilterCategory = new ComboBox();
             label2 = new Label();
-            toolTipAterstallFiltering = new ToolTip(components);
             toolTipFrivilligKategori = new ToolTip(components);
+            toolTipChangeFeedName = new ToolTip(components);
+            toolTipResetFilters = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)dataGridViewPodcastList).BeginInit();
             SuspendLayout();
             // 
@@ -200,7 +201,7 @@
             cbChangeFeedCategory.FormattingEnabled = true;
             resources.ApplyResources(cbChangeFeedCategory, "cbChangeFeedCategory");
             cbChangeFeedCategory.Name = "cbChangeFeedCategory";
-            toolTipAndraKategori.SetToolTip(cbChangeFeedCategory, resources.GetString("cbChangeFeedCategory.ToolTip"));
+            toolTipChangeFeedCategory.SetToolTip(cbChangeFeedCategory, resources.GetString("cbChangeFeedCategory.ToolTip"));
             cbChangeFeedCategory.SelectedIndexChanged += comboBoxKat_SelectedIndexChanged;
             // 
             // dataGridViewPodcastList
@@ -210,34 +211,34 @@
             dataGridViewPodcastList.AllowUserToResizeRows = false;
             dataGridViewPodcastList.BackgroundColor = Color.White;
             dataGridViewPodcastList.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dataGridViewPodcastList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewPodcastList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewPodcastList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Window;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dataGridViewPodcastList.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridViewPodcastList.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewPodcastList.GridColor = Color.White;
             resources.ApplyResources(dataGridViewPodcastList, "dataGridViewPodcastList");
             dataGridViewPodcastList.Name = "dataGridViewPodcastList";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dataGridViewPodcastList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridViewPodcastList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             // 
             // checkedListBoxUserCategories
             // 
@@ -279,12 +280,13 @@
             // 
             resources.ApplyResources(tbChangeFeedName, "tbChangeFeedName");
             tbChangeFeedName.Name = "tbChangeFeedName";
+            toolTipChangeFeedName.SetToolTip(tbChangeFeedName, resources.GetString("tbChangeFeedName.ToolTip"));
             // 
-            // toolTipAndraKategori
+            // toolTipChangeFeedCategory
             // 
-            toolTipAndraKategori.AutoPopDelay = 5000;
-            toolTipAndraKategori.InitialDelay = 50;
-            toolTipAndraKategori.ReshowDelay = 100;
+            toolTipChangeFeedCategory.AutoPopDelay = 5000;
+            toolTipChangeFeedCategory.InitialDelay = 50;
+            toolTipChangeFeedCategory.ReshowDelay = 100;
             // 
             // btnRemoveSelectedFeed
             // 
@@ -294,8 +296,8 @@
             resources.ApplyResources(btnRemoveSelectedFeed, "btnRemoveSelectedFeed");
             btnRemoveSelectedFeed.ForeColor = Color.FromArgb(64, 0, 0);
             btnRemoveSelectedFeed.Name = "btnRemoveSelectedFeed";
-            toolTipTaBortPodd.SetToolTip(btnRemoveSelectedFeed, resources.GetString("btnRemoveSelectedFeed.ToolTip"));
-            toolTipAndraKategori.SetToolTip(btnRemoveSelectedFeed, resources.GetString("btnRemoveSelectedFeed.ToolTip1"));
+            toolTipRemoveSelectedFeed.SetToolTip(btnRemoveSelectedFeed, resources.GetString("btnRemoveSelectedFeed.ToolTip"));
+            toolTipChangeFeedCategory.SetToolTip(btnRemoveSelectedFeed, resources.GetString("btnRemoveSelectedFeed.ToolTip1"));
             btnRemoveSelectedFeed.UseVisualStyleBackColor = false;
             // 
             // btnResetFilters
@@ -306,8 +308,7 @@
             resources.ApplyResources(btnResetFilters, "btnResetFilters");
             btnResetFilters.ForeColor = Color.FromArgb(64, 0, 0);
             btnResetFilters.Name = "btnResetFilters";
-            toolTipAndraKategori.SetToolTip(btnResetFilters, resources.GetString("btnResetFilters.ToolTip"));
-            toolTipAterstallFiltering.SetToolTip(btnResetFilters, resources.GetString("btnResetFilters.ToolTip1"));
+            toolTipResetFilters.SetToolTip(btnResetFilters, resources.GetString("btnResetFilters.ToolTip"));
             btnResetFilters.UseVisualStyleBackColor = false;
             // 
             // btnChangeCategory
@@ -320,11 +321,11 @@
             btnChangeCategory.Name = "btnChangeCategory";
             btnChangeCategory.UseVisualStyleBackColor = false;
             // 
-            // toolTipTaBortPodd
+            // toolTipRemoveSelectedFeed
             // 
-            toolTipTaBortPodd.AutoPopDelay = 5000;
-            toolTipTaBortPodd.InitialDelay = 50;
-            toolTipTaBortPodd.ReshowDelay = 100;
+            toolTipRemoveSelectedFeed.AutoPopDelay = 5000;
+            toolTipRemoveSelectedFeed.InitialDelay = 50;
+            toolTipRemoveSelectedFeed.ReshowDelay = 100;
             // 
             // cbFilterCategory
             // 
@@ -338,17 +339,23 @@
             label2.ForeColor = Color.Firebrick;
             label2.Name = "label2";
             // 
-            // toolTipAterstallFiltering
-            // 
-            toolTipAterstallFiltering.AutoPopDelay = 5000;
-            toolTipAterstallFiltering.InitialDelay = 50;
-            toolTipAterstallFiltering.ReshowDelay = 100;
-            // 
             // toolTipFrivilligKategori
             // 
             toolTipFrivilligKategori.AutoPopDelay = 5000;
             toolTipFrivilligKategori.InitialDelay = 50;
             toolTipFrivilligKategori.ReshowDelay = 100;
+            // 
+            // toolTipChangeFeedName
+            // 
+            toolTipChangeFeedName.AutoPopDelay = 5000;
+            toolTipChangeFeedName.InitialDelay = 50;
+            toolTipChangeFeedName.ReshowDelay = 100;
+            // 
+            // toolTipResetFilters
+            // 
+            toolTipResetFilters.AutoPopDelay = 5000;
+            toolTipResetFilters.InitialDelay = 50;
+            toolTipResetFilters.ReshowDelay = 100;
             // 
             // Poddbibliotek
             // 
@@ -415,16 +422,17 @@
         private Label lbTilldelaKategori;
         private Label lbAndraFiltrera;
         private TextBox tbChangeFeedName;
-        private ToolTip toolTipAndraKategori;
+        private ToolTip toolTipChangeFeedCategory;
         private Button btnChangeCategory;
         private Button btnRemoveSelectedFeed;
-        private ToolTip toolTipTaBortPodd;
+        private ToolTip toolTipRemoveSelectedFeed;
         private Label lbUpdateringsfrekv;
         private ComboBox cbFilterCategory;
         private Label lbFiltreraKategori;
         private Label label2;
         private Button btnResetFilters;
-        private ToolTip toolTipAterstallFiltering;
         private ToolTip toolTipFrivilligKategori;
+        private ToolTip toolTipChangeFeedName;
+        private ToolTip toolTipResetFilters;
     }
 }

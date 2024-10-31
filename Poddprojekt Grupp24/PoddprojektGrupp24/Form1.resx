@@ -461,7 +461,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="cbUpdateFrequencyDataGridViewItems.Size" type="System.Drawing.Size, System.Drawing">
-    <value>302, 40</value>
+    <value>139, 40</value>
   </data>
   <data name="cbUpdateFrequencyDataGridViewItems.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -478,9 +478,6 @@
   <data name="&gt;&gt;cbUpdateFrequencyDataGridViewItems.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <metadata name="toolTipFrivilligKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1235, 17</value>
-  </metadata>
   <data name="cbAssignFeedCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>271, 270</value>
   </data>
@@ -493,6 +490,9 @@
   <data name="cbAssignFeedCategory.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
+  <metadata name="toolTipFrivilligKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1500, 23</value>
+  </metadata>
   <data name="cbAssignFeedCategory.ToolTip" xml:space="preserve">
     <value>Frivilligt att ange kategori</value>
   </data>
@@ -601,9 +601,6 @@
   <metadata name="cbChangeFeedCategory.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="toolTipAndraKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>334, 17</value>
-  </metadata>
   <data name="cbChangeFeedCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>561, 221</value>
   </data>
@@ -616,8 +613,11 @@
   <data name="cbChangeFeedCategory.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
+  <metadata name="toolTipChangeFeedCategory.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>376, 27</value>
+  </metadata>
   <data name="cbChangeFeedCategory.ToolTip" xml:space="preserve">
-    <value>Ändra kategori på en vald podd</value>
+    <value>Välj en podd i listan för att ändra kategori</value>
   </data>
   <data name="&gt;&gt;cbChangeFeedCategory.Name" xml:space="preserve">
     <value>cbChangeFeedCategory</value>
@@ -829,6 +829,12 @@
   <data name="tbChangeFeedName.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
+  <metadata name="toolTipChangeFeedName.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>18, 22</value>
+  </metadata>
+  <data name="tbChangeFeedName.ToolTip" xml:space="preserve">
+    <value>Välj en podd i listan för att ändra namnet</value>
+  </data>
   <data name="&gt;&gt;tbChangeFeedName.Name" xml:space="preserve">
     <value>tbChangeFeedName</value>
   </data>
@@ -841,12 +847,6 @@
   <data name="&gt;&gt;tbChangeFeedName.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="toolTipAndraKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>334, 17</value>
-  </metadata>
-  <metadata name="toolTipTaBortPodd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>638, 17</value>
-  </metadata>
   <data name="btnRemoveSelectedFeed.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
@@ -868,6 +868,9 @@
   <data name="btnRemoveSelectedFeed.Text" xml:space="preserve">
     <value>Ta bort podd</value>
   </data>
+  <metadata name="toolTipRemoveSelectedFeed.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>770, 22</value>
+  </metadata>
   <data name="btnRemoveSelectedFeed.ToolTip" xml:space="preserve">
     <value>Välj en podd i listan att ta bort</value>
   </data>
@@ -886,9 +889,6 @@
   <data name="&gt;&gt;btnRemoveSelectedFeed.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="toolTipAterstallFiltering.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>910, 17</value>
-  </metadata>
   <data name="btnResetFilters.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
@@ -896,7 +896,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnResetFilters.Location" type="System.Drawing.Point, System.Drawing">
-    <value>923, 274</value>
+    <value>923, 334</value>
   </data>
   <data name="btnResetFilters.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -910,11 +910,11 @@
   <data name="btnResetFilters.Text" xml:space="preserve">
     <value>Återställ</value>
   </data>
+  <metadata name="toolTipResetFilters.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1153, 28</value>
+  </metadata>
   <data name="btnResetFilters.ToolTip" xml:space="preserve">
-    <value>Tar bort filtrering och återställer till standardvy</value>
-  </data>
-  <data name="btnResetFilters.ToolTip1" xml:space="preserve">
-    <value>Tar bort filtrering och återställer till standardvy</value>
+    <value>Tar bort all filtrering och återställer till standardvy</value>
   </data>
   <data name="&gt;&gt;btnResetFilters.Name" xml:space="preserve">
     <value>btnResetFilters</value>
@@ -961,17 +961,14 @@
   <data name="&gt;&gt;btnChangeCategory.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="toolTipTaBortPodd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>638, 17</value>
-  </metadata>
   <data name="cbFilterCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>754, 274</value>
+    <value>774, 274</value>
   </data>
   <data name="cbFilterCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
   <data name="cbFilterCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 40</value>
+    <value>302, 40</value>
   </data>
   <data name="cbFilterCategory.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -1024,14 +1021,11 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="toolTipAterstallFiltering.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>910, 17</value>
-  </metadata>
-  <metadata name="toolTipFrivilligKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1235, 17</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>189</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>13, 32</value>
@@ -1048,28 +1042,34 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Poddbiblioteket</value>
   </data>
-  <data name="&gt;&gt;toolTipAndraKategori.Name" xml:space="preserve">
-    <value>toolTipAndraKategori</value>
+  <data name="&gt;&gt;toolTipChangeFeedCategory.Name" xml:space="preserve">
+    <value>toolTipChangeFeedCategory</value>
   </data>
-  <data name="&gt;&gt;toolTipAndraKategori.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolTipChangeFeedCategory.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolTipTaBortPodd.Name" xml:space="preserve">
-    <value>toolTipTaBortPodd</value>
+  <data name="&gt;&gt;toolTipRemoveSelectedFeed.Name" xml:space="preserve">
+    <value>toolTipRemoveSelectedFeed</value>
   </data>
-  <data name="&gt;&gt;toolTipTaBortPodd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolTipAterstallFiltering.Name" xml:space="preserve">
-    <value>toolTipAterstallFiltering</value>
-  </data>
-  <data name="&gt;&gt;toolTipAterstallFiltering.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolTipRemoveSelectedFeed.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolTipFrivilligKategori.Name" xml:space="preserve">
     <value>toolTipFrivilligKategori</value>
   </data>
   <data name="&gt;&gt;toolTipFrivilligKategori.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTipChangeFeedName.Name" xml:space="preserve">
+    <value>toolTipChangeFeedName</value>
+  </data>
+  <data name="&gt;&gt;toolTipChangeFeedName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTipResetFilters.Name" xml:space="preserve">
+    <value>toolTipResetFilters</value>
+  </data>
+  <data name="&gt;&gt;toolTipResetFilters.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
