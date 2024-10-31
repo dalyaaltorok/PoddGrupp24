@@ -1,16 +1,20 @@
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.DirectoryServices;
 using BusinessLayer;
 using Models;
+using PresentationLayer;
 
 namespace PoddprojektGrupp24
 {
     public partial class Poddbibliotek : Form
     {
         CategeoryController catController;
+        ValidationPL validator;
         public Poddbibliotek()
         {
             catController = new CategeoryController("Category.xml");
+            validator = new ValidationPL("Category.xml");
             InitializeComponent();
             populateCategories();
 
@@ -41,12 +45,24 @@ namespace PoddprojektGrupp24
         private void button1LaggTillKat_Click(object sender, EventArgs e)
         {
             String name = tbNewCategoryName.Text.Trim(); //Ser till att ta bort onädiga spaces i början och slutet av kategorinamnfältet.
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                MessageBox.Show("Kategorinamn kan inte vara tomt! Vänligen ange ett giltigt namn.", "Valideringsfel");
+                return;
+            }
+
+            if(validator.isDuplicate(name, "category"))
+            {
+                MessageBox.Show($"Kategorin '{name}' finns redan. Försök igenom med ett nytt namn!", "Valideringsfel");
+                return;
+            }
+
             catController.Add(name);
             checkedListBoxUserCategories.Items.Clear(); //Rensar boxen innan den populeras på nytt i nedan metod.
             populateCategories();
             tbNewCategoryName.Clear();
-            MessageBox.Show("Kategorin " + name + " har lagts till!", "Ny kategori tillagd");
-
+            MessageBox.Show($"Kategorin '{name}' har lagts till!", "Ny kategori tillagd");
+            
         }
 
         private void button2AndraKat_Click(object sender, EventArgs e)
@@ -72,12 +88,12 @@ namespace PoddprojektGrupp24
             int index = checkedListBoxUserCategories.SelectedIndex;
             if (index < 0)
             {
-                MessageBox.Show("Please select a category to remove");
+                MessageBox.Show("Vänligen välj en kategori att ta bort");
                 return;
             }
 
-            string message = "Are you sure you want to remove this category?";
-            string title = "Category";
+            string message = "Är du säker på att du vill ta bort kategorin?";
+            string title = "Ta bort kategori";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult dialog = MessageBox.Show(message, title, buttons);
 
@@ -89,7 +105,7 @@ namespace PoddprojektGrupp24
 
                     checkedListBoxUserCategories.Items.Remove(index);
 
-                    MessageBox.Show("You have successfully removed this category!");
+                    MessageBox.Show("Kategorin har tagits bort");
                 }
             }
             checkedListBoxUserCategories.Items.Clear();
@@ -198,7 +214,7 @@ namespace PoddprojektGrupp24
 
         private void btnResetFilters_Click(object sender, EventArgs e)
         {
-            cbFilterCategory.SelectedIndex = -1;
+            cbFilterCategory.SelectedIndex = -1; //Vid klick på "återställ" sätts värdet i relavanta CB:s till "".
             cbUpdateFrequencyDataGridViewItems.SelectedIndex = -1;
         }
 
@@ -207,7 +223,7 @@ namespace PoddprojektGrupp24
 
         }
 
-        private async void btnAddNewFeed_Click(object sender, EventArgs e)
+        private void btnAddNewFeed_Click(object sender, EventArgs e)
         {
 
         }

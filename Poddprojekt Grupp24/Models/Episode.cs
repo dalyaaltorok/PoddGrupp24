@@ -9,9 +9,9 @@ namespace Models
     public class Episode
     {
         private string name;
-        public string Name 
-        { 
-            get { return name; } 
+        public string Name
+        {
+            get { return name; }
             set { name = value; }
         }
 
@@ -26,6 +26,9 @@ namespace Models
         {
             this.name = name;
             this.description = description;
+        }
+
+        public Episode(){
         }
     }
 }
