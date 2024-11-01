@@ -19,7 +19,7 @@ namespace PresentationLayer
         public ValidationPL(string path)
         {
             feedController = new FeedController(path);
-            categoryController = new CategoryController();
+            categoryController = new CategoryController(path);
             httpClient = new HttpClient();
         }
         public async Task<bool> ValidateRSSUrlAsync(string url)
@@ -69,6 +69,7 @@ namespace PresentationLayer
             switch (type)
             {
                 case "category":
+
                     return categoryController.GetAll().Any(category => category.Name.ToLower() == name);
 
                 case "feed":

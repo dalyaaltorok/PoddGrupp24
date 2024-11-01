@@ -26,7 +26,7 @@ namespace BusinessLayer
         }
 
         public List<Category> GetAll()
-        {
+        { 
             return categoryRepo.GetAll();
         }
 

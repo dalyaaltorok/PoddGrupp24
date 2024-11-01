@@ -2,15 +2,18 @@ using System.ComponentModel;
 using System.DirectoryServices;
 using BusinessLayer;
 using Models;
+using PresentationLayer;
 
 namespace PoddprojektGrupp24
 {
     public partial class Poddbibliotek : Form
     {
         CategoryController catController;
+        ValidationPL validator;
         public Poddbibliotek()
         {
             catController = new CategoryController("Category.xml");
+            validator = new ValidationPL("Category.xml");
             InitializeComponent();
             populateCategories();
 
@@ -41,6 +44,13 @@ namespace PoddprojektGrupp24
         private void button1LaggTillKat_Click(object sender, EventArgs e)
         {
             String name = tbNewCategoryName.Text.Trim(); //Ser till att ta bort onädiga spaces i början och slutet av kategorinamnfältet.
+
+            if (validator.isDuplicate(name, "category"))
+            {
+                MessageBox.Show($"Kategorinamnet du angav finns redan, eller  är tomt. Försök igen med ett annat namn!", "Valideringsfel");
+                return;
+            }
+
             catController.Add(name);
             checkedListBoxUserCategories.Items.Clear(); //Rensar boxen innan den populeras på nytt i nedan metod.
             populateCategories();
@@ -207,7 +217,7 @@ namespace PoddprojektGrupp24
 
         }
 
-        private async void btnAddNewFeed_Click(object sender, EventArgs e)
+        private void btnAddNewFeed_Click(object sender, EventArgs e)
         {
 
         }

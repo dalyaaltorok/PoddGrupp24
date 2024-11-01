@@ -7,6 +7,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
 using System.ServiceModel.Syndication;
+using Models;
 
 
 namespace DataAccessLayer
@@ -30,17 +31,18 @@ namespace DataAccessLayer
         
         public void Serialize(List<T> list)
         {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<T>));
-                using (FileStream stream = new FileStream(Path, FileMode.Create, FileAccess.Write))
+            XmlSerializer serializer = new XmlSerializer(typeof(List<T>), new XmlRootAttribute($"ArrayOf{typeof(List<T>).Name}") { Namespace = "" });
+            using (FileStream stream = new FileStream(Path, FileMode.Create, FileAccess.Write))
                 {
                     serializer.Serialize(stream, list);
                 }
-            }
+                
+        }
         
         public List<T> Deserialize()
         {
-            XmlSerializer deserializer = new XmlSerializer(typeof(List<T>));
-            if(validation.FileExists(Path))
+            XmlSerializer deserializer = new XmlSerializer(typeof(List<T>), new XmlRootAttribute($"ArrayOf{typeof(List<T>).Name}") { Namespace = "" });
+            if (validation.FileExists(Path))
             {
                 using (FileStream stream = new FileStream(Path, FileMode.Open, FileAccess.Read))
                 {
