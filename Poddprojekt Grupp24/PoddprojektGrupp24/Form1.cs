@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using System.DirectoryServices;
 using System.ServiceModel.Syndication;
+using System.Text.RegularExpressions;
 using BusinessLayer;
 using DataAccessLayer;
 using Models;
@@ -15,12 +16,14 @@ namespace PoddprojektGrupp24
         ValidationPL categoryValidator;
         ValidationPL feedValidator;
         Serializer<Feed> serializer;
+        Feed selectedFeed;
         public Poddbibliotek()
         {
             catController = new CategoryController("Category.xml");
             categoryValidator = new ValidationPL("Category.xml");
             feedController = new FeedController("Feed.xml");
-            feedValidator = new ("Feed.xml");
+            feedValidator = new("Feed.xml");
+            selectedFeed = null;
             InitializeComponent();
             populateCategories();
             populateListView();
@@ -233,25 +236,26 @@ namespace PoddprojektGrupp24
         {
             string url = textBoxURL.Text.Trim();
             string name = textBoxFeedName.Text.Trim();
-            try { 
-            if (feedValidator.isDuplicate(name, "feed"))
+            try
             {
-                MessageBox.Show("Ett flöde med detta namn existerar redan. Vänligen ange ett annat namn.", "Duplicerat flöde");
-                return;
-            } 
-            
-            bool isURLValid = await feedValidator.ValidateRSSUrlAsync(url);
-            if (!isURLValid)
-            {
-                MessageBox.Show("Denna URL är inte ett giltigt RSS-flöde. Vänligen ange en giltig URL.", "Valideringsfel");
-                return;
-            }
+                if (feedValidator.isDuplicate(name, "feed"))
+                {
+                    MessageBox.Show("Ett flöde med detta namn existerar redan. Vänligen ange ett annat namn.", "Duplicerat flöde");
+                    return;
+                }
 
-            if (cbAssignFeedCategory.SelectedItem == null)
-            {
-                MessageBox.Show("Vänligen välj en kategori för podcasten. Du kan skapa en kategori under 'Hantera Kategori'", "Valideringsfel");
-                return;
-            }
+                bool isURLValid = await feedValidator.ValidateRSSUrlAsync(url);
+                if (!isURLValid)
+                {
+                    MessageBox.Show("Denna URL är inte ett giltigt RSS-flöde. Vänligen ange en giltig URL.", "Valideringsfel");
+                    return;
+                }
+
+                if (cbAssignFeedCategory.SelectedItem == null)
+                {
+                    MessageBox.Show("Vänligen välj en kategori för podcasten. Du kan skapa en kategori under 'Hantera Kategori'", "Valideringsfel");
+                    return;
+                }
 
                 Serializer<Feed> serializer = new Serializer<Feed>();
                 SyndicationFeed rssFeed = await serializer.DeserializeRSS(url);
@@ -276,7 +280,7 @@ namespace PoddprojektGrupp24
                 MessageBox.Show($"Podcasten {newFeed.Title} har lagts till!", "Ny podcast tillagd!");
                 populateListView();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show($"Ett fel uppstod när podcasten skulle läggas till: '{ex.Message}'", "Okänt fel");
             }
@@ -313,7 +317,81 @@ namespace PoddprojektGrupp24
 
         private void listViewPodd_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listViewPodd.SelectedItems.Count > 0)
+            {
+                DisplayEpisodes();
+            }
 
+            else
+            {
+                listBoxEpisodes.Items.Clear();
+                richTextBoxEpisodeDescription.Clear();
+            }
+            
+            if(listViewPodd.SelectedItems.Count > 0)
+{
+                //selectedItem hämtar ut items i listView, där det första itemet i listan får index 0 eftersom det blir det första i listan
+                var selectedItem = listViewPodd.SelectedItems[0];
+
+                //hittar feedet (podden) genom namnet
+                string feedName = selectedItem.Text;
+                selectedFeed = feedController.getFeed(feedName);
+            }
+else
+            {
+                //om ingenting är i-klickat så blir det null
+                selectedFeed = null;
+            }
+        }
+        private async void DisplayEpisodes()
+        {
+            string podcastFeedName = listViewPodd.SelectedItems[0].SubItems[0].Text;
+            Feed feed = feedController.getFeed(podcastFeedName);
+
+            List<Episode> episodes = feed.Episodes;
+
+            listBoxEpisodes.Items.Clear();
+            foreach (Episode episode in episodes)
+            {
+                //listBoxEpisodes.Items.Add(episode.Name);
+                ListViewItem item = new ListViewItem(episode.Name);
+                listBoxEpisodes.Items.Add(item);
+
+            }
+        }
+        private void DisplayDescription()
+        {
+            //hämta det valda avsnittets name från listviewn (listBoxEpisodes orkade inte ändra namn)
+            string selectedEPName = listBoxEpisodes.SelectedItems[0].Text;
+
+            //hämtar aktuella poddens name från listViewPodd
+            string feedName = listViewPodd.SelectedItems[0].SubItems[0].Text;
+            Feed feed = feedController.getFeed(feedName);
+
+            //hittar avsnittet i feedet som matchar det valda namnet
+            Episode selectedEp = feed.Episodes.FirstOrDefault(ep => ep.Name == selectedEPName);
+
+            if (selectedEp != null)
+            {
+                richTextBoxEpisodeDescription.Text = Regex.Replace(selectedEp.Description, "<.*?>", String.Empty);
+            }
+            else
+            {
+                richTextBoxEpisodeDescription.Clear();
+            }
+
+        }
+
+        private void listBoxEpisodes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxEpisodes.SelectedItems.Count > 0)
+            {
+                DisplayDescription();
+            }
+            else
+            {
+                richTextBoxEpisodeDescription.Clear();
+            }
         }
     }
 }

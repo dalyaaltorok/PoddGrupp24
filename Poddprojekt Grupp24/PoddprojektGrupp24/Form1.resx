@@ -352,30 +352,6 @@
   <data name="&gt;&gt;lbAvsnitt.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="listBoxEpisodes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1144, 187</value>
-  </data>
-  <data name="listBoxEpisodes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="listBoxEpisodes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 836</value>
-  </data>
-  <data name="listBoxEpisodes.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;listBoxEpisodes.Name" xml:space="preserve">
-    <value>listBoxEpisodes</value>
-  </data>
-  <data name="&gt;&gt;listBoxEpisodes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listBoxEpisodes.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;listBoxEpisodes.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
   <data name="lbLaggTillPoddcast.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
   </data>
@@ -407,7 +383,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbLaggTillPoddcast.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="textBoxFeedName.Location" type="System.Drawing.Point, System.Drawing">
     <value>44, 221</value>
@@ -434,7 +410,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxFeedName.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="cbUpdateFrequencyDataGridViewItems.Items" xml:space="preserve">
     <value>1:a Minut</value>
@@ -467,7 +443,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbUpdateFrequencyDataGridViewItems.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="cbAssignFeedCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>271, 270</value>
@@ -491,7 +467,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbAssignFeedCategory.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="textBoxURL.Location" type="System.Drawing.Point, System.Drawing">
     <value>44, 173</value>
@@ -518,7 +494,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxURL.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="btnAddNewFeed.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -548,7 +524,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAddNewFeed.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="btnChangeFeedName.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -581,7 +557,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnChangeFeedName.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <metadata name="cbChangeFeedCategory.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -614,7 +590,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbChangeFeedCategory.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="checkedListBoxUserCategories.Location" type="System.Drawing.Point, System.Drawing">
     <value>1656, 333</value>
@@ -635,7 +611,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkedListBoxUserCategories.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="lbTilldelaKategori.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10.125pt, style=Bold</value>
@@ -668,7 +644,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbTilldelaKategori.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="lbUpdateringsfrekv.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10.125pt, style=Bold</value>
@@ -704,7 +680,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbUpdateringsfrekv.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lbFiltreraKategori.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10.125pt, style=Bold</value>
@@ -737,7 +713,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbFiltreraKategori.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lbAndraFiltrera.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -770,7 +746,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbAndraFiltrera.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="tbChangeFeedName.Location" type="System.Drawing.Point, System.Drawing">
     <value>561, 173</value>
@@ -797,7 +773,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbChangeFeedName.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="btnRemoveSelectedFeed.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -839,7 +815,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnRemoveSelectedFeed.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnResetFilters.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -881,7 +857,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnResetFilters.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnChangeCategory.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -914,7 +890,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnChangeCategory.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="cbFilterCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>754, 274</value>
@@ -938,7 +914,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbFilterCategory.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lbAvsnittsbeskrivning.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -959,7 +935,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbAvsnittsbeskrivning.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="toolTipChangeFeedName.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>780, 17</value>
@@ -995,7 +971,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbKategoriLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lbAvsnittsbesk.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -1028,7 +1004,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbAvsnittsbesk.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Namn.Text" xml:space="preserve">
     <value>Namn</value>
@@ -1076,6 +1052,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;listViewPodd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Avsnitt</value>
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>300</value>
+  </data>
+  <data name="listBoxEpisodes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1121, 179</value>
+  </data>
+  <data name="listBoxEpisodes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 844</value>
+  </data>
+  <data name="listBoxEpisodes.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;listBoxEpisodes.Name" xml:space="preserve">
+    <value>listBoxEpisodes</value>
+  </data>
+  <data name="&gt;&gt;listBoxEpisodes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listBoxEpisodes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listBoxEpisodes.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1089,9 +1092,6 @@
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -1145,6 +1145,12 @@
     <value>Kategori</value>
   </data>
   <data name="&gt;&gt;Kategori.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

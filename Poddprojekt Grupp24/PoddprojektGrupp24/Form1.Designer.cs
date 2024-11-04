@@ -38,7 +38,6 @@
             btnTaBortKat = new Button();
             richTextBoxEpisodeDescription = new RichTextBox();
             lbAvsnitt = new Label();
-            listBoxEpisodes = new ListBox();
             lbLaggTillPoddcast = new Label();
             textBoxFeedName = new TextBox();
             cbUpdateFrequencyDataGridViewItems = new ComboBox();
@@ -69,6 +68,8 @@
             Titel = new ColumnHeader();
             Antalavsnitt = new ColumnHeader();
             Kategori = new ColumnHeader();
+            listBoxEpisodes = new ListView();
+            columnHeader1 = new ColumnHeader();
             SuspendLayout();
             // 
             // Rubrik
@@ -135,13 +136,6 @@
             lbAvsnitt.ForeColor = Color.Firebrick;
             lbAvsnitt.Name = "lbAvsnitt";
             lbAvsnitt.Click += label2_Click;
-            // 
-            // listBoxEpisodes
-            // 
-            listBoxEpisodes.FormattingEnabled = true;
-            resources.ApplyResources(listBoxEpisodes, "listBoxEpisodes");
-            listBoxEpisodes.Name = "listBoxEpisodes";
-            listBoxEpisodes.SelectedIndexChanged += listBoxAvsnitt_SelectedIndexChanged;
             // 
             // lbLaggTillPoddcast
             // 
@@ -335,6 +329,7 @@
             // listViewPodd
             // 
             listViewPodd.Columns.AddRange(new ColumnHeader[] { Namn, Titel, Antalavsnitt, Kategori });
+            listViewPodd.FullRowSelect = true;
             resources.ApplyResources(listViewPodd, "listViewPodd");
             listViewPodd.Name = "listViewPodd";
             listViewPodd.UseCompatibleStateImageBehavior = false;
@@ -357,11 +352,27 @@
             // 
             resources.ApplyResources(Kategori, "Kategori");
             // 
+            // listBoxEpisodes
+            // 
+            listBoxEpisodes.Columns.AddRange(new ColumnHeader[] { columnHeader1 });
+            listBoxEpisodes.FullRowSelect = true;
+            listBoxEpisodes.GridLines = true;
+            resources.ApplyResources(listBoxEpisodes, "listBoxEpisodes");
+            listBoxEpisodes.Name = "listBoxEpisodes";
+            listBoxEpisodes.UseCompatibleStateImageBehavior = false;
+            listBoxEpisodes.View = View.Details;
+            listBoxEpisodes.SelectedIndexChanged += listBoxEpisodes_SelectedIndexChanged;
+            // 
+            // columnHeader1
+            // 
+            resources.ApplyResources(columnHeader1, "columnHeader1");
+            // 
             // Poddbibliotek
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
+            Controls.Add(listBoxEpisodes);
             Controls.Add(listViewPodd);
             Controls.Add(lbAvsnittsbesk);
             Controls.Add(lbKategoriLabel);
@@ -384,7 +395,6 @@
             Controls.Add(cbUpdateFrequencyDataGridViewItems);
             Controls.Add(textBoxFeedName);
             Controls.Add(lbLaggTillPoddcast);
-            Controls.Add(listBoxEpisodes);
             Controls.Add(lbAvsnitt);
             Controls.Add(richTextBoxEpisodeDescription);
             Controls.Add(btnTaBortKat);
@@ -409,7 +419,6 @@
         private Button btnTaBortKat;
         private RichTextBox richTextBoxEpisodeDescription;
         private Label lbAvsnitt;
-        private ListBox listBoxEpisodes;
         private Label lbLaggTillPoddcast;
         private TextBox textBoxFeedName;
         private ComboBox cbUpdateFrequencyDataGridViewItems;
@@ -440,5 +449,7 @@
         private ColumnHeader Titel;
         private ColumnHeader Antalavsnitt;
         private ColumnHeader Kategori;
+        private ListView listBoxEpisodes;
+        private ColumnHeader columnHeader1;
     }
 }
