@@ -61,7 +61,7 @@ namespace PoddprojektGrupp24
 
             if (categoryValidator.isDuplicate(name, "category"))
             {
-                string test = null;
+                
                 MessageBox.Show($"Kategorinamnet du angav finns redan, eller  är tomt. Försök igen med ett annat namn!", "Valideringsfel");
                 return;
             }
