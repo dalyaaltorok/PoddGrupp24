@@ -30,9 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Poddbibliotek));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Rubrik = new Label();
             lbKategori = new Label();
             tbNewCategoryName = new TextBox();
@@ -50,7 +47,6 @@
             btnAddNewFeed = new Button();
             btnChangeFeedName = new Button();
             cbChangeFeedCategory = new ComboBox();
-            dataGridViewPodcastList = new DataGridView();
             checkedListBoxUserCategories = new CheckedListBox();
             lbTilldelaKategori = new Label();
             lbUpdateringsfrekv = new Label();
@@ -69,7 +65,11 @@
             toolTipResetFilters = new ToolTip(components);
             lbKategoriLabel = new Label();
             lbAvsnittsbesk = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewPodcastList).BeginInit();
+            listViewPodd = new ListView();
+            Namn = new ColumnHeader();
+            Titel = new ColumnHeader();
+            Antalavsnitt = new ColumnHeader();
+            Kategori = new ColumnHeader();
             SuspendLayout();
             // 
             // Rubrik
@@ -208,42 +208,6 @@
             toolTipChangeFeedCategory.SetToolTip(cbChangeFeedCategory, resources.GetString("cbChangeFeedCategory.ToolTip"));
             cbChangeFeedCategory.SelectedIndexChanged += comboBoxKat_SelectedIndexChanged;
             // 
-            // dataGridViewPodcastList
-            // 
-            dataGridViewPodcastList.AllowUserToAddRows = false;
-            dataGridViewPodcastList.AllowUserToDeleteRows = false;
-            dataGridViewPodcastList.AllowUserToResizeRows = false;
-            dataGridViewPodcastList.BackgroundColor = Color.White;
-            dataGridViewPodcastList.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridViewPodcastList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewPodcastList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridViewPodcastList.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewPodcastList.GridColor = Color.White;
-            resources.ApplyResources(dataGridViewPodcastList, "dataGridViewPodcastList");
-            dataGridViewPodcastList.Name = "dataGridViewPodcastList";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridViewPodcastList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            // 
             // checkedListBoxUserCategories
             // 
             checkedListBoxUserCategories.CheckOnClick = true;
@@ -376,11 +340,37 @@
             lbAvsnittsbesk.ForeColor = Color.Firebrick;
             lbAvsnittsbesk.Name = "lbAvsnittsbesk";
             // 
+            // listViewPodd
+            // 
+            listViewPodd.Columns.AddRange(new ColumnHeader[] { Namn, Titel, Antalavsnitt, Kategori });
+            resources.ApplyResources(listViewPodd, "listViewPodd");
+            listViewPodd.Name = "listViewPodd";
+            listViewPodd.UseCompatibleStateImageBehavior = false;
+            listViewPodd.View = View.Details;
+            listViewPodd.SelectedIndexChanged += listViewPodd_SelectedIndexChanged;
+            // 
+            // Namn
+            // 
+            resources.ApplyResources(Namn, "Namn");
+            // 
+            // Titel
+            // 
+            resources.ApplyResources(Titel, "Titel");
+            // 
+            // Antalavsnitt
+            // 
+            resources.ApplyResources(Antalavsnitt, "Antalavsnitt");
+            // 
+            // Kategori
+            // 
+            resources.ApplyResources(Kategori, "Kategori");
+            // 
             // Poddbibliotek
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
+            Controls.Add(listViewPodd);
             Controls.Add(lbAvsnittsbesk);
             Controls.Add(lbKategoriLabel);
             Controls.Add(btnResetFilters);
@@ -394,7 +384,6 @@
             Controls.Add(lbAndraFiltrera);
             Controls.Add(lbTilldelaKategori);
             Controls.Add(checkedListBoxUserCategories);
-            Controls.Add(dataGridViewPodcastList);
             Controls.Add(cbChangeFeedCategory);
             Controls.Add(btnChangeFeedName);
             Controls.Add(btnAddNewFeed);
@@ -414,7 +403,6 @@
             Controls.Add(Rubrik);
             Name = "Poddbibliotek";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridViewPodcastList).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -438,7 +426,6 @@
         private Button btnAddNewFeed;
         private Button btnChangeFeedName;
         private ComboBox cbChangeFeedCategory;
-        private DataGridView dataGridViewPodcastList;
         private CheckedListBox checkedListBoxUserCategories;
         private Label lbTilldelaKategori;
         private Label lbAndraFiltrera;
@@ -457,5 +444,10 @@
         private ToolTip toolTipResetFilters;
         private Label lbKategoriLabel;
         private Label lbAvsnittsbesk;
+        private ListView listViewPodd;
+        private ColumnHeader Namn;
+        private ColumnHeader Titel;
+        private ColumnHeader Antalavsnitt;
+        private ColumnHeader Kategori;
     }
 }

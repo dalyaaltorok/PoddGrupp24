@@ -577,30 +577,6 @@
   <data name="&gt;&gt;cbChangeFeedCategory.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="dataGridViewPodcastList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 243</value>
-  </data>
-  <data name="dataGridViewPodcastList.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="dataGridViewPodcastList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>635, 396</value>
-  </data>
-  <data name="dataGridViewPodcastList.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewPodcastList.Name" xml:space="preserve">
-    <value>dataGridViewPodcastList</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewPodcastList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewPodcastList.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewPodcastList.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
   <data name="checkedListBoxUserCategories.Location" type="System.Drawing.Point, System.Drawing">
     <value>1019, 208</value>
   </data>
@@ -623,7 +599,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;checkedListBoxUserCategories.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="lbTilldelaKategori.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10.125pt, style=Bold</value>
@@ -653,7 +629,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbTilldelaKategori.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="lbUpdateringsfrekv.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10.125pt, style=Bold</value>
@@ -686,7 +662,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbUpdateringsfrekv.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lbFiltreraKategori.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10.125pt, style=Bold</value>
@@ -716,7 +692,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbFiltreraKategori.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lbAndraFiltrera.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -746,7 +722,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbAndraFiltrera.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="tbChangeFeedName.Location" type="System.Drawing.Point, System.Drawing">
     <value>345, 108</value>
@@ -770,7 +746,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbChangeFeedName.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btnRemoveSelectedFeed.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -809,7 +785,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnRemoveSelectedFeed.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnResetFilters.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -848,7 +824,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnResetFilters.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnChangeCategory.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
@@ -878,7 +854,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnChangeCategory.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="cbFilterCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>464, 171</value>
@@ -899,7 +875,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbFilterCategory.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lbAvsnittsbeskrivning.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -923,7 +899,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbAvsnittsbeskrivning.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="toolTipChangeFeedName.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>780, 17</value>
@@ -956,7 +932,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbKategoriLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lbAvsnittsbesk.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt, style=Bold</value>
@@ -968,7 +944,7 @@
     <value>1097, 311</value>
   </data>
   <data name="lbAvsnittsbesk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 30</value>
+    <value>147, 30</value>
   </data>
   <data name="lbAvsnittsbesk.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -986,6 +962,51 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbAvsnittsbesk.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Namn.Text" xml:space="preserve">
+    <value>Namn</value>
+  </data>
+  <data name="Namn.Width" type="System.Int32, mscorlib">
+    <value>160</value>
+  </data>
+  <data name="Titel.Text" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="Titel.Width" type="System.Int32, mscorlib">
+    <value>160</value>
+  </data>
+  <data name="Antalavsnitt.Text" xml:space="preserve">
+    <value>Antal avsnitt</value>
+  </data>
+  <data name="Antalavsnitt.Width" type="System.Int32, mscorlib">
+    <value>160</value>
+  </data>
+  <data name="Kategori.Text" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="Kategori.Width" type="System.Int32, mscorlib">
+    <value>151</value>
+  </data>
+  <data name="listViewPodd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 259</value>
+  </data>
+  <data name="listViewPodd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>636, 382</value>
+  </data>
+  <data name="listViewPodd.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;listViewPodd.Name" xml:space="preserve">
+    <value>listViewPodd</value>
+  </data>
+  <data name="&gt;&gt;listViewPodd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewPodd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listViewPodd.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1032,6 +1053,30 @@
   </data>
   <data name="&gt;&gt;toolTipResetFilters.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Namn.Name" xml:space="preserve">
+    <value>Namn</value>
+  </data>
+  <data name="&gt;&gt;Namn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Titel.Name" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="&gt;&gt;Titel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Antalavsnitt.Name" xml:space="preserve">
+    <value>Antalavsnitt</value>
+  </data>
+  <data name="&gt;&gt;Antalavsnitt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Kategori.Name" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="&gt;&gt;Kategori.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Poddbibliotek</value>

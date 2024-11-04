@@ -24,11 +24,14 @@ namespace BusinessLayer
         public async Task CreateFeed(string name, string rss, Category category)
         {
             await GetRSSFeed(rss);
-            string title = stream.Title.Text;
+            string title = stream.Title?.Text ?? "No Title";
             List<Episode> episodes = new List<Episode>();
             foreach (SyndicationItem item in stream.Items)
             {
-                Episode episode = new Episode(item.Title.Text, item.Summary.Text);
+                string episodeTitle = item.Title?.Text ?? "No Title";
+                string episodeSummary = item.Summary?.Text ?? "No Summary";
+
+                Episode episode = new Episode(episodeTitle, episodeSummary);
                 episodes.Add(episode);
             }
             Feed newFeed = new Feed(name, title, category, episodes);

@@ -1,6 +1,8 @@
 using System.ComponentModel;
 using System.DirectoryServices;
+using System.ServiceModel.Syndication;
 using BusinessLayer;
+using DataAccessLayer;
 using Models;
 using PresentationLayer;
 
@@ -9,14 +11,17 @@ namespace PoddprojektGrupp24
     public partial class Poddbibliotek : Form
     {
         CategoryController catController;
+        FeedController feedController;
         ValidationPL validator;
+        Serializer<Feed> serializer;
         public Poddbibliotek()
         {
             catController = new CategoryController("Category.xml");
             validator = new ValidationPL("Category.xml");
+            feedController = new FeedController("Feed.xml");
             InitializeComponent();
             populateCategories();
-
+            populateListView();
         }
 
         private void populateCategories()
@@ -28,10 +33,14 @@ namespace PoddprojektGrupp24
             foreach (Category category in list)
             {
                 checkedListBoxUserCategories.Items.Add(category.Name, false); //Lägger till en item i kategoriboxen. "false" innebär att ett item inte ska vara iklickat efter att det skapats.  
-                cbChangeFeedCategory.Items.Add(category.Name);
-                cbFilterCategory.Items.Add(category.Name);
-                cbAssignFeedCategory.Items.Add(category.Name);
+                cbChangeFeedCategory.Items.Add(category);
+                cbFilterCategory.Items.Add(category);
+                cbAssignFeedCategory.Items.Add(category);
             }
+            //Settar DisplayMember så att namnen på kategorierna syns och inte "Models.Category", vilket det hade gjort annars.
+            cbChangeFeedCategory.DisplayMember = "Name";
+            cbFilterCategory.DisplayMember = "Name";
+            cbAssignFeedCategory.DisplayMember = "Name";
         }
 
 
@@ -218,9 +227,63 @@ namespace PoddprojektGrupp24
 
         }
 
-        private void btnAddNewFeed_Click(object sender, EventArgs e)
+        private async void btnAddNewFeed_Click(object sender, EventArgs e)
         {
+            string url = textBoxURL.Text.Trim();
+            string name = textBoxFeedName.Text.Trim();
+            bool isURLValid = await validator.ValidateRSSUrlAsync(url);
+            if (!isURLValid)
+            {
+                MessageBox.Show("Denna URL är inte ett giltigt RSS-flöde. Vänligen ange en giltig URL.");
+                return;
+            }
+            if (validator.isDuplicate(name, url))
+            {
+                MessageBox.Show("Ett flöde med detta namn existerar redan. Vänligen ange ett annat namn.");
+                return;
+            }
 
+            Serializer<Feed> serializer = new Serializer<Feed>();
+            SyndicationFeed rssFeed = await serializer.DeserializeRSS(url);
+
+            if (rssFeed == null)
+            {
+                MessageBox.Show("Misslyckades med att hämta RSS-flöde. Vänligen ange en giltig URL.");
+                return;
+            }
+
+            string rssTitle = rssFeed.Title.Text ?? "Inget namn";
+
+            var newFeed = new Feed();
+            {
+                newFeed.Name = name;
+                newFeed.Title = rssTitle;
+                newFeed.Category = (Category)cbAssignFeedCategory.SelectedItem;
+                newFeed.Episodes = new List<Episode>();
+            }
+
+            feedController.CreateFeed(name, url, newFeed.Category);
+            MessageBox.Show("Podcasten " + newFeed.Title + " har lagts till!");
+            populateListView();
+        }
+
+        private void populateListView()
+        {
+            listViewPodd.Items.Clear();
+            var feeds = feedController.GetFeeds();
+
+            foreach (Feed feed in feeds)
+            {
+                ListViewItem listViewItem = new ListViewItem(feed.Name);
+                listViewItem.SubItems.Add(feed.Title);
+                listViewItem.SubItems.Add(feed.Episodes.Count.ToString());
+                listViewItem.SubItems.Add(feed.Category.Name);
+
+                listViewPodd.Items.Add(listViewItem);
+            }
+            {
+
+            }
         }
 
         private void textBoxURL_TextChanged(object sender, EventArgs e)
@@ -229,6 +292,11 @@ namespace PoddprojektGrupp24
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewPodd_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
