@@ -276,8 +276,12 @@ namespace PoddprojektGrupp24
                 }
 
                 await feedController.CreateFeed(name, url, newFeed.Category);
+                textBoxURL.Clear();
+                textBoxFeedName.Clear();
+                cbAssignFeedCategory.SelectedIndex = -1;
                 MessageBox.Show($"Podcasten {newFeed.Title} har lagts till!", "Ny podcast tillagd!");
                 populateListView();
+
             }
             catch (Exception ex)
             {
@@ -348,41 +352,57 @@ namespace PoddprojektGrupp24
                 selectedFeed = null;
             }
         }
-        private async void DisplayEpisodes()
+        private void DisplayEpisodes()
         {
-            string podcastFeedName = listViewPodd.SelectedItems[0].SubItems[0].Text;
-            Feed feed = feedController.getFeed(podcastFeedName);
-
-            List<Episode> episodes = feed.Episodes;
-
-            listBoxEpisodes.Items.Clear();
-            foreach (Episode episode in episodes)
+            try
             {
-                //listBoxEpisodes.Items.Add(episode.Name);
-                ListViewItem item = new ListViewItem(episode.Name);
-                listBoxEpisodes.Items.Add(item);
+                string podcastFeedName = listViewPodd.SelectedItems[0].SubItems[0].Text;
+                Feed feed = feedController.getFeed(podcastFeedName);
 
+                List<Episode> episodes = feed.Episodes;
+
+                listBoxEpisodes.Items.Clear();
+                foreach (Episode episode in episodes)
+                {
+                    //listBoxEpisodes.Items.Add(episode.Name);
+                    ListViewItem item = new ListViewItem(episode.Name);
+                    listBoxEpisodes.Items.Add(item);
+
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Följande fel har inträffat: {ex.Message}", "Ett fel har inträffat");
+            }
+
         }
+
         private void DisplayDescription()
         {
-            //hämta det valda avsnittets name från listviewn (listBoxEpisodes orkade inte ändra namn)
-            string selectedEPName = listBoxEpisodes.SelectedItems[0].Text;
-
-            //hämtar aktuella poddens name från listViewPodd
-            string feedName = listViewPodd.SelectedItems[0].SubItems[0].Text;
-            Feed feed = feedController.getFeed(feedName);
-
-            //hittar avsnittet i feedet som matchar det valda namnet
-            Episode selectedEp = feed.Episodes.FirstOrDefault(ep => ep.Name == selectedEPName);
-
-            if (selectedEp != null)
+            try
             {
-                richTextBoxEpisodeDescription.Text = Regex.Replace(selectedEp.Description, "<.*?>", String.Empty);
+                //hämta det valda avsnittets name från listviewn (listBoxEpisodes orkade inte ändra namn)
+                string selectedEPName = listBoxEpisodes.SelectedItems[0].Text;
+
+                //hämtar aktuella poddens name från listViewPodd
+                string feedName = listViewPodd.SelectedItems[0].SubItems[0].Text;
+                Feed feed = feedController.getFeed(feedName);
+
+                //hittar avsnittet i feedet som matchar det valda namnet
+                Episode selectedEp = feed.Episodes.FirstOrDefault(ep => ep.Name == selectedEPName);
+
+                if (selectedEp != null)
+                {
+                    richTextBoxEpisodeDescription.Text = Regex.Replace(selectedEp.Description, "<.*?>", String.Empty);
+                }
+                else
+                {
+                    richTextBoxEpisodeDescription.Clear();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                richTextBoxEpisodeDescription.Clear();
+                MessageBox.Show($"Följande fel har inträffat: {ex.Message}", "Ett fel har inträffat");
             }
 
         }
@@ -401,24 +421,32 @@ namespace PoddprojektGrupp24
 
         private void btnRemoveSelectedFeed_Click(object sender, EventArgs e)
         {
+           
             if (selectedFeed != null)
             {
-                //$-tecknet framför texten möjliggör att man kan lägga in variabler direkt in i texten men med ' och {} före och efter variabeln som det står nedan '{selectedFeed.Title}' och man slipper skriva + etc.
-                var confirm = MessageBox.Show($"Är du säker på att du vill radera '{selectedFeed.Title}'?", "Bekräfta borttagning av podcast", MessageBoxButtons.YesNo);
-                if (confirm == DialogResult.Yes)
+                try
                 {
-                    //hittar indexet av det valda feedet (podden) för att radera det
-                    var feeds = feedController.GetFeeds();
-                    int indexDelete = feeds.FindIndex(f => f.Name == selectedFeed.Name);
-
-                    if (indexDelete >= 0)
+                    //$-tecknet framför texten möjliggör att man kan lägga in variabler direkt in i texten men med ' och {} före och efter variabeln som det står nedan '{selectedFeed.Title}' och man slipper skriva + etc.
+                    var confirm = MessageBox.Show($"Är du säker på att du vill radera '{selectedFeed.Title}'?", "Bekräfta borttagning av podcast", MessageBoxButtons.YesNo);
+                    if (confirm == DialogResult.Yes)
                     {
-                        feedController.DeleteFeed(indexDelete);
-                        populateListView();
-                        MessageBox.Show($"'{selectedFeed.Title}' har tagits bort!", "Bekräftelse på borttagen podcast");
-                        //clearar klickningen så att det inte är någonting som är i-klickat efter borttagningen
-                        selectedFeed = null;
+                        //hittar indexet av det valda feedet (podden) för att radera det
+                        var feeds = feedController.GetFeeds();
+                        int indexDelete = feeds.FindIndex(f => f.Name == selectedFeed.Name);
+
+                        if (indexDelete >= 0)
+                        {
+                            feedController.DeleteFeed(indexDelete);
+                            populateListView();
+                            MessageBox.Show($"'{selectedFeed.Title}' har tagits bort!", "Bekräftelse på borttagen podcast");
+                            //clearar klickningen så att det inte är någonting som är i-klickat efter borttagningen
+                            selectedFeed = null;
+                        }
                     }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Följande fel har inträffat: {ex.Message}", "Ett fel har inträffat");
                 }
             }
             else

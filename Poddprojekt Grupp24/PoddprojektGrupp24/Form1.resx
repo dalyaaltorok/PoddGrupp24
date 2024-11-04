@@ -923,25 +923,25 @@
     <value>Namn</value>
   </data>
   <data name="Namn.Width" type="System.Int32, mscorlib">
-    <value>160</value>
+    <value>250</value>
   </data>
   <data name="Titel.Text" xml:space="preserve">
     <value>Titel</value>
   </data>
   <data name="Titel.Width" type="System.Int32, mscorlib">
-    <value>160</value>
+    <value>250</value>
   </data>
   <data name="Antalavsnitt.Text" xml:space="preserve">
     <value>Antal avsnitt</value>
   </data>
   <data name="Antalavsnitt.Width" type="System.Int32, mscorlib">
-    <value>160</value>
+    <value>250</value>
   </data>
   <data name="Kategori.Text" xml:space="preserve">
     <value>Kategori</value>
   </data>
   <data name="Kategori.Width" type="System.Int32, mscorlib">
-    <value>151</value>
+    <value>250</value>
   </data>
   <data name="listViewPodd.Location" type="System.Drawing.Point, System.Drawing">
     <value>44, 414</value>
