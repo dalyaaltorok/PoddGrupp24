@@ -40,7 +40,6 @@
             lbAvsnitt = new Label();
             lbLaggTillPoddcast = new Label();
             textBoxFeedName = new TextBox();
-            cbUpdateFrequencyDataGridViewItems = new ComboBox();
             cbAssignFeedCategory = new ComboBox();
             textBoxURL = new TextBox();
             btnAddNewFeed = new Button();
@@ -48,11 +47,9 @@
             cbChangeFeedCategory = new ComboBox();
             checkedListBoxUserCategories = new CheckedListBox();
             lbTilldelaKategori = new Label();
-            lbUpdateringsfrekv = new Label();
             lbFiltreraKategori = new Label();
             lbAndraFiltrera = new Label();
             tbChangeFeedName = new TextBox();
-            toolTipChangeFeedCategory = new ToolTip(components);
             btnRemoveSelectedFeed = new Button();
             btnResetFilters = new Button();
             btnChangeCategory = new Button();
@@ -60,7 +57,6 @@
             cbFilterCategory = new ComboBox();
             lbAvsnittsbeskrivning = new Label();
             toolTipChangeFeedName = new ToolTip(components);
-            toolTipResetFilters = new ToolTip(components);
             lbKategoriLabel = new Label();
             lbAvsnittsbesk = new Label();
             listViewPodd = new ListView();
@@ -150,16 +146,9 @@
             textBoxFeedName.Name = "textBoxFeedName";
             textBoxFeedName.TextChanged += textBoxNamn_TextChanged;
             // 
-            // cbUpdateFrequencyDataGridViewItems
-            // 
-            cbUpdateFrequencyDataGridViewItems.FormattingEnabled = true;
-            cbUpdateFrequencyDataGridViewItems.Items.AddRange(new object[] { resources.GetString("cbUpdateFrequencyDataGridViewItems.Items"), resources.GetString("cbUpdateFrequencyDataGridViewItems.Items1"), resources.GetString("cbUpdateFrequencyDataGridViewItems.Items2") });
-            resources.ApplyResources(cbUpdateFrequencyDataGridViewItems, "cbUpdateFrequencyDataGridViewItems");
-            cbUpdateFrequencyDataGridViewItems.Name = "cbUpdateFrequencyDataGridViewItems";
-            cbUpdateFrequencyDataGridViewItems.SelectedIndexChanged += comboBoxMinuter_SelectedIndexChanged;
-            // 
             // cbAssignFeedCategory
             // 
+            cbAssignFeedCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             cbAssignFeedCategory.FormattingEnabled = true;
             resources.ApplyResources(cbAssignFeedCategory, "cbAssignFeedCategory");
             cbAssignFeedCategory.Name = "cbAssignFeedCategory";
@@ -191,13 +180,14 @@
             btnChangeFeedName.ForeColor = Color.FromArgb(64, 0, 0);
             btnChangeFeedName.Name = "btnChangeFeedName";
             btnChangeFeedName.UseVisualStyleBackColor = false;
+            btnChangeFeedName.Click += btnChangeFeedName_Click;
             // 
             // cbChangeFeedCategory
             // 
+            cbChangeFeedCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             cbChangeFeedCategory.FormattingEnabled = true;
             resources.ApplyResources(cbChangeFeedCategory, "cbChangeFeedCategory");
             cbChangeFeedCategory.Name = "cbChangeFeedCategory";
-            toolTipChangeFeedCategory.SetToolTip(cbChangeFeedCategory, resources.GetString("cbChangeFeedCategory.ToolTip"));
             cbChangeFeedCategory.SelectedIndexChanged += comboBoxKat_SelectedIndexChanged;
             // 
             // checkedListBoxUserCategories
@@ -214,13 +204,6 @@
             lbTilldelaKategori.ForeColor = Color.Firebrick;
             lbTilldelaKategori.Name = "lbTilldelaKategori";
             lbTilldelaKategori.Click += label3_Click;
-            // 
-            // lbUpdateringsfrekv
-            // 
-            resources.ApplyResources(lbUpdateringsfrekv, "lbUpdateringsfrekv");
-            lbUpdateringsfrekv.ForeColor = Color.Firebrick;
-            lbUpdateringsfrekv.Name = "lbUpdateringsfrekv";
-            lbUpdateringsfrekv.Click += label3_Click_2;
             // 
             // lbFiltreraKategori
             // 
@@ -241,12 +224,6 @@
             resources.ApplyResources(tbChangeFeedName, "tbChangeFeedName");
             tbChangeFeedName.Name = "tbChangeFeedName";
             // 
-            // toolTipChangeFeedCategory
-            // 
-            toolTipChangeFeedCategory.AutoPopDelay = 5000;
-            toolTipChangeFeedCategory.InitialDelay = 50;
-            toolTipChangeFeedCategory.ReshowDelay = 100;
-            // 
             // btnRemoveSelectedFeed
             // 
             btnRemoveSelectedFeed.BackColor = Color.LightCoral;
@@ -256,8 +233,8 @@
             btnRemoveSelectedFeed.ForeColor = Color.FromArgb(64, 0, 0);
             btnRemoveSelectedFeed.Name = "btnRemoveSelectedFeed";
             toolTipRemoveSelectedFeed.SetToolTip(btnRemoveSelectedFeed, resources.GetString("btnRemoveSelectedFeed.ToolTip"));
-            toolTipChangeFeedCategory.SetToolTip(btnRemoveSelectedFeed, resources.GetString("btnRemoveSelectedFeed.ToolTip1"));
             btnRemoveSelectedFeed.UseVisualStyleBackColor = false;
+            btnRemoveSelectedFeed.Click += btnRemoveSelectedFeed_Click;
             // 
             // btnResetFilters
             // 
@@ -267,8 +244,6 @@
             resources.ApplyResources(btnResetFilters, "btnResetFilters");
             btnResetFilters.ForeColor = Color.FromArgb(64, 0, 0);
             btnResetFilters.Name = "btnResetFilters";
-            toolTipChangeFeedCategory.SetToolTip(btnResetFilters, resources.GetString("btnResetFilters.ToolTip"));
-            toolTipResetFilters.SetToolTip(btnResetFilters, resources.GetString("btnResetFilters.ToolTip1"));
             btnResetFilters.UseVisualStyleBackColor = false;
             btnResetFilters.Click += btnResetFilters_Click;
             // 
@@ -281,6 +256,7 @@
             btnChangeCategory.ForeColor = Color.FromArgb(64, 0, 0);
             btnChangeCategory.Name = "btnChangeCategory";
             btnChangeCategory.UseVisualStyleBackColor = false;
+            btnChangeCategory.Click += btnChangeCategory_Click;
             // 
             // toolTipRemoveSelectedFeed
             // 
@@ -290,6 +266,7 @@
             // 
             // cbFilterCategory
             // 
+            cbFilterCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             cbFilterCategory.FormattingEnabled = true;
             resources.ApplyResources(cbFilterCategory, "cbFilterCategory");
             cbFilterCategory.Name = "cbFilterCategory";
@@ -306,12 +283,6 @@
             toolTipChangeFeedName.AutoPopDelay = 5000;
             toolTipChangeFeedName.InitialDelay = 50;
             toolTipChangeFeedName.ReshowDelay = 100;
-            // 
-            // toolTipResetFilters
-            // 
-            toolTipResetFilters.AutoPopDelay = 5000;
-            toolTipResetFilters.InitialDelay = 50;
-            toolTipResetFilters.ReshowDelay = 100;
             // 
             // lbKategoriLabel
             // 
@@ -380,7 +351,6 @@
             Controls.Add(lbAvsnittsbeskrivning);
             Controls.Add(lbFiltreraKategori);
             Controls.Add(cbFilterCategory);
-            Controls.Add(lbUpdateringsfrekv);
             Controls.Add(btnRemoveSelectedFeed);
             Controls.Add(btnChangeCategory);
             Controls.Add(tbChangeFeedName);
@@ -392,7 +362,6 @@
             Controls.Add(btnAddNewFeed);
             Controls.Add(textBoxURL);
             Controls.Add(cbAssignFeedCategory);
-            Controls.Add(cbUpdateFrequencyDataGridViewItems);
             Controls.Add(textBoxFeedName);
             Controls.Add(lbLaggTillPoddcast);
             Controls.Add(lbAvsnitt);
@@ -421,7 +390,6 @@
         private Label lbAvsnitt;
         private Label lbLaggTillPoddcast;
         private TextBox textBoxFeedName;
-        private ComboBox cbUpdateFrequencyDataGridViewItems;
         private ComboBox cbAssignFeedCategory;
         private TextBox textBoxURL;
         private Button btnAddNewFeed;
@@ -431,17 +399,14 @@
         private Label lbTilldelaKategori;
         private Label lbAndraFiltrera;
         private TextBox tbChangeFeedName;
-        private ToolTip toolTipChangeFeedCategory;
         private Button btnChangeCategory;
         private Button btnRemoveSelectedFeed;
         private ToolTip toolTipRemoveSelectedFeed;
-        private Label lbUpdateringsfrekv;
         private ComboBox cbFilterCategory;
         private Label lbFiltreraKategori;
         private Label lbAvsnittsbeskrivning;
         private Button btnResetFilters;
         private ToolTip toolTipChangeFeedName;
-        private ToolTip toolTipResetFilters;
         private Label lbKategoriLabel;
         private Label lbAvsnittsbesk;
         private ListView listViewPodd;

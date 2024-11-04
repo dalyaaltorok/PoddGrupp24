@@ -61,7 +61,7 @@ namespace PoddprojektGrupp24
 
             if (categoryValidator.isDuplicate(name, "category"))
             {
-                
+
                 MessageBox.Show($"Kategorinamnet du angav finns redan, eller  är tomt. Försök igen med ett annat namn!", "Valideringsfel");
                 return;
             }
@@ -224,12 +224,11 @@ namespace PoddprojektGrupp24
         private void btnResetFilters_Click(object sender, EventArgs e)
         {
             cbFilterCategory.SelectedIndex = -1;
-            cbUpdateFrequencyDataGridViewItems.SelectedIndex = -1;
         }
 
         private void cbFilterCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            populateListView();
         }
 
         private async void btnAddNewFeed_Click(object sender, EventArgs e)
@@ -291,6 +290,12 @@ namespace PoddprojektGrupp24
             listViewPodd.Items.Clear();
             var feeds = feedController.GetFeeds();
 
+            Category selectedCategory = cbFilterCategory.SelectedItem as Category;
+            if (selectedCategory != null)
+            {
+                feeds = feeds.Where(feed => feed.Category.Name == selectedCategory.Name).ToList();
+            }
+
             foreach (Feed feed in feeds)
             {
                 ListViewItem listViewItem = new ListViewItem(feed.Name);
@@ -327,9 +332,9 @@ namespace PoddprojektGrupp24
                 listBoxEpisodes.Items.Clear();
                 richTextBoxEpisodeDescription.Clear();
             }
-            
-            if(listViewPodd.SelectedItems.Count > 0)
-{
+
+            if (listViewPodd.SelectedItems.Count > 0)
+            {
                 //selectedItem hämtar ut items i listView, där det första itemet i listan får index 0 eftersom det blir det första i listan
                 var selectedItem = listViewPodd.SelectedItems[0];
 
@@ -337,7 +342,7 @@ namespace PoddprojektGrupp24
                 string feedName = selectedItem.Text;
                 selectedFeed = feedController.getFeed(feedName);
             }
-else
+            else
             {
                 //om ingenting är i-klickat så blir det null
                 selectedFeed = null;
@@ -391,6 +396,101 @@ else
             else
             {
                 richTextBoxEpisodeDescription.Clear();
+            }
+        }
+
+        private void btnRemoveSelectedFeed_Click(object sender, EventArgs e)
+        {
+            if (selectedFeed != null)
+            {
+                //$-tecknet framför texten möjliggör att man kan lägga in variabler direkt in i texten men med ' och {} före och efter variabeln som det står nedan '{selectedFeed.Title}' och man slipper skriva + etc.
+                var confirm = MessageBox.Show($"Är du säker på att du vill radera '{selectedFeed.Title}'?", "Bekräfta borttagning av podcast", MessageBoxButtons.YesNo);
+                if (confirm == DialogResult.Yes)
+                {
+                    //hittar indexet av det valda feedet (podden) för att radera det
+                    var feeds = feedController.GetFeeds();
+                    int indexDelete = feeds.FindIndex(f => f.Name == selectedFeed.Name);
+
+                    if (indexDelete >= 0)
+                    {
+                        feedController.DeleteFeed(indexDelete);
+                        populateListView();
+                        MessageBox.Show($"'{selectedFeed.Title}' har tagits bort!", "Bekräftelse på borttagen podcast");
+                        //clearar klickningen så att det inte är någonting som är i-klickat efter borttagningen
+                        selectedFeed = null;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vänligen välj en podcast att radera.", "Välj feed att ta bort");
+            }
+        }
+
+        private void btnChangeFeedName_Click(object sender, EventArgs e)
+        {   
+            if (listViewPodd.SelectedItems.Count == 0) //Är ett feed valt? Om inte, kör nedan.
+            {
+                MessageBox.Show("Du måste välja en podcast från listan att ändra namnet på.", "Ingen podcast är vald"); 
+                return;
+            }
+            string currentFeedName = listViewPodd.SelectedItems[0].Text; //Nuvarande självtilldelat namn på feed.
+            string newName = tbChangeFeedName.Text.Trim(); //Önskat nytt namn på vald podcast.
+
+            if (feedValidator.isDuplicate(newName, "feed")) //Validering, säkerställer att inga dubletter uppstår.
+            {
+                MessageBox.Show("Vänligen ange ett annat namn. Namnet du angav är antingen tomt eller används redan.", "Valideringsfel");
+                return;
+            }
+
+            try
+            {
+                Feed feedToUpdate = feedController.getFeed(currentFeedName); //Hämtar feed-objektet som ska ändras.
+                int index = listViewPodd.SelectedItems[0].Index; //Hämtar index på valt feed.
+                feedController.UpdateFeedName(index, feedToUpdate, newName); //Uppdaterar namnet på valt feed. 
+
+                populateListView();
+
+                MessageBox.Show("Namnet har uppdaterats!", "Namn ändrat"); //Success! Yippie.
+                tbChangeFeedName.Clear(); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Följande fel har inträffat: '{ex.Message}'", "Ett fel har inträffat"); 
+                return;
+            }
+        }
+
+        private void btnChangeCategory_Click(object sender, EventArgs e)
+        {
+            if (listViewPodd.SelectedItems.Count == 0) //Samma som ovan, välj en podd annars går det fan inte bra.
+            {
+                MessageBox.Show("Du måste välja en podcast från listan för att ändra kategori", "Ingen podcast är vald");
+                return;
+            }
+
+            if (cbChangeFeedCategory.SelectedItem == null) //Om man inte valt en kategori att byta till.
+            {
+                MessageBox.Show("Du måste välja en kategori att byta till", "Ingen kategori är vald");
+                return;
+            }
+
+            string currentFeedName = listViewPodd.SelectedItems[0].Text; //Inget trim, användaren ger ändå ingen direkt input.
+
+            try
+            {
+                Feed feedToUpdate = feedController.getFeed(currentFeedName);
+                int index = listViewPodd.SelectedItems[0].Index; //Hämtar index på vald feed, som ovan.
+                Category newCategory = (Category)cbChangeFeedCategory.SelectedItem;
+                feedController.updateFeedCategory(index, feedToUpdate, newCategory);
+
+                populateListView();
+                cbChangeFeedCategory.SelectedIndex = -1;
+                MessageBox.Show("Podcastens kategori har uppdaterats!", "Kategori ändrad");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Följande fel har inträffat: {ex.Message}", "Ett fel har inträffat");
             }
         }
     }
