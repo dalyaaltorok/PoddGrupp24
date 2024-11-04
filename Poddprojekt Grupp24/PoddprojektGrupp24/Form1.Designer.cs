@@ -264,6 +264,7 @@
             toolTipRemoveSelectedFeed.SetToolTip(btnRemoveSelectedFeed, resources.GetString("btnRemoveSelectedFeed.ToolTip"));
             toolTipChangeFeedCategory.SetToolTip(btnRemoveSelectedFeed, resources.GetString("btnRemoveSelectedFeed.ToolTip1"));
             btnRemoveSelectedFeed.UseVisualStyleBackColor = false;
+            btnRemoveSelectedFeed.Click += btnRemoveSelectedFeed_Click;
             // 
             // btnResetFilters
             // 
@@ -335,6 +336,7 @@
             // listViewPodd
             // 
             listViewPodd.Columns.AddRange(new ColumnHeader[] { Namn, Titel, Antalavsnitt, Kategori });
+            listViewPodd.FullRowSelect = true;
             resources.ApplyResources(listViewPodd, "listViewPodd");
             listViewPodd.Name = "listViewPodd";
             listViewPodd.UseCompatibleStateImageBehavior = false;

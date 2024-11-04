@@ -15,12 +15,14 @@ namespace PoddprojektGrupp24
         ValidationPL categoryValidator;
         ValidationPL feedValidator;
         Serializer<Feed> serializer;
+        Feed selectedFeed;
         public Poddbibliotek()
         {
             catController = new CategoryController("Category.xml");
             categoryValidator = new ValidationPL("Category.xml");
             feedController = new FeedController("Feed.xml");
-            feedValidator = new ("Feed.xml");
+            feedValidator = new("Feed.xml");
+            selectedFeed = null;
             InitializeComponent();
             populateCategories();
             populateListView();
@@ -233,25 +235,26 @@ namespace PoddprojektGrupp24
         {
             string url = textBoxURL.Text.Trim();
             string name = textBoxFeedName.Text.Trim();
-            try { 
-            if (feedValidator.isDuplicate(name, "feed"))
+            try
             {
-                MessageBox.Show("Ett flöde med detta namn existerar redan. Vänligen ange ett annat namn.", "Duplicerat flöde");
-                return;
-            } 
-            
-            bool isURLValid = await feedValidator.ValidateRSSUrlAsync(url);
-            if (!isURLValid)
-            {
-                MessageBox.Show("Denna URL är inte ett giltigt RSS-flöde. Vänligen ange en giltig URL.", "Valideringsfel");
-                return;
-            }
+                if (feedValidator.isDuplicate(name, "feed"))
+                {
+                    MessageBox.Show("Ett flöde med detta namn existerar redan. Vänligen ange ett annat namn.", "Duplicerat flöde");
+                    return;
+                }
 
-            if (cbAssignFeedCategory.SelectedItem == null)
-            {
-                MessageBox.Show("Vänligen välj en kategori för podcasten. Du kan skapa en kategori under 'Hantera Kategori'", "Valideringsfel");
-                return;
-            }
+                bool isURLValid = await feedValidator.ValidateRSSUrlAsync(url);
+                if (!isURLValid)
+                {
+                    MessageBox.Show("Denna URL är inte ett giltigt RSS-flöde. Vänligen ange en giltig URL.", "Valideringsfel");
+                    return;
+                }
+
+                if (cbAssignFeedCategory.SelectedItem == null)
+                {
+                    MessageBox.Show("Vänligen välj en kategori för podcasten. Du kan skapa en kategori under 'Hantera Kategori'", "Valideringsfel");
+                    return;
+                }
 
                 Serializer<Feed> serializer = new Serializer<Feed>();
                 SyndicationFeed rssFeed = await serializer.DeserializeRSS(url);
@@ -276,7 +279,7 @@ namespace PoddprojektGrupp24
                 MessageBox.Show($"Podcasten {newFeed.Title} har lagts till!", "Ny podcast tillagd!");
                 populateListView();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show($"Ett fel uppstod när podcasten skulle läggas till: '{ex.Message}'", "Okänt fel");
             }
@@ -313,7 +316,48 @@ namespace PoddprojektGrupp24
 
         private void listViewPodd_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listViewPodd.SelectedItems.Count > 0)
+            {
+                //selectedItem hämtar ut items i listView, där det första itemet i listan får index 0 eftersom det blir det första i listan
+                var selectedItem = listViewPodd.SelectedItems[0];
 
+                //hittar feedet (podden) genom namnet
+                string feedName = selectedItem.Text;
+                selectedFeed = feedController.getFeed(feedName);
+            }
+            else
+            {
+                //om ingenting är i-klickat så blir det null
+                selectedFeed = null;
+            }
+        }
+
+        private void btnRemoveSelectedFeed_Click(object sender, EventArgs e)
+        {
+            if (selectedFeed != null)
+            {
+                //$-tecknet framför texten möjliggör att man kan lägga in variabler direkt in i texten men med ' och {} före och efter variabeln som det står nedan '{selectedFeed.Title}' och man slipper skriva + etc.
+                var confirm = MessageBox.Show($"Är du säker på att du vill radera '{selectedFeed.Title}'?", "Confirm Delete", MessageBoxButtons.YesNo);
+                if (confirm == DialogResult.Yes)
+                {
+                    //hittar indexet av det valda feedet (podden) för att radera det
+                    var feeds = feedController.GetFeeds();
+                    int indexDelete = feeds.FindIndex(f => f.Name == selectedFeed.Name);
+
+                    if (indexDelete >= 0)
+                    {
+                        feedController.DeleteFeed(indexDelete);
+                        populateListView();
+                        MessageBox.Show($"'{selectedFeed.Title}' har tagits bort!");
+                        //clearar klickningen så att det inte är någonting som är i-klickat efter borttagningen
+                        selectedFeed = null;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vänligen välj en podcast att radera.");
+            }
         }
     }
 }
