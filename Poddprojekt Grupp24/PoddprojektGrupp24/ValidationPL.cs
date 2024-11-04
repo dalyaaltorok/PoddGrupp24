@@ -70,10 +70,12 @@ namespace PresentationLayer
             {
                 case "category":
 
-                    return categoryController.GetAll().Any(category => category.Name.ToLower() == name);
+                    return categoryController.GetAll()
+                        .Any(category => category.Name.Trim().ToLower() == name);
 
                 case "feed":
-                    return feedController.GetFeeds().Any(feed => feed.Name.ToLower() == name);
+                    return feedController.GetFeeds()
+                        .Any(feed => feed.Name.Trim().ToLower() == name);
 
                 default:
                     return false;

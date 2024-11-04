@@ -12,13 +12,15 @@ namespace PoddprojektGrupp24
     {
         CategoryController catController;
         FeedController feedController;
-        ValidationPL validator;
+        ValidationPL categoryValidator;
+        ValidationPL feedValidator;
         Serializer<Feed> serializer;
         public Poddbibliotek()
         {
             catController = new CategoryController("Category.xml");
-            validator = new ValidationPL("Category.xml");
+            categoryValidator = new ValidationPL("Category.xml");
             feedController = new FeedController("Feed.xml");
+            feedValidator = new ("Feed.xml");
             InitializeComponent();
             populateCategories();
             populateListView();
@@ -54,7 +56,7 @@ namespace PoddprojektGrupp24
         {
             String name = tbNewCategoryName.Text.Trim(); //Ser till att ta bort onädiga spaces i början och slutet av kategorinamnfältet.
 
-            if (validator.isDuplicate(name, "category"))
+            if (categoryValidator.isDuplicate(name, "category"))
             {
                 string test = null;
                 MessageBox.Show($"Kategorinamnet du angav finns redan, eller  är tomt. Försök igen med ett annat namn!", "Valideringsfel");
@@ -231,40 +233,56 @@ namespace PoddprojektGrupp24
         {
             string url = textBoxURL.Text.Trim();
             string name = textBoxFeedName.Text.Trim();
-            bool isURLValid = await validator.ValidateRSSUrlAsync(url);
+            try { 
+            if (feedValidator.isDuplicate(name, "feed"))
+            {
+                MessageBox.Show("Ett flöde med detta namn existerar redan. Vänligen ange ett annat namn.");
+                return;
+            } 
+            
+            bool isURLValid = await feedValidator.ValidateRSSUrlAsync(url);
             if (!isURLValid)
             {
                 MessageBox.Show("Denna URL är inte ett giltigt RSS-flöde. Vänligen ange en giltig URL.");
                 return;
             }
-            if (validator.isDuplicate(name, "feed"))
+
+            if (cbAssignFeedCategory.SelectedItem == null)
             {
-                MessageBox.Show("Ett flöde med detta namn existerar redan. Vänligen ange ett annat namn.");
+                MessageBox.Show("Vänligen välj en kategori för podcasten. Du kan skapa en kategori under 'Hantera Kategori'");
                 return;
             }
 
-            Serializer<Feed> serializer = new Serializer<Feed>();
-            SyndicationFeed rssFeed = await serializer.DeserializeRSS(url);
+            
+            
 
-            if (rssFeed == null)
-            {
-                MessageBox.Show("Misslyckades med att hämta RSS-flöde. Vänligen ange en giltig URL.");
-                return;
+                Serializer<Feed> serializer = new Serializer<Feed>();
+                SyndicationFeed rssFeed = await serializer.DeserializeRSS(url);
+
+                if (rssFeed == null)
+                {
+                    MessageBox.Show("Misslyckades med att hämta RSS-flöde. Vänligen ange en giltig URL.");
+                    return;
+                }
+
+                string rssTitle = rssFeed.Title.Text ?? "Inget namn";
+
+                var newFeed = new Feed();
+                {
+                    newFeed.Name = name;
+                    newFeed.Title = rssTitle;
+                    newFeed.Category = (Category)cbAssignFeedCategory.SelectedItem;
+                    newFeed.Episodes = new List<Episode>();
+                }
+
+                await feedController.CreateFeed(name, url, newFeed.Category);
+                MessageBox.Show($"Podcasten {newFeed.Title} har lagts till!");
+                populateListView();
             }
-
-            string rssTitle = rssFeed.Title.Text ?? "Inget namn";
-
-            var newFeed = new Feed();
+            catch (Exception ex) 
             {
-                newFeed.Name = name;
-                newFeed.Title = rssTitle;
-                newFeed.Category = (Category)cbAssignFeedCategory.SelectedItem;
-                newFeed.Episodes = new List<Episode>();
+                MessageBox.Show($"Ett fel uppstod när podcasten skulle läggas till: '{ex.Message}'");
             }
-
-            feedController.CreateFeed(name, url, newFeed.Category);
-            MessageBox.Show("Podcasten " + newFeed.Title + " har lagts till!");
-            populateListView();
         }
 
         private void populateListView()

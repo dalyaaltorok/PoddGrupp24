@@ -122,10 +122,14 @@
     <value>Segoe UI, 25pt</value>
   </data>
   <data name="Rubrik.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 12</value>
+    <value>821, 19</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Rubrik.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="Rubrik.Size" type="System.Drawing.Size, System.Drawing">
-    <value>378, 56</value>
+    <value>614, 90</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Rubrik.TabIndex" type="System.Int32, mscorlib">
@@ -149,12 +153,8 @@
   <data name="lbKategori.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbKategori.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
   <data name="lbKategori.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 14</value>
+    <value>101, 22</value>
   </data>
   <data name="lbKategori.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -172,13 +172,16 @@
     <value>29</value>
   </data>
   <data name="tbNewCategoryName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1019, 121</value>
+    <value>1656, 194</value>
+  </data>
+  <data name="tbNewCategoryName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="tbNewCategoryName.PlaceholderText" xml:space="preserve">
     <value>Ange namn på ny kateogori</value>
   </data>
   <data name="tbNewCategoryName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 27</value>
+    <value>475, 39</value>
   </data>
   <data name="tbNewCategoryName.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -200,10 +203,13 @@
     <value>Popup</value>
   </data>
   <data name="btnLaggTillKat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1019, 166</value>
+    <value>1656, 266</value>
+  </data>
+  <data name="btnLaggTillKat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="btnLaggTillKat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 29</value>
+    <value>153, 46</value>
   </data>
   <data name="btnLaggTillKat.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -230,10 +236,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnAndraKat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1119, 166</value>
+    <value>1818, 266</value>
+  </data>
+  <data name="btnAndraKat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="btnAndraKat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 29</value>
+    <value>153, 46</value>
   </data>
   <data name="btnAndraKat.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -260,10 +269,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnTaBortKat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1219, 165</value>
+    <value>1981, 264</value>
+  </data>
+  <data name="btnTaBortKat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="btnTaBortKat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 29</value>
+    <value>150, 46</value>
   </data>
   <data name="btnTaBortKat.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -284,10 +296,13 @@
     <value>25</value>
   </data>
   <data name="richTextBoxEpisodeDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1019, 350</value>
+    <value>1656, 560</value>
+  </data>
+  <data name="richTextBoxEpisodeDescription.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="richTextBoxEpisodeDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 291</value>
+    <value>475, 463</value>
   </data>
   <data name="richTextBoxEpisodeDescription.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -311,10 +326,13 @@
     <value>Segoe UI, 12pt, style=Bold</value>
   </data>
   <data name="lbAvsnitt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>769, 74</value>
+    <value>1250, 118</value>
+  </data>
+  <data name="lbAvsnitt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="lbAvsnitt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 30</value>
+    <value>257, 48</value>
   </data>
   <data name="lbAvsnitt.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -335,10 +353,13 @@
     <value>23</value>
   </data>
   <data name="listBoxEpisodes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, 117</value>
+    <value>1144, 187</value>
+  </data>
+  <data name="listBoxEpisodes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="listBoxEpisodes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 524</value>
+    <value>470, 836</value>
   </data>
   <data name="listBoxEpisodes.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -362,10 +383,13 @@
     <value>NoControl</value>
   </data>
   <data name="lbLaggTillPoddcast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 74</value>
+    <value>166, 118</value>
+  </data>
+  <data name="lbLaggTillPoddcast.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="lbLaggTillPoddcast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 31</value>
+    <value>273, 50</value>
   </data>
   <data name="lbLaggTillPoddcast.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -386,13 +410,16 @@
     <value>21</value>
   </data>
   <data name="textBoxFeedName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 138</value>
+    <value>44, 221</value>
+  </data>
+  <data name="textBoxFeedName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="textBoxFeedName.PlaceholderText" xml:space="preserve">
     <value>Ge podden ett namn!</value>
   </data>
   <data name="textBoxFeedName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 27</value>
+    <value>475, 39</value>
   </data>
   <data name="textBoxFeedName.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -419,10 +446,13 @@
     <value>5:e Minut</value>
   </data>
   <data name="cbUpdateFrequencyDataGridViewItems.Location" type="System.Drawing.Point, System.Drawing">
-    <value>476, 208</value>
+    <value>774, 333</value>
+  </data>
+  <data name="cbUpdateFrequencyDataGridViewItems.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="cbUpdateFrequencyDataGridViewItems.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 28</value>
+    <value>301, 40</value>
   </data>
   <data name="cbUpdateFrequencyDataGridViewItems.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -440,19 +470,16 @@
     <value>19</value>
   </data>
   <data name="cbAssignFeedCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 169</value>
+    <value>271, 270</value>
+  </data>
+  <data name="cbAssignFeedCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="cbAssignFeedCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 28</value>
+    <value>248, 40</value>
   </data>
   <data name="cbAssignFeedCategory.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <metadata name="toolTipFrivilligKategori.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1402, 17</value>
-  </metadata>
-  <data name="cbAssignFeedCategory.ToolTip" xml:space="preserve">
-    <value>Frivilligt att ange kategori</value>
   </data>
   <data name="&gt;&gt;cbAssignFeedCategory.Name" xml:space="preserve">
     <value>cbAssignFeedCategory</value>
@@ -467,13 +494,16 @@
     <value>18</value>
   </data>
   <data name="textBoxURL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 108</value>
+    <value>44, 173</value>
+  </data>
+  <data name="textBoxURL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="textBoxURL.PlaceholderText" xml:space="preserve">
     <value>Ange poddens RSS-länk!</value>
   </data>
   <data name="textBoxURL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 27</value>
+    <value>475, 39</value>
   </data>
   <data name="textBoxURL.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -494,10 +524,13 @@
     <value>Popup</value>
   </data>
   <data name="btnAddNewFeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 208</value>
+    <value>44, 333</value>
+  </data>
+  <data name="btnAddNewFeed.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="btnAddNewFeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 29</value>
+    <value>224, 46</value>
   </data>
   <data name="btnAddNewFeed.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -524,10 +557,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnChangeFeedName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 108</value>
+    <value>923, 173</value>
+  </data>
+  <data name="btnChangeFeedName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="btnChangeFeedName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 24</value>
+    <value>153, 38</value>
   </data>
   <data name="btnChangeFeedName.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -551,10 +587,13 @@
     <value>True</value>
   </metadata>
   <data name="cbChangeFeedCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>345, 138</value>
+    <value>561, 221</value>
+  </data>
+  <data name="cbChangeFeedCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="cbChangeFeedCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 28</value>
+    <value>345, 40</value>
   </data>
   <data name="cbChangeFeedCategory.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -578,13 +617,10 @@
     <value>14</value>
   </data>
   <data name="checkedListBoxUserCategories.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1019, 208</value>
-  </data>
-  <data name="checkedListBoxUserCategories.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1656, 333</value>
   </data>
   <data name="checkedListBoxUserCategories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 92</value>
+    <value>475, 112</value>
   </data>
   <data name="checkedListBoxUserCategories.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -608,10 +644,13 @@
     <value>NoControl</value>
   </data>
   <data name="lbTilldelaKategori.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 169</value>
+    <value>36, 270</value>
+  </data>
+  <data name="lbTilldelaKategori.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="lbTilldelaKategori.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 25</value>
+    <value>232, 40</value>
   </data>
   <data name="lbTilldelaKategori.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -638,10 +677,13 @@
     <value>NoControl</value>
   </data>
   <data name="lbUpdateringsfrekv.Location" type="System.Drawing.Point, System.Drawing">
-    <value>345, 209</value>
+    <value>561, 334</value>
+  </data>
+  <data name="lbUpdateringsfrekv.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="lbUpdateringsfrekv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 25</value>
+    <value>203, 40</value>
   </data>
   <data name="lbUpdateringsfrekv.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -671,10 +713,13 @@
     <value>NoControl</value>
   </data>
   <data name="lbFiltreraKategori.Location" type="System.Drawing.Point, System.Drawing">
-    <value>345, 171</value>
+    <value>561, 274</value>
+  </data>
+  <data name="lbFiltreraKategori.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="lbFiltreraKategori.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 25</value>
+    <value>184, 40</value>
   </data>
   <data name="lbFiltreraKategori.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -701,10 +746,13 @@
     <value>NoControl</value>
   </data>
   <data name="lbAndraFiltrera.Location" type="System.Drawing.Point, System.Drawing">
-    <value>439, 74</value>
+    <value>713, 118</value>
+  </data>
+  <data name="lbAndraFiltrera.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="lbAndraFiltrera.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 31</value>
+    <value>239, 50</value>
   </data>
   <data name="lbAndraFiltrera.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -725,13 +773,16 @@
     <value>11</value>
   </data>
   <data name="tbChangeFeedName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>345, 108</value>
+    <value>561, 173</value>
+  </data>
+  <data name="tbChangeFeedName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="tbChangeFeedName.PlaceholderText" xml:space="preserve">
     <value>Ändra namn på podcast</value>
   </data>
   <data name="tbChangeFeedName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 27</value>
+    <value>345, 39</value>
   </data>
   <data name="tbChangeFeedName.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -755,10 +806,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRemoveSelectedFeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>181, 208</value>
+    <value>294, 333</value>
+  </data>
+  <data name="btnRemoveSelectedFeed.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="btnRemoveSelectedFeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 29</value>
+    <value>224, 46</value>
   </data>
   <data name="btnRemoveSelectedFeed.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -794,10 +848,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnResetFilters.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 171</value>
+    <value>923, 274</value>
+  </data>
+  <data name="btnResetFilters.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="btnResetFilters.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 24</value>
+    <value>153, 38</value>
   </data>
   <data name="btnResetFilters.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -833,10 +890,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnChangeCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 138</value>
+    <value>923, 221</value>
+  </data>
+  <data name="btnChangeCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="btnChangeCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 24</value>
+    <value>153, 38</value>
   </data>
   <data name="btnChangeCategory.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -857,10 +917,13 @@
     <value>9</value>
   </data>
   <data name="cbFilterCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>464, 171</value>
+    <value>754, 274</value>
+  </data>
+  <data name="cbFilterCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="cbFilterCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 28</value>
+    <value>152, 40</value>
   </data>
   <data name="cbFilterCategory.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -880,11 +943,8 @@
   <data name="lbAvsnittsbeskrivning.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="lbAvsnittsbeskrivning.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
   <data name="lbAvsnittsbeskrivning.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 14</value>
+    <value>101, 22</value>
   </data>
   <data name="lbAvsnittsbeskrivning.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -911,10 +971,13 @@
     <value>NoControl</value>
   </data>
   <data name="lbKategoriLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1103, 75</value>
+    <value>1792, 120</value>
+  </data>
+  <data name="lbKategoriLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="lbKategoriLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 30</value>
+    <value>179, 48</value>
   </data>
   <data name="lbKategoriLabel.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -941,10 +1004,13 @@
     <value>NoControl</value>
   </data>
   <data name="lbAvsnittsbesk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1097, 311</value>
+    <value>1783, 498</value>
+  </data>
+  <data name="lbAvsnittsbesk.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="lbAvsnittsbesk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 30</value>
+    <value>239, 48</value>
   </data>
   <data name="lbAvsnittsbesk.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -989,10 +1055,13 @@
     <value>151</value>
   </data>
   <data name="listViewPodd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 259</value>
+    <value>44, 414</value>
+  </data>
+  <data name="listViewPodd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="listViewPodd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>636, 382</value>
+    <value>1031, 609</value>
   </data>
   <data name="listViewPodd.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -1013,13 +1082,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 20</value>
+    <value>13, 32</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1323, 656</value>
+    <value>2150, 1050</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Poddbiblioteket</value>
@@ -1034,12 +1106,6 @@
     <value>toolTipRemoveSelectedFeed</value>
   </data>
   <data name="&gt;&gt;toolTipRemoveSelectedFeed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolTipFrivilligKategori.Name" xml:space="preserve">
-    <value>toolTipFrivilligKategori</value>
-  </data>
-  <data name="&gt;&gt;toolTipFrivilligKategori.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolTipChangeFeedName.Name" xml:space="preserve">

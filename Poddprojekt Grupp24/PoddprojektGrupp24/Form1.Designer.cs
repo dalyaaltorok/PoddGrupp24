@@ -60,7 +60,6 @@
             toolTipRemoveSelectedFeed = new ToolTip(components);
             cbFilterCategory = new ComboBox();
             lbAvsnittsbeskrivning = new Label();
-            toolTipFrivilligKategori = new ToolTip(components);
             toolTipChangeFeedName = new ToolTip(components);
             toolTipResetFilters = new ToolTip(components);
             lbKategoriLabel = new Label();
@@ -170,7 +169,6 @@
             cbAssignFeedCategory.FormattingEnabled = true;
             resources.ApplyResources(cbAssignFeedCategory, "cbAssignFeedCategory");
             cbAssignFeedCategory.Name = "cbAssignFeedCategory";
-            toolTipFrivilligKategori.SetToolTip(cbAssignFeedCategory, resources.GetString("cbAssignFeedCategory.ToolTip"));
             cbAssignFeedCategory.SelectedIndexChanged += comboBoxKategori_SelectedIndexChanged;
             // 
             // textBoxURL
@@ -309,12 +307,6 @@
             resources.ApplyResources(lbAvsnittsbeskrivning, "lbAvsnittsbeskrivning");
             lbAvsnittsbeskrivning.Name = "lbAvsnittsbeskrivning";
             // 
-            // toolTipFrivilligKategori
-            // 
-            toolTipFrivilligKategori.AutoPopDelay = 5000;
-            toolTipFrivilligKategori.InitialDelay = 50;
-            toolTipFrivilligKategori.ReshowDelay = 100;
-            // 
             // toolTipChangeFeedName
             // 
             toolTipChangeFeedName.AutoPopDelay = 5000;
@@ -439,7 +431,6 @@
         private Label lbFiltreraKategori;
         private Label lbAvsnittsbeskrivning;
         private Button btnResetFilters;
-        private ToolTip toolTipFrivilligKategori;
         private ToolTip toolTipChangeFeedName;
         private ToolTip toolTipResetFilters;
         private Label lbKategoriLabel;
