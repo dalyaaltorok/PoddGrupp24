@@ -383,19 +383,19 @@
     <value>NoControl</value>
   </data>
   <data name="lbLaggTillPoddcast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 118</value>
+    <value>114, 120</value>
   </data>
   <data name="lbLaggTillPoddcast.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
   </data>
   <data name="lbLaggTillPoddcast.Size" type="System.Drawing.Size, System.Drawing">
-    <value>273, 50</value>
+    <value>333, 50</value>
   </data>
   <data name="lbLaggTillPoddcast.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="lbLaggTillPoddcast.Text" xml:space="preserve">
-    <value>Lägg till podcast</value>
+    <value>LÄGG TILL PODCAST</value>
   </data>
   <data name="&gt;&gt;lbLaggTillPoddcast.Name" xml:space="preserve">
     <value>lbLaggTillPoddcast</value>
@@ -620,7 +620,7 @@
     <value>1656, 333</value>
   </data>
   <data name="checkedListBoxUserCategories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>475, 112</value>
+    <value>475, 148</value>
   </data>
   <data name="checkedListBoxUserCategories.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -746,19 +746,19 @@
     <value>NoControl</value>
   </data>
   <data name="lbAndraFiltrera.Location" type="System.Drawing.Point, System.Drawing">
-    <value>713, 118</value>
+    <value>654, 118</value>
   </data>
   <data name="lbAndraFiltrera.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
   </data>
   <data name="lbAndraFiltrera.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 50</value>
+    <value>297, 50</value>
   </data>
   <data name="lbAndraFiltrera.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
   <data name="lbAndraFiltrera.Text" xml:space="preserve">
-    <value>Ändra/Filtrera</value>
+    <value>ÄNDRA/FILTRERA</value>
   </data>
   <data name="&gt;&gt;lbAndraFiltrera.Name" xml:space="preserve">
     <value>lbAndraFiltrera</value>
@@ -971,19 +971,19 @@
     <value>NoControl</value>
   </data>
   <data name="lbKategoriLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1792, 120</value>
+    <value>1718, 120</value>
   </data>
   <data name="lbKategoriLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
   </data>
   <data name="lbKategoriLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 48</value>
+    <value>339, 48</value>
   </data>
   <data name="lbKategoriLabel.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
   <data name="lbKategoriLabel.Text" xml:space="preserve">
-    <value>KATEGORI</value>
+    <value>HANTERA KATEGORI</value>
   </data>
   <data name="&gt;&gt;lbKategoriLabel.Name" xml:space="preserve">
     <value>lbKategoriLabel</value>
@@ -1085,10 +1085,13 @@
     <value>13, 32</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>2150, 1050</value>
+    <value>2536, 1050</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>

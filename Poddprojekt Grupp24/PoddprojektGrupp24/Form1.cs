@@ -236,32 +236,29 @@ namespace PoddprojektGrupp24
             try { 
             if (feedValidator.isDuplicate(name, "feed"))
             {
-                MessageBox.Show("Ett flöde med detta namn existerar redan. Vänligen ange ett annat namn.");
+                MessageBox.Show("Ett flöde med detta namn existerar redan. Vänligen ange ett annat namn.", "Duplicerat flöde");
                 return;
             } 
             
             bool isURLValid = await feedValidator.ValidateRSSUrlAsync(url);
             if (!isURLValid)
             {
-                MessageBox.Show("Denna URL är inte ett giltigt RSS-flöde. Vänligen ange en giltig URL.");
+                MessageBox.Show("Denna URL är inte ett giltigt RSS-flöde. Vänligen ange en giltig URL.", "Valideringsfel");
                 return;
             }
 
             if (cbAssignFeedCategory.SelectedItem == null)
             {
-                MessageBox.Show("Vänligen välj en kategori för podcasten. Du kan skapa en kategori under 'Hantera Kategori'");
+                MessageBox.Show("Vänligen välj en kategori för podcasten. Du kan skapa en kategori under 'Hantera Kategori'", "Valideringsfel");
                 return;
             }
-
-            
-            
 
                 Serializer<Feed> serializer = new Serializer<Feed>();
                 SyndicationFeed rssFeed = await serializer.DeserializeRSS(url);
 
                 if (rssFeed == null)
                 {
-                    MessageBox.Show("Misslyckades med att hämta RSS-flöde. Vänligen ange en giltig URL.");
+                    MessageBox.Show("Misslyckades med att hämta RSS-flöde. Vänligen ange en giltig URL.", "Valideringsfel");
                     return;
                 }
 
@@ -276,12 +273,12 @@ namespace PoddprojektGrupp24
                 }
 
                 await feedController.CreateFeed(name, url, newFeed.Category);
-                MessageBox.Show($"Podcasten {newFeed.Title} har lagts till!");
+                MessageBox.Show($"Podcasten {newFeed.Title} har lagts till!", "Ny podcast tillagd!");
                 populateListView();
             }
             catch (Exception ex) 
             {
-                MessageBox.Show($"Ett fel uppstod när podcasten skulle läggas till: '{ex.Message}'");
+                MessageBox.Show($"Ett fel uppstod när podcasten skulle läggas till: '{ex.Message}'", "Okänt fel");
             }
         }
 
