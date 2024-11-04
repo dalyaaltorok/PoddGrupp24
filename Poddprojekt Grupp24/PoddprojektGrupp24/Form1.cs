@@ -237,7 +237,7 @@ namespace PoddprojektGrupp24
                 MessageBox.Show("Denna URL är inte ett giltigt RSS-flöde. Vänligen ange en giltig URL.");
                 return;
             }
-            if (validator.isDuplicate(name, url))
+            if (validator.isDuplicate(name, "feed"))
             {
                 MessageBox.Show("Ett flöde med detta namn existerar redan. Vänligen ange ett annat namn.");
                 return;
